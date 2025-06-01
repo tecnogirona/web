@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="TecnoGirona: tu experto en reparación de móviles y ordenadores en Girona. También ofrecemos desarrollo web a medida y soporte IT para empresas. ¡Soluciones tecnológicas rápidas y fiables!">
-    <title>TecnoGirona - Soluciones Tecnológicas Integrales</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
-    <!-- Google tag (gtag.js) -->
+    <meta name="description" content="Servicio técnico especializado en Girona para reparación de ordenadores, móviles, tablets y videoconsolas. Reparaciones rápidas con garantía.">
+    <meta name="keywords" content="reparación móviles Girona, arreglar ordenadores, servicio técnico, reparación consolas, recuperación datos">
+    <meta name="author" content="TecnoGirona">
+    <meta property="og:title" content="TecnoGirona | Reparación de Dispositivos en Girona">
+    <meta property="og:description" content="Reparación rápida de móviles, ordenadores y consolas con garantía. ¡Presupuesto sin compromiso!">
+    <!-- Preload resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1X4ES7FPPT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -20,1171 +22,764 @@
   gtag('config', 'G-1X4ES7FPPT');
 </script>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/dusk/64/000000/computer-support.png">
+    
+    <title>TecnoGirona - Reparación de Dispositivos Tecnológicos en Girona</title>
+    
+    <!-- Critical CSS -->
     <style>
-        /* --- GLOBAL RESET & BOX-SIZING --- */
-        * {
-            box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho/alto total */
-        }
-
-        /* Bloquea el desplazamiento horizontal en todo el documento */
-        html, body {
-            overflow-x: hidden; /* ¡Esto es la clave para evitar el scroll lateral! */
-            width: 100%; /* Asegura que no crezcan más allá del viewport */
-        }
-
-        /* --- VARIABLES CSS --- */
+        :root{--primary-color:#2c3e50;--secondary-color:#3498db;--mobile-color:#27ae60;--console-color:#9b59b6;--pc-color:#2980b9;--data-color:#f39c12;--config-color:#1abc9c;--business-color:#e74c3c;--light-color:#ecf0f1;--dark-color:#2c3e50}
+        body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.6;margin:0;padding:0;overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:'Montserrat',sans-serif;font-weight:700;margin-top:0}
+        .navbar{background-color:var(--primary-color);box-shadow:0 2px 10px rgba(0,0,0,0.1);transition:all 0.3s ease}
+        .hero-section{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:#fff;padding:120px 0 80px;position:relative;overflow:hidden}
+        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--primary-color);z-index:9999;display:flex;justify-content:center;align-items:center;transition:opacity 0.5s ease}
+        .preloader.fade-out{opacity:0}
+    </style>
+    
+    <!-- Deferred CSS -->
+    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Main CSS -->
+    <style>
+        /* Optimized CSS */
         :root {
-            --color-primario: #FFBF00; /* Naranja/Amarillo corporativo - vibrante y energico */
-            --color-primario-rgb: 255, 191, 0;
-            --color-secundario: #E6AC00; /* Tono más oscuro para hover y acentos */
-            --color-fondo-oscuro: #121212; /* Fondo principal muy oscuro */
-            --color-fondo-claro: #1E1E1E; /* Fondo para secciones/tarjetas ligeramente más claro */
-            --color-texto-claro: #F0F0F0; /* Blanco roto para el texto principal */
-            --color-texto-oscuro: #000000; /* Negro para texto sobre elementos claros */
-            --color-borde: #333333; /* Color de borde sutil */
-            --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.2);
-            --sombra-media: 0 8px 16px rgba(0, 0, 0, 0.4);
-            --sombra-fuerte: 0 12px 25px rgba(0,0,0,0.6);
-
-            /* Fuentes */
-            --font-headings: 'Montserrat', sans-serif;
-            --font-body: 'Open Sans', sans-serif;
-            --font-logo: 'Lexend', sans-serif; /* ¡NUEVA FUENTE PARA EL LOGO! */
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --mobile-color: #27ae60;
+            --console-color: #9b59b6;
+            --pc-color: #2980b9;
+            --data-color: #f39c12;
+            --config-color: #1abc9c;
+            --business-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
         }
-
-        /* --- ESTILOS GENERALES --- */
+        
         body {
-            margin: 0;
-            padding: 0;
-            font-family: var(--font-body);
-            background-color: var(--color-fondo-oscuro);
-            color: var(--color-texto-claro);
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
             line-height: 1.6;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23121212%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2275%22%20cy%3D%2225%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2275%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%2275%22%20cy%3D%2275%22%20r%3D%221%22%20fill%3D%22%23FFBF00%20%22%20opacity%3D%220.3%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2275%22%20y2%3D%2225%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2275%22%20x2%3D%2275%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2225%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3Cline%20x1%3D%2275%22%20y1%3D%2225%22%20x2%3D%2275%22%20y2%3D%2275%22%20stroke%3D%22%23FFBF00%22%20stroke-width%3D%220.5%22%20opacity%3D%220.15%22%2F%3E%3C%2Fsvg%3E");
-            background-size: 100px 100px;
-            background-repeat: repeat;
-            background-attachment: fixed;
         }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* SECCIÓN BASE - MEJORA DE LA DIVISIÓN */
-        section {
-            padding: 80px 0; /* Mayor padding para más espacio */
-            position: relative;
-            background-color: var(--color-fondo-claro); /* Fondo claro para la mayoría de secciones */
-            box-shadow: var(--sombra-fuerte); /* Sombra para que las secciones floten */
-            margin: 40px auto; /* Márgenes para separar las secciones */
-            border-radius: 12px; /* Bordes redondeados para las secciones */
-            width: 90%; /* Asegura que la sección use el ancho del contenedor */
-            max-width: 1200px; /* Consistente con el contenedor principal */
-        }
-
-        /* AJUSTES ESPECÍFICOS PARA SECCIONES */
-        #hero {
-            margin-top: 0; /* Hero no tiene margen superior */
-            border-radius: 0 0 12px 12px; /* Solo bordes inferiores redondeados para el hero */
-            box-shadow: var(--sombra-fuerte); /* Sombra también para el hero */
-        }
-        #testimonials {
-            background-color: var(--color-fondo-oscuro); /* Fondo más oscuro para la sección de testimonios para contraste */
-        }
-        #contact {
-            /* ya tiene sus estilos de padding y max-width en su propia regla */
-            margin-bottom: 40px; /* Asegurar margen inferior para el contacto */
-        }
-        footer {
-            margin-top: 0; /* Footer no tiene margen superior si se trata como una sección */
-            border-radius: 12px 12px 0 0; /* Solo bordes superiores redondeados para el footer */
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-headings);
-            font-weight: 700; /* Negrita para títulos */
-            color: var(--color-texto-claro);
-        }
-
-        h2.section-title {
-            text-align: center;
-            font-size: 2.8em; /* Tamaño más grande para títulos de sección */
-            color: var(--color-texto-claro);
-            margin-bottom: 50px; /* Más espacio */
-            position: relative;
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-
-        h2.section-title::after {
-            content: '';
-            display: block;
-            width: 80px; /* Línea más ancha */
-            height: 4px; /* Línea más gruesa */
-            background-color: var(--color-primario);
-            margin: 15px auto 0; /* Más espacio */
-            border-radius: 2px;
-        }
-
-        /* --- BOTONES --- */
-        .btn-primario {
-            display: inline-block;
-            background-color: var(--color-primario);
-            color: var(--color-texto-oscuro);
-            padding: 15px 40px; /* Más padding */
-            text-decoration: none;
-            font-weight: 600; /* Seminegrita */
-            border-radius: 8px; /* Bordes más redondeados */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1em;
-            text-transform: uppercase; /* Mayúsculas */
-            letter-spacing: 0.5px;
-            box-shadow: var(--sombra-media);
-        }
-
-        .btn-primario:hover {
-            background-color: var(--color-secundario);
-            transform: translateY(-3px); /* Mayor levantamiento */
-            box-shadow: var(--sombra-fuerte);
-        }
-
-        /* --- HEADER --- */
-        header {
-            background-color: var(--color-fondo-oscuro);
-            padding: 20px 0;
-            border-bottom: 3px solid var(--color-primario);
-            display: flex;
-            justify-content: center; /* Centrar el logo ahora que no hay elementos a los lados */
-            align-items: center;
-            position: sticky; /* Sticky header */
-            top: 0;
-            z-index: 1000; /* Asegura que esté por encima de otros elementos */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra para efecto 3D */
-        }
-
-        header .logo-text {
-            margin: 0;
-            font-size: 2.8em; /* Logo más grande */
-            font-family: var(--font-logo); /* ¡APLICACIÓN DE LA NUEVA FUENTE VARIABLE! */
-            color: var(--color-texto-claro);
-            display: flex;
-            align-items: center;
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            /* Ajustes para los ejes de la fuente variable (Peso y Ancho) */
-            font-variation-settings: 'wght' 800, 'wdth' 80; /* Peso 800 (extrabold), Ancho 80 (condensado) */
         }
-
-        header .logo-text svg {
-            height: 1.3em; /* Ajuste para el nuevo logo, ligeramente más grande */
-            width: 1.3em;
-            margin-right: 12px;
-            vertical-align: middle;
-            transition: transform 0.3s ease; /* Pequeña animación */
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
-
-        header .logo-text:hover svg {
-            transform: rotate(10deg); /* Animación al pasar el ratón */
+        
+        .navbar.scrolled {
+            background-color: rgba(44, 62, 80, 0.95);
+            padding: 10px 0;
         }
-
-        header .logo-text span {
-            color: var(--color-primario);
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
         }
-
-        /* --- SECCIÓN HERO --- */
-        .hero {
-            background: radial-gradient(circle at center, rgba(var(--color-primario-rgb), 0.25) 0%, var(--color-fondo-oscuro) 70%); /* Gradiente más vibrante */
-            background-size: 200% 200%;
-            animation: heroBackgroundPulse 15s infinite alternate ease-in-out;
-            color: var(--color-texto-claro);
-            padding: 100px 20px; /* Mayor padding */
-            text-align: center;
+        
+        .nav-link {
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
             position: relative;
+            overflow: hidden;
         }
-
-        @keyframes heroBackgroundPulse {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
         }
-
-        .hero h2 {
-            font-size: 4em; /* Título más grande y con impacto */
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
             margin-bottom: 30px;
-            color: var(--color-primario);
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(var(--color-primario-rgb), 0.7), 0 0 40px rgba(var(--color-primario-rgb), 0.5);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInSlideUp 1s ease-out forwards;
-            animation-delay: 0.2s;
-            line-height: 1.2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 100%;
         }
-
-        .hero p {
-            font-size: 1.4em; /* Texto más grande y legible */
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-icon.pc { color: var(--pc-color); }
+        .service-icon.mobile { color: var(--mobile-color); }
+        .service-icon.console { color: var(--console-color); }
+        .service-icon.data { color: var(--data-color); }
+        .service-icon.config { color: var(--config-color); }
+        .service-icon.business { color: var(--business-color); }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .btn-mobile {
+            background-color: var(--mobile-color);
+            border-color: var(--mobile-color);
+            color: white;
+        }
+        
+        .btn-mobile:hover {
+            background-color: #219955;
+            border-color: #219955;
+            color: white;
+        }
+        
+        .btn-console {
+            background-color: var(--console-color);
+            border-color: var(--console-color);
+            color: white;
+        }
+        
+        .btn-console:hover {
+            background-color: #8e44ad;
+            border-color: #8e44ad;
+            color: white;
+        }
+        
+        .btn-pc {
+            background-color: var(--pc-color);
+            border-color: var(--pc-color);
+            color: white;
+        }
+        
+        .btn-pc:hover {
+            background-color: #2472a4;
+            border-color: #2472a4;
+            color: white;
+        }
+        
+        .btn-data {
+            background-color: var(--data-color);
+            border-color: var(--data-color);
+            color: white;
+        }
+        
+        .btn-data:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+            color: white;
+        }
+        
+        .btn-config {
+            background-color: var(--config-color);
+            border-color: var(--config-color);
+            color: white;
+        }
+        
+        .btn-config:hover {
+            background-color: #16a085;
+            border-color: #16a085;
+            color: white;
+        }
+        
+        .btn-business {
+            background-color: var(--business-color);
+            border-color: var(--business-color);
+            color: white;
+        }
+        
+        .btn-business:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
             margin-bottom: 50px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInSlideUp 1s ease-out forwards;
-            animation-delay: 0.5s;
-            font-weight: 300; /* Más ligero para el párrafo */
+            padding-bottom: 15px;
         }
-
-        .hero .btn-primario {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInSlideUp 1s ease-out forwards;
-            animation-delay: 0.8s;
-            padding: 18px 45px; /* Botón más grande */
-            font-size: 1.2em;
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
         }
-
-        @keyframes fadeInSlideUp {
+        
+        .section-title.mobile::after { background-color: var(--mobile-color); }
+        .section-title.console::after { background-color: var(--console-color); }
+        .section-title.pc::after { background-color: var(--pc-color); }
+        .section-title.data::after { background-color: var(--data-color); }
+        .section-title.config::after { background-color: var(--config-color); }
+        .section-title.business::after { background-color: var(--business-color); }
+        
+        .testimonial-card { border-left: 4px solid var(--secondary-color); }
+        .bg-light-gray { background-color: #f8f9fa; }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-links .text-white {
+            color: white !important;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .badge-service {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .badge-mobile { background-color: var(--mobile-color); }
+        .badge-console { background-color: var(--console-color); }
+        .badge-pc { background-color: var(--pc-color); }
+        .badge-data { background-color: var(--data-color); }
+        .badge-config { background-color: var(--config-color); }
+        .badge-business { background-color: var(--business-color); }
+        
+        .feature-box {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Banners styles */
+        .mobile-banner {
+            background: linear-gradient(135deg, var(--mobile-color) 0%, #2ecc71 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mobile-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        .console-banner {
+            background: linear-gradient(135deg, var(--console-color) 0%, #6c3483 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .console-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        .pc-banner {
+            background: linear-gradient(135deg, var(--pc-color) 0%, #3498db 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pc-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        .data-banner {
+            background: linear-gradient(135deg, var(--data-color) 0%, #f39c12 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .data-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        .config-banner {
+            background: linear-gradient(135deg, var(--config-color) 0%, #1abc9c 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .config-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        .business-banner {
+            background: linear-gradient(135deg, var(--business-color) 0%, #e74c3c 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .business-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        /* Banner cards */
+        .banner-card {
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            height: 100%;
+        }
+        
+        .banner-card .card-body {
+            padding: 2rem;
+        }
+        
+        .banner-card i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* Accessibility improvements */
+        a:focus, button:focus {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Skip to content link for keyboard users */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Lazy loading for images */
+        img.lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        img.lazy.loaded {
+            opacity: 1;
+        }
+        
+        /* Improved contrast for better accessibility */
+        .text-muted {
+            color: #6c757d !important;
+        }
+        
+        /* Animation for cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
-        /* --- TARJETAS FLIP (SERVICIOS Y VENTAJAS) --- */
-        .services-grid, .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tarjetas ligeramente más grandes y consistentes */
-            gap: 40px; /* Mayor espacio entre tarjetas */
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease forwards;
         }
-
-        .service-card, .advantage-item { /* Estilos base para el contenedor flip */
-            background-color: transparent;
-            border-radius: 12px;
-            box-shadow: none;
-            perspective: 1000px;
-            height: 280px; /* Altura un poco mayor */
-            cursor: pointer;
-            position: relative;
-        }
-
-        .service-card-inner, .advantage-item-inner { /* Estilos para el elemento que rota */
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Curva de animación más suave */
-            transform-style: preserve-3d;
-            border-radius: 12px;
-            box-sizing: border-box;
-            box-shadow: var(--sombra-suave); /* Sombra inicial en el inner */
-        }
-
-        .service-card:hover .service-card-inner,
-        .advantage-item:hover .advantage-item-inner {
-            transform: rotateY(180deg) translateY(-5px); /* Rotación y levantamiento combinados */
-            box-shadow: var(--sombra-fuerte); /* Sombra más pronunciada al hover */
-        }
-
-        .service-card-front, .service-card-back,
-        .advantage-item-front, .advantage-item-back { /* Estilos para las caras frontal y trasera */
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            padding: 30px; /* Más padding interno */
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid var(--color-borde);
-            background-color: var(--color-fondo-claro); /* Fondo claro para las tarjetas */
-            transition: background-color 0.3s ease;
-        }
-
-        .service-card-front, .advantage-item-front {
-            color: var(--color-texto-claro);
-        }
-
-        .service-card-back, .advantage-item-back {
-            background-color: rgba(var(--color-primario-rgb), 0.1); /* Fondo trasero con un toque del color principal */
-            color: var(--color-texto-claro);
-            transform: rotateY(180deg);
-            border: 1px solid var(--color-primario); /* Borde con color principal */
-        }
-
-        /* Estilos específicos para texto en la parte trasera */
-        .service-card-back h3, .advantage-item-back h3 {
-            color: var(--color-primario); /* Título trasero en color principal */
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .service-card-back p, .advantage-item-back p {
-            font-size: 1em;
-            line-height: 1.5;
-            color: var(--color-texto-claro);
-        }
-
-        /* Estilos para iconos en tarjetas */
-        .service-card .icon, .advantage-item .icon {
-            font-size: 3em; /* Iconos más grandes */
-            color: var(--color-primario);
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .service-card:hover .icon, .advantage-item:hover .icon {
-            color: var(--color-secundario); /* Cambia de color al hacer hover */
-        }
-
-        .service-card .icon svg, .advantage-item .icon svg {
-            width: 1em;
-            height: 1em;
-            fill: currentColor; /* Asegura que el SVG herede el color */
-        }
-
-        .service-card h3, .advantage-item h3 {
-            font-size: 1.5em;
-            color: var(--color-texto-claro);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .service-card p, .advantage-item p {
-            font-size: 1em;
-            color: var(--color-texto-claro);
-            line-height: 1.5;
-        }
-
-        /* --- SECCIÓN "POR QUÉ ELEGIRNOS" --- */
-        #why-choose-us {
-            background-color: var(--color-fondo-claro); /* Ya usa este */
-        }
-        /* advantage-grid y advantage-item ya se tratan arriba */
-
-        /* --- SECCIÓN TESTIMONIOS --- */
-        #testimonials {
-            background-color: var(--color-fondo-oscuro); /* Fondo más oscuro para contraste */
-            display: flex; /* Para centrar el carrusel y dots */
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .testimonial-carousel {
-            width: 100%; /* El carrusel ocupa todo el ancho disponible del contenedor */
-            overflow: hidden; /* Oculta los elementos fuera de la vista */
-            position: relative;
-            min-height: 280px; /* Altura mínima para evitar saltos de diseño */
-            max-width: calc(3 * 350px + 2 * 30px); /* Max-width para 3 cards + 2 gaps */
-        }
-
-        .testimonial-card-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
-        }
-
-        .testimonial-card {
-            flex: 0 0 350px; /* Ancho fijo para cada tarjeta de testimonio */
-            margin-right: 30px; /* Espacio entre tarjetas */
-            background-color: var(--color-fondo-claro);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: var(--sombra-media);
-            border: 1px solid var(--color-borde);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 250px; /* Ajuste para que las tarjetas de testimonio tengan altura suficiente */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .testimonial-card:last-child {
-            margin-right: 0; /* No margin al último para evitar scroll extra */
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--sombra-fuerte);
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.05em;
-            line-height: 1.6;
-            color: var(--color-texto-claro);
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--color-primario);
-            font-size: 1.1em;
-        }
-        .testimonial-author span {
-            font-weight: 400;
-            color: var(--color-texto-claro);
-            font-size: 0.9em;
-        }
-
-        /* Puntos de navegación del carrusel */
-        .carousel-dots {
-            text-align: center;
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .dot {
-            display: inline-block;
-            width: 12px; /* Tamaño del punto */
-            height: 12px;
-            background-color: var(--color-borde); /* Color por defecto del punto */
+        
+        /* Preloader animation */
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
             border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-            border: 1px solid var(--color-primario); /* Borde sutil para los puntos */
+            border-top-color: var(--secondary-color);
+            animation: spin 1s ease-in-out infinite;
         }
-
-        .dot.active {
-            background-color: var(--color-primario); /* Color del punto activo */
-            transform: scale(1.2); /* Tamaño ligeramente mayor para el punto activo */
-            border-color: var(--color-secundario); /* Borde diferente para el activo */
-        }
-
-
-        /* --- SECCIÓN CONTACTO --- */
-        #contact {
-            padding: 60px; /* Más padding */
-            border-radius: 12px; /* Más redondeado */
-            max-width: 800px; /* Más ancho */
-            margin: 40px auto; /* Más margen */
-            background-color: var(--color-fondo-claro); /* Fondo más claro */
-            box-shadow: var(--sombra-media); /* Sombra consistente */
-            border: 1px solid var(--color-borde);
-            z-index: 1;
-            position: relative;
-        }
-
-        .contact-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Dos columnas para campos cortos */
-            gap: 25px; /* Mayor espacio */
-        }
-
-        .contact-form .full-width {
-            grid-column: 1 / -1; /* Ocupa todo el ancho en dos columnas */
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px; /* Más espacio */
-            font-weight: 600;
-            color: var(--color-texto-claro);
-            font-size: 1em; /* Ajustado de 1.05em a 1em */
-        }
-
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form input[type="tel"],
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px; /* Mayor padding */
-            border: 1px solid var(--color-borde);
-            border-radius: 8px; /* Bordes redondeados */
-            background-color: var(--color-fondo-oscuro); /* Fondo de input más oscuro */
-            color: var(--color-texto-claro);
-            box-sizing: border-box;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            font-family: var(--font-body);
-            font-size: 1em;
-        }
-
-        .contact-form input[type="text"]:focus,
-        .contact-form input[type="email"]:focus,
-        .contact-form input[type="tel"]:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--color-primario);
-            box-shadow: 0 0 8px rgba(var(--color-primario-rgb), 0.6);
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 150px; /* Mayor altura mínima */
-        }
-
-        .contact-form .btn-primario {
-            width: auto; /* El botón ocupa su ancho natural */
-            justify-self: start; /* Alinea el botón a la izquierda */
-            grid-column: 1 / -1; /* Ocupa todo el ancho */
-            margin-top: 15px; /* Espacio superior */
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 30px 0; /* Más padding */
-            background-color: var(--color-fondo-oscuro);
-            border-top: 3px solid var(--color-primario);
-            margin-top: 60px; /* Más margen superior */
-            color: var(--color-texto-claro);
-        }
-
-        footer p {
-            margin: 8px 0;
-            font-size: 0.95em;
-            color: var(--color-texto-claro);
-        }
-
-        footer a {
-            color: var(--color-primario);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: var(--color-secundario);
-            text-decoration: underline;
-        }
-
-        /* --- MEDIA QUERIES (RESPONSIVE) --- */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 15px 0;
-                justify-content: center; /* Asegurar centrado en móvil también */
-            }
-            header .logo-text {
-                font-size: 2.2em;
-                justify-content: center;
-                margin-bottom: 0; /* Sin margen inferior si es el único elemento */
-                font-variation-settings: 'wght' 700, 'wdth' 90; /* Ajuste para móvil, menos condensado */
-            }
-            header .logo-text svg {
-                height: 1.1em;
-                width: 1.1em;
-            }
-
-            .hero {
-                padding: 70px 15px;
-            }
-            .hero h2 {
-                font-size: 3em;
-                line-height: 1.3;
-            }
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            section {
-                padding: 60px 0;
-                margin: 30px auto; /* Menos margen en móvil */
-            }
-            h2.section-title {
-                font-size: 2.2em;
-                margin-bottom: 40px;
-            }
-
-            .services-grid, .advantages-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .service-card, .advantage-item { /* Aplicar estilos responsive a ambas */
-                height: auto; /* Altura auto para mejor adaptación en móvil */
-                min-height: 250px;
-                flex: 0 0 auto; /* Permite que el ancho se ajuste */
-                width: 90%; /* Ajuste de ancho para tarjetas */
-                margin: 0 auto;
-            }
-
-            .testimonial-carousel {
-                max-width: 90%; /* Ancho más restrictivo en móvil */
-                padding: 0 10px; /* Padding para evitar que las cards toquen los bordes */
-                box-sizing: border-box;
-            }
-
-            .testimonial-card {
-                flex: 0 0 100%; /* Cada tarjeta ocupa el 100% del ancho del carrusel en móvil */
-                margin-right: 0; /* Sin margen entre cards en móvil, el JS manejará la traslación */
-            }
-            .testimonial-card:not(:last-child) { /* Asegurarse que haya un pequeño espacio si se quiere */
-                margin-right: 20px; /* Un pequeño margen para que se vea el deslizamiento entre tarjetas */
-            }
-
-
-            #contact {
-                padding: 30px;
-                margin: 30px auto;
-            }
-            .contact-form {
-                grid-template-columns: 1fr; /* Una columna en móvil */
-                gap: 20px;
-            }
-            .contact-form .full-width {
-                grid-column: auto;
-            }
-        }
-        @media (max-width: 480px) {
-            header .logo-text {
-                font-size: 1.8em;
-            }
-            .hero h2 {
-                font-size: 2.2em; /* Ajustado para móviles pequeños */
-                line-height: 1.2;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            .btn-primario {
-                padding: 12px 30px;
-                font-size: 1em;
-            }
-            .service-card h3, .advantage-item h3 {
-                font-size: 1.3em;
-            }
-            .service-card p, .advantage-item p {
-                font-size: 0.9em;
-            }
-            .testimonial-card {
-                min-height: 220px; /* Ligeramente más pequeña para móvil */
-            }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "url": "https://dani477.github.io/tecnogirona.guithub.io/", // Ejemplo: "https://www.tecnogirona.com"
-      "name": "TecnoGirona",
-      "description": "TecnoGirona: tu experto en reparación de móviles y ordenadores en Girona. También ofrecemos desarrollo web a medida y soporte IT para empresas. ¡Soluciones tecnológicas rápidas y fiables!",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://dani477.github.io/tecnogirona.guithub.io/buscar?q={search_term_string}" // Si tienes una función de búsqueda interna
-        },
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": ["LocalBusiness", "ProfessionalService", "ElectronicsRepairShop"],
-      "name": "TecnoGirona",
-      "description": "TecnoGirona: tu experto en reparación de móviles y ordenadores en Girona. También ofrecemos desarrollo web a medida y soporte IT para empresas. ¡Soluciones tecnológicas rápidas y fiables!",
-      "url": "https://dani477.github.io/tecnogirona.guithub.io/",
-      "logo": "URL_DE_TU_LOGO_IMAGEN_AQUI", // Ejemplo: "https://www.tecnogirona.com/logo.png" (Debe ser una URL de imagen, no el SVG incrustado directamente)
-      "image": "URL_DE_UNA_IMAGEN_REPRESENTATIVA_AQUI", // Opcional, una imagen de tu negocio
-      "telephone": "+34637161141", // Ejemplo: "+34972000000"
-      "email": "tecnogirona@gmail.com", // Ejemplo: "info@tecnogirona.com"
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Oviedo, 7", // Ejemplo: "Carrer de la Força, 1"
-        "addressLocality": "Girona",
-        "postalCode": "17005", // Ejemplo: "17004"
-        "addressRegion": "Girona",
-        "addressCountry": "ES"
-      },
-      "geo": { // Opcional pero recomendado si tienes local físico
-        "@type": "GeoCoordinates",
-        "latitude": "TU_LATITUD_AQUI", // Ejemplo: "41.98311"
-        "longitude": "TU_LONGITUD_AQUI" // Ejemplo: "2.82493"
-      },
-      "openingHoursSpecification": [ // Modifica según tu horario real
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-          ],
-          "opens": "10:00",
-          "closes": "20:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Friday",
-          "opens": "10:00",
-          "closes": "15:00"
-        }
-        // Añade "Saturday", "Sunday" si aplica, o déjalo así si cierras fines de semana
-      ],
-      "priceRange": "$$", // Opcional: Indica el rango de precios ($, $$, $$$)
-      "areaServed": {
-        "@type": "Place",
-        "name": "Girona"
-      },
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Reparación de Ordenadores",
-            "description": "Desde la optimización del sistema hasta la sustitución de componentes críticos, nuestro equipo experto garantiza la máxima eficiencia y durabilidad. ¡Diagnóstico rápido y eficaz para tu PC o Mac!",
-            "serviceType": "Computer Repair",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"} // Enlaza a la organización principal
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Reparación de Móviles",
-            "description": "Especialistas en la reparación de todo tipo de smartphones y tablets. Soluciones rápidas para pantallas, baterías, conectores de carga y problemas de software en todas las marcas.",
-            "serviceType": "Mobile Phone Repair",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Reparación de Consolas",
-            "description": "No solo ordenadores y móviles. También reparamos consolas de videojuegos (PlayStation, Xbox, Nintendo) y una amplia gama de otros dispositivos electrónicos. ¡Pregúntanos sin compromiso!",
-            "serviceType": "Electronics Repair", // Más genérico, o puedes buscar tipos específicos si existen
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desarrollo Web a Medida",
-            "description": "Desde webs corporativas hasta tiendas online. Diseñamos y desarrollamos soluciones web personalizadas que se adaptan a tus necesidades, garantizando una excelente experiencia de usuario y visibilidad en buscadores.",
-            "serviceType": "Web Development",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Recuperación de Datos",
-            "description": "¿Has perdido información importante? Ofrecemos servicios de recuperación de datos de discos duros dañados, SSD, memorias USB y cualquier otro medio de almacenamiento, minimizando la pérdida y maximizando la recuperación.",
-            "serviceType": "Data Recovery",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Ampliación y Equipos a la Carta",
-            "description": "Potencia tu rendimiento con nuestras ampliaciones de RAM y SSD. Además, diseñamos y ensamblamos equipos personalizados a la medida de tus necesidades, ya sea para gaming, trabajo o diseño.",
-            "serviceType": "Computer Hardware Upgrades and Custom Builds",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Mantenimiento Integral",
-            "description": "Asegura la longevidad y el rendimiento óptimo de tus equipos con nuestros planes de mantenimiento. Prevención y solución de problemas para ordenadores y videoconsolas, garantizando su buen funcionamiento.",
-            "serviceType": "IT Maintenance",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "TPV y CRM",
-            "description": "Optimiza la gestión de tu negocio con nuestras soluciones TPV (Terminal Punto de Venta) y CRM (Customer Relationship Management). Implementación, configuración y soporte para mejorar tus ventas y la relación con tus clientes.",
-            "serviceType": "POS and CRM Solutions",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Asesoramiento Tecnológico",
-            "description": "¿Necesitas orientación tecnológica? Te ofrecemos asesoramiento experto para elegir el hardware, software o soluciones más adecuadas para tu hogar o negocio, optimizando tu inversión y garantizando compatibilidad.",
-            "serviceType": "Technology Consulting",
-            "areaServed": {"@type": "City", "name": "Girona"},
-            "provider": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-          }
-        }
-      ],
-      "review": [ // Si tienes reseñas en tu web, puedes marcarlas así
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Juan P."
-          },
-          "reviewBody": "Mi portátil estaba muerto y TecnoGirona lo resucitó en tiempo récord. ¡Un servicio impecable y transparente! Los recomiendo al 100%.",
-          "itemReviewed": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"} // Enlaza a la organización principal
-          // "reviewRating": { "@type": "Rating", "ratingValue": "5" }, // Añade si tienes valoración
-          // "datePublished": "FECHA_DE_PUBLICACION_RESEÑA_YYYY-MM-DD" // Añade si tienes fecha
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Maria F."
-          },
-          "reviewBody": "Necesitaba una web para mi negocio y el equipo de TecnoGirona superó mis expectativas. Profesionalidad y un diseño increíble.",
-          "itemReviewed": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Carlos G."
-          },
-          "reviewBody": "La recuperación de mis datos fue crucial y lo lograron sin problemas. Un alivio saber que puedo confiar en ellos para cualquier problema tecnológico.",
-          "itemReviewed": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Laura M."
-          },
-          "reviewBody": "Siempre que tengo un problema con mi móvil, acudo a TecnoGirona. Rápidos, eficientes y con precios justos. ¡Son mis técnicos de cabecera!",
-          "itemReviewed": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Roberto D."
-          },
-          "reviewBody": "El asesoramiento para mi nueva oficina fue excelente. Me ayudaron a elegir el hardware y software perfecto sin gastar de más.",
-          "itemReviewed": {"@id": "TU_URL_COMPLETA_DEL_SITIO_WEB_AQUI#organization"}
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Ana L."
-          },
-          "reviewBody": "Servicio de mantenimiento para mis consolas, ¡impecable! Ahora funcionan como el primer día. Totalmente recomendados para gamers.",
-          "itemReviewed": {"@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization"}
-        }
-      ],
-      "@id": "https://dani477.github.io/tecnogirona.guithub.io/#organization" // Identificador único para tu organización
-    }
-  ]
-}
-</script>
 </head>
 <body>
-
-    <header>
-        <div class="container" style="display: flex; justify-content: center; align-items: center;">
-            <h1 class="logo-text">
-                <svg viewBox="-1 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Group_29" data-name="Group 29" transform="translate(-127 -339)"> <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(147 361)" fill="#FFBF00"></circle> <g id="Group_28" data-name="Group 28"> <path id="Path_33" data-name="Path 33" d="M151,354a11,11,0,1,0,11,11A11.013,11.013,0,0,0,151,354Zm0,20a9,9,0,1,1,9-9A9.01,9.01,0,0,1,151,374Z" fill="#ffffff"></path> <path id="Path_34" data-name="Path 34" d="M170,361h-2.484a16.81,16.81,0,0,0-2.026-4.833l1.774-1.773a3.005,3.005,0,0,0,0-4.244l-1.414-1.414a3,3,0,0,0-4.243,0l-1.773,1.774A16.809,16.809,0,0,0,155,348.484V346a3,3,0,0,0-3-3h-2a3,3,0,0,0-3,3v2.484A17.117,17.117,0,0,0,134.484,361H132a3,3,0,0,0-3,3v2a3,3,0,0,0,3,3h2.484a16.81,16.81,0,0,0,2.026,4.833l-1.774,1.773a3.005,3.005,0,0,0,0,4.244l1.414,1.414a3,3,0,0,0,4.243,0l1.773-1.774A16.809,16.809,0,0,0,147,381.516V384a3,3,0,0,0,3,3h2a3,3,0,0,0,3-3v-2.484a16.809,16.809,0,0,0,4.833-2.026l1.773,1.774a3,3,0,0,0,4.243,0l1.415-1.414a3.005,3.005,0,0,0,0-4.244l-1.773-1.773A16.81,16.81,0,0,0,167.516,369H170a3,3,0,0,0,3-3v-2A3,3,0,0,0,170,361Zm-6.979-10.85a1,1,0,0,1,1.414,0l1.414,1.414a1,1,0,0,1,0,1.415l-1.521,1.521a17.274,17.274,0,0,0-2.828-2.828Zm-24.042,29.7a1,1,0,0,1-1.414,0l-1.414-1.414a1,1,0,0,1,0-1.415l1.521-1.521a17.274,17.274,0,0,0,2.828,2.828Zm26.87-2.829a1,1,0,0,1,0,1.415l-1.414,1.414a1,1,0,0,1-1.414,0l-1.522-1.522a17.24,17.24,0,0,0,2.829-2.828ZM171,366a1,1,0,0,1-1,1h-4.119l-.154.813a15.08,15.08,0,0,1-11.914,11.914l-.813.154V384a1,1,0,0,1-1,1h-2a1,1,0,0,1-1-1v-4.119l-.813-.154a15.08,15.08,0,0,1-11.914-11.914l-.154-.813H132a1,1,0,0,1-1-1v-2a1,1,0,0,1,1-1h4.119l.154-.813a15.08,15.08,0,0,1,11.914-11.914l.813-.154V346a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1v4.119l.813.154a15.08,15.08,0,0,1,11.914,11.914l.154.813H170a1,1,0,0,1,1,1Z" fill="#ffffff"></path> <path id="Path_35" data-name="Path 35" d="M139,345a6,6,0,1,0-6,6A6.006,6.006,0,0,0,139,345Zm-10,0a4,4,0,1,1,4,4A4,0,0,1,129,345Z" fill="#ffffff"></path> <circle id="Ellipse_4" data-name="Ellipse 4" cx="2" cy="2" r="2" transform="translate(131 343)" fill="#ffffff"></circle> </g> </g> </g>
-                </svg>
-                Tecno<span>Girona</span>
-            </h1>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/34637161141" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" aria-label="TecnoGirona - Inicio">
+                <i class="fas fa-laptop-medical me-2" aria-hidden="true"></i>Tecno<span style="color: var(--secondary-color);">Girona</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#moviles">Móviles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#consolas">Consolas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="tel:+34972123456">
+                            <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>637 161 141
+                        </a>
+                    </li>
+                </ul>
             </div>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="container">
-            <h2>Tu Socio Tecnológico</h2>
-            <p>Desde la reparación experta de tus dispositivos hasta el desarrollo web a medida, fusionamos la experiencia técnica con soluciones innovadoras. ¡Tu tecnología, en las mejores manos!</p>
         </div>
-    </section>
+    </nav>
 
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
-                                </svg>
-                            </div>
-                            <h3>Reparación de Ordenadores</h3>
-                            <p>Solucionamos cualquier problema en tu PC o Mac, hardware o software.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Reparación de Ordenadores</h3>
-                            <p>Desde la optimización del sistema hasta la sustitución de componentes críticos, nuestro equipo experto garantiza la máxima eficiencia y durabilidad. ¡Diagnóstico rápido y eficaz para tu PC o Mac!</p>
-                        </div>
+    <!-- Hero Section -->
+    <section class="hero-section" id="main-content">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Reparación de Dispositivos Tecnológicos</h1>
+                    <p class="lead mb-4">Servicio técnico especializado en Girona para ordenadores, móviles, tablets y videoconsolas. Soluciones rápidas y profesionales con garantía.</p>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge-service"><i class="fas fa-check-circle me-1" aria-hidden="true"></i> Reparación Express</span>
+                        <span class="badge-service"><i class="fas fa-check-circle me-1" aria-hidden="true"></i> Diagnóstico 53,90€</span>
+                        <span class="badge-service badge-mobile"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Especialistas en Móviles</span>
+                        <span class="badge-service badge-console"><i class="fas fa-gamepad me-1" aria-hidden="true"></i> Expertos en Consolas</span>
                     </div>
+                    <a href="#contacto" class="btn btn-primary btn-lg me-2">Contacto Rápido</a>
+                    <a href="#servicios" class="btn btn-outline-light btn-lg">Nuestros Servicios</a>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-2 20H9v-1h6v1zm2-4V5H7v12h10z"/>
-                                </svg>
-                            </div>
-                            <h3>Reparación de Móviles</h3>
-                            <p>Reparamos pantallas rotas, baterías, problemas de carga y más.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Reparación de Móviles</h3>
-                            <p>Especialistas en la reparación de todo tipo de smartphones y tablets. Soluciones rápidas para pantallas, baterías, conectores de carga y problemas de software en todas las marcas.</p>
-                        </div>
-                    </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Reparación de dispositivos y consolas" class="img-fluid rounded shadow lazy" loading="lazy">
                 </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM9 16H6V8h3v8zm4 0h-3V8h3v8zm4 0h-3V8h3v8zm-7-5.5h-1v1h1v-1zm1 2h-1v1h1v-1zm1 0h1v1h-1v-1zm1-2h-1v1h1v-1zm1 0h1v1h-1v-1zm-1 2h-1v1h1v-1z"/>
-                                </svg>
-                            </div>
-                            <h3>Reparación de Consolas</h3>
-                            <p>Servicio técnico especializado para PlayStation, Xbox, Nintendo y otros aparatos.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Reparación de Consolas</h3>
-                            <p>No solo ordenadores y móviles. También reparamos consolas de videojuegos (PlayStation, Xbox, Nintendo) y una amplia gama de otros dispositivos electrónicos. ¡Pregúntanos sin compromiso!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
-                            </div>
-                            <h3>Desarrollo Web a Medida</h3>
-                            <p>Creamos sitios web modernos, responsivos y optimizados para tu negocio.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Desarrollo Web a Medida</h3>
-                            <p>Desde webs corporativas hasta tiendas online. Diseñamos y desarrollamos soluciones web personalizadas que se adaptan a tus necesidades, garantizando una excelente experiencia de usuario y visibilidad en buscadores.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.53 15.65 20 13.95 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.47 8.89 4 10.3 4 12c0 4.42 3.58 8 8 8V23l4-4-4-4v3z"/>
-                                </svg>
-                            </div>
-                            <h3>Recuperación de Datos</h3>
-                            <p>Recuperamos información valiosa de discos duros, SSD, USB y otros medios.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Recuperación de Datos</h3>
-                            <p>¿Has perdido información importante? Ofrecemos servicios de recuperación de datos de discos duros dañados, SSD, memorias USB y cualquier otro medio de almacenamiento, minimizando la pérdida y maximizando la recuperación.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06L14 2.1c-.06-.2-.25-.33-.47-.33H9.4c-.22 0-.41.13-.47.33L7.3 4.2c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24-.42-.12-.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52-.4 1.09.76 1.71 1.06l.3 2.1c-.06-.2-.25-.33-.47-.33h4.8c.22 0 .41-.13.47-.33l.3-2.1c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22-.07.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
-                                </svg>
-                            </div>
-                            <h3>Ampliación y Equipos a la Carta</h3>
-                            <p>Mejoramos tu ordenador con RAM, SSD, y montamos equipos personalizados.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Ampliación y Equipos a la Carta</h3>
-                            <p>Potencia tu rendimiento con nuestras ampliaciones de RAM y SSD. Además, diseñamos y ensamblamos equipos personalizados a la medida de tus necesidades, ya sea para gaming, trabajo o diseño.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                                </svg>
-                            </div>
-                            <h3>Mantenimiento Integral</h3>
-                            <p>Mantenimiento preventivo y correctivo para ordenadores y videoconsolas.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Mantenimiento Integral</h3>
-                            <p>Asegura la longevidad y el rendimiento óptimo de tus equipos con nuestros planes de mantenimiento. Prevención y solución de problemas para ordenadores y videoconsolas, garantizando su buen funcionamiento.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/>
-                                </svg>
-                            </div>
-                            <h3>TPV y CRM</h3>
-                            <p>Implantación y gestión de Terminales Punto de Venta (TPV) y software CRM.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>TPV y CRM</h3>
-                            <p>Optimiza la gestión de tu negocio con nuestras soluciones TPV (Terminal Punto de Venta) y CRM (Customer Relationship Management). Implementación, configuración y soporte para mejorar tus ventas y la relación con tus clientes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--color-primario)">
-                                    <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.97 2 7 3.97 7 7c0 2.18 1.1 4.14 2.76 5.37L10 13v2h4v-2l1.24-1.63C16.9 11.14 18 9.18 18 7c0-3.03-1.97-5-5-5h-1z"/>
-                                </svg>
-                            </div>
-                            <h3>Asesoramiento Tecnológico</h3>
-                            <p>Te ayudamos a elegir la mejor tecnología y soluciones adaptadas.</p>
-                        </div>
-                        <div class="service-card-back">
-                            <h3>Asesoramiento Tecnológico</h3>
-                            <p>¿Necesitas orientación tecnológica? Te ofrecemos asesoramiento experto para elegir el hardware, software o soluciones más adecuadas para tu hogar o negocio, optimizando tu inversión y garantizando compatibilidad.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section id="why-choose-us">
+    <!-- Services Section -->
+    <section id="servicios" class="py-5 bg-light-gray">
         <div class="container">
-            <h2 class="section-title">¿Por Qué Elegirnos?</h2>
-            <div class="advantages-grid">
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
+            <div class="text-center mb-5">
+                <h2 class="section-title display-5 fw-bold">Nuestros Servicios</h2>
+                <p class="lead">Soluciones técnicas profesionales para todos tus dispositivos</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Reparación Ordenadores -->
+                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon pc">
+                                <i class="fas fa-desktop" aria-hidden="true"></i>
                             </div>
-                            <h3>Expertos Certificados</h3>
-                            <p>Nuestro equipo está formado por técnicos titulados con años de experiencia en el sector.</p>
+                            <h3 class="h4">Reparación de Ordenadores</h3>
+                            <p class="card-text">Diagnóstico y reparación de todo tipo de problemas en ordenadores de sobremesa y portátiles de todas las marcas.</p>
+                            <div class="mt-3 text-start">
+                                <h5 class="h6">Incluye:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Cambio de piezas</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Eliminación de virus</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Problemas de hardware</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Optimización</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="advantage-item-back">
-                            <h3>Expertos Certificados</h3>
-                            <p>Nuestro equipo de técnicos cuenta con certificaciones reconocidas y años de experiencia en el sector, garantizando un servicio de la más alta calidad y soluciones fiables.</p>
+                        <div class="card-footer bg-transparent border-top-0 text-center">
+                            <a href="#ordenadores" class="btn btn-sm btn-pc">Más Información</a>
                         </div>
                     </div>
                 </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/>
-                                </svg>
+                
+                <!-- Reparación Móviles/Tablets -->
+                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mobile">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                             </div>
-                            <h3>Soluciones Integrales</h3>
-                            <p>Cubrimos todas tus necesidades tecnológicas: reparación, desarrollo, mantenimiento y asesoramiento.</p>
+                            <h3 class="h4">Reparación Móviles/Tablets</h3>
+                            <p class="card-text">Arreglamos pantallas rotas, problemas de carga, fallos de software y más en smartphones y tablets.</p>
+                            <div class="mt-3 text-start">
+                                <h5 class="h6">Incluye:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Cambio de pantalla</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Reparación conector carga</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Problemas de software</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Sustitución batería</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="advantage-item-back">
-                            <h3>Soluciones Integrales</h3>
-                            <p>Desde reparaciones y desarrollo web hasta mantenimiento y asesoramiento, te ofrecemos un abanico completo de servicios tecnológicos para cubrir todas tus necesidades bajo un mismo techo.</p>
+                        <div class="card-footer bg-transparent border-top-0 text-center">
+                            <a href="#moviles" class="btn btn-sm btn-mobile">Más Información</a>
                         </div>
                     </div>
                 </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                                </svg>
+                
+                <!-- Reparación de Videoconsolas -->
+                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon console">
+                                <i class="fas fa-gamepad" aria-hidden="true"></i>
                             </div>
-                            <h3>Atención Personalizada</h3>
-                            <p>Cada cliente es único. Ofrecemos un servicio adaptado a tus requisitos y presupuesto.</p>
+                            <h3 class="h4">Reparación de Videoconsolas</h3>
+                            <p class="card-text">Especialistas en reparación de PS4, PS5, Xbox, Nintendo Switch y otras consolas. Soluciones para problemas de hardware y software.</p>
+                            <div class="mt-3 text-start">
+                                <h5 class="h6">Incluye:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Luz azul/roja PS4</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Problemas lectura discos</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Overheating</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Fallos de alimentación</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="advantage-item-back">
-                            <h3>Atención Personalizada</h3>
-                            <p>Sabemos que cada cliente es único. Escuchamos tus necesidades para ofrecerte soluciones a medida, con un trato cercano y adaptado a tus requisitos y presupuesto.</p>
+                        <div class="card-footer bg-transparent border-top-0 text-center">
+                            <a href="#consolas" class="btn btn-sm btn-console">Más Información</a>
                         </div>
                     </div>
                 </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.71-12.29c-.39-.39-1.02-.39-1.41 0L9 10.59l-1.3-1.3c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41L8.29 13.7c.39.39 1.02.39 1.41 0L14.71 9.71c.39-.39.39-1.02 0-1.41z"/>
-                                </svg>
+                
+                <!-- Recuperación de Datos -->
+                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon data">
+                                <i class="fas fa-hdd" aria-hidden="true"></i>
                             </div>
-                            <h3>Garantía de Satisfacción</h3>
-                            <p>Trabajamos con los más altos estándares de calidad para tu total tranquilidad y confianza.</p>
+                            <h3 class="h4">Recuperación de Datos</h3>
+                            <p class="card-text">Recuperamos tus archivos importantes de discos duros, USB, tarjetas de memoria y otros dispositivos dañados.</p>
+                            <div class="mt-3 text-start">
+                                <h5 class="h6">Incluye:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Discos duros dañados</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Datos borrados</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Formateo accidental</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Fallos lógicos</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="advantage-item-back">
-                            <h3>Garantía de Satisfacción</h3>
-                            <p>Tu confianza es nuestra prioridad. Trabajamos con los más altos estándares de calidad y te ofrecemos garantía en todos nuestros servicios, asegurando tu total tranquilidad.</p>
+                        <div class="card-footer bg-transparent border-top-0 text-center">
+                            <a href="#datos" class="btn btn-sm btn-data">Más Información</a>
                         </div>
                     </div>
                 </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M13 1.01V6h5L11 23v-5H6l7-17z"/>
-                                </svg>
+                
+                <!-- Instalación y Configuración -->
+                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.5s;">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon config">
+                                <i class="fas fa-cogs" aria-hidden="true"></i>
                             </div>
-                            <h3>Soporte Técnico Rápido</h3>
-                            <p>Nos enorgullece ofrecer tiempos de respuesta ágiles y soluciones rápidas para que nunca te quedes desconectado.</p>
+                            <h3 class="h4">Instalación y Configuración</h3>
+                            <p class="card-text">Instalamos y configuramos sistemas operativos, programas, redes WiFi y otros servicios tecnológicos.</p>
+                            <div class="mt-3 text-start">
+                                <h5 class="h6">Incluye:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Instalación Windows/Linux</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Configuración redes</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Instalación programas</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Optimización sistema</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="advantage-item-back">
-                            <h3>Soporte Técnico Rápido</h3>
-                            <p>Tu tiempo es oro. Por eso, garantizamos una respuesta inmediata y soluciones eficientes a tus problemas tecnológicos, minimizando cualquier interrupción en tu día a día.</p>
+                        <div class="card-footer bg-transparent border-top-0 text-center">
+                            <a href="#configuracion" class="btn btn-sm btn-config">Más Información</a>
                         </div>
                     </div>
                 </div>
-                <div class="advantage-item">
-                    <div class="advantage-item-inner">
-                        <div class="advantage-item-front">
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
+                
+                <!-- Servicio a Empresas -->
+                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.6s;">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon business">
+                                <i class="fas fa-building" aria-hidden="true"></i>
                             </div>
-                            <h3>Presencia Local en Girona</h3>
-                            <p>Estamos cerca de ti en Girona, ofreciendo un servicio de proximidad y confianza que solo un equipo local puede dar.</p>
+                            <h3 class="h4">Servicio a Empresas</h3>
+                            <p class="card-text">Soluciones tecnológicas integrales para empresas, con mantenimiento preventivo y soporte continuo.</p>
+                            <div class="mt-3 text-start">
+                                <h5 class="h6">Servicios:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Mantenimiento IT</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Soporte remoto</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Redes empresariales</li>
+                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Soluciones a medida</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="advantage-item-back">
-                            <h3>Presencia Local en Girona</h3>
-                            <p>Como empresa arraigada en Girona, entendemos las necesidades de nuestra comunidad. Ofrecemos un servicio cercano, accesible y de confianza, siempre a tu disposición en la provincia.</p>
+                        <div class="card-footer bg-transparent border-top-0 text-center">
+                            <a href="#empresas" class="btn btn-sm btn-business">Más Información</a>
                         </div>
                     </div>
                 </div>
@@ -1192,146 +787,1009 @@
         </div>
     </section>
 
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-            <div class="testimonial-carousel">
-                <div class="testimonial-card-wrapper">
-                    <div class="testimonial-card">
-                        <p>"Mi portátil estaba muerto y TecnoGirona lo resucitó en tiempo récord. ¡Un servicio impecable y transparente! Los recomiendo al 100%."</p>
-                        <div class="testimonial-author">
-                            Juan P. <span>- Empresario local</span>
-                        </div>
+    <!-- PC Banner Section -->
+    <section id="ordenadores" class="pc-banner">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="display-5 fw-bold mb-4">Reparación Profesional de Ordenadores</h2>
+                    <p class="lead mb-4">Especialistas en reparación de portátiles y ordenadores de sobremesa de todas las marcas con componentes de calidad.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-white text-dark"><i class="fas fa-laptop me-1" aria-hidden="true"></i> Portátiles</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-desktop me-1" aria-hidden="true"></i> Sobremesa</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-server me-1" aria-hidden="true"></i> Componentes</span>
                     </div>
-                    <div class="testimonial-card">
-                        <p>"Necesitaba una web para mi negocio y el equipo de TecnoGirona superó mis expectativas. Profesionalidad y un diseño increíble."</p>
-                        <div class="testimonial-author">
-                            Maria F. <span>- Tienda online</span>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                    <h4>Reparaciones Comunes</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Pantallas rotas</li>
+                                        <li class="mb-2">Problemas de arranque</li>
+                                        <li class="mb-2">Sobrecalentamiento</li>
+                                        <li>Fallos de hardware</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"La recuperación de mis datos fue crucial y lo lograron sin problemas. Un alivio saber que puedo confiar en ellos para cualquier problema tecnológico."</p>
-                        <div class="testimonial-author">
-                            Carlos G. <span>- Autónomo</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Siempre que tengo un problema con mi móvil, acudo a TecnoGirona. Rápidos, eficientes y con precios justos. ¡Son mis técnicos de cabecera!"</p>
-                        <div class="testimonial-author">
-                            Laura M. <span>- Cliente recurrente</span>
-                        </div>
-                    </div>
-                     <div class="testimonial-card">
-                        <p>"El asesoramiento para mi nueva oficina fue excelente. Me ayudaron a elegir el hardware y software perfecto sin gastar de más."</p>
-                        <div class="testimonial-author">
-                            Roberto D. <span>- Startup Tech</span>
-                        </div>
-                    </div>
-                     <div class="testimonial-card">
-                        <p>"Servicio de mantenimiento para mis consolas, ¡impecable! Ahora funcionan como el primer día. Totalmente recomendados para gamers."</p>
-                        <div class="testimonial-author">
-                            Ana L. <span>- Entusiasta de los videojuegos</span>
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-tools" aria-hidden="true"></i>
+                                    <h4>Otros Servicios</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Actualización componentes</li>
+                                        <li class="mb-2">Limpieza interna</li>
+                                        <li class="mb-2">Cambio pasta térmica</li>
+                                        <li>Optimización sistema</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-dots"></div>
         </div>
     </section>
+
+    <!-- PC Models Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title pc display-5 fw-bold">Marcas que Reparamos</h2>
+                <p class="lead">Trabajamos con todas las principales marcas de ordenadores y componentes</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-laptop fa-4x mb-3" style="color: var(--pc-color);" aria-hidden="true"></i>
+                            <h3>Portátiles</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">HP, Dell, Lenovo</li>
+                                <li class="mb-2">Asus, Acer, MSI</li>
+                                <li class="mb-2">Apple MacBook</li>
+                                <li>Toshiba, Samsung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-desktop fa-4x mb-3" style="color: var(--pc-color);" aria-hidden="true"></i>
+                            <h3>Sobremesa</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">PC Gaming</li>
+                                <li class="mb-2">Workstations</li>
+                                <li class="mb-2">Todo-en-uno</li>
+                                <li>Ordenadores de oficina</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-microchip fa-4x mb-3" style="color: var(--pc-color);" aria-hidden="true"></i>
+                            <h3>Componentes</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Discos duros/SSD</li>
+                                <li class="mb-2">Tarjetas gráficas</li>
+                                <li class="mb-2">Placas base</li>
+                                <li>Fuentes alimentación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contacto" class="btn btn-pc btn-lg px-4">Consulta tu modelo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Banner Section -->
+    <section id="moviles" class="mobile-banner">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="display-5 fw-bold mb-4">Reparación Profesional de Móviles</h2>
+                    <p class="lead mb-4">Especialistas en reparación de todas las marcas y modelos con componentes de calidad y garantía.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-white text-dark"><i class="fab fa-apple me-1" aria-hidden="true"></i> iPhone</span>
+                        <span class="badge bg-white text-dark"><i class="fab fa-android me-1" aria-hidden="true"></i> Android</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Tablets</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-mobile-screen" aria-hidden="true"></i>
+                                    <h4>Reparaciones Comunes</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Cambio de pantalla</li>
+                                        <li class="mb-2">Sustitución de batería</li>
+                                        <li class="mb-2">Problemas de carga</li>
+                                        <li>Fallo de micrófono/altavoz</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+                                    <h4>Otros Servicios</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Reparación de placa base</li>
+                                        <li class="mb-2">Sustitución de conectores</li>
+                                        <li class="mb-2">Eliminación de humedad</li>
+                                        <li>Recuperación de datos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Models Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title mobile display-5 fw-bold">Marcas que Reparamos</h2>
+                <p class="lead">Trabajamos con todas las principales marcas y modelos de smartphones y tablets</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-apple fa-4x mb-3" style="color: var(--mobile-color);" aria-hidden="true"></i>
+                            <h3>Apple iPhone</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">iPhone 14/13/12 Series</li>
+                                <li class="mb-2">iPhone 11/XS/XR</li>
+                                <li class="mb-2">iPhone X/8/7/6</li>
+                                <li>iPhone SE/5S/5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-android fa-4x mb-3" style="color: var(--mobile-color);" aria-hidden="true"></i>
+                            <h3>Android</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Samsung Galaxy S/Note</li>
+                                <li class="mb-2">Xiaomi Redmi/Note</li>
+                                <li class="mb-2">Huawei P/Mate Series</li>
+                                <li>Oppo/OnePlus/Vivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-tablet-alt fa-4x mb-3" style="color: var(--mobile-color);" aria-hidden="true"></i>
+                            <h3>Tablets</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">iPad todas series</li>
+                                <li class="mb-2">Samsung Galaxy Tab</li>
+                                <li class="mb-2">Huawei MediaPad</li>
+                                <li>Amazon Fire Tablet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contacto" class="btn btn-mobile btn-lg px-4">Consulta tu modelo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Console Banner Section -->
+    <section id="consolas" class="console-banner">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="display-5 fw-bold mb-4">Reparación Profesional de Videoconsolas</h2>
+                    <p class="lead mb-4">Especialistas en reparación de todas las marcas y modelos con piezas originales y garantía.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-white text-dark"><i class="fas fa-playstation me-1" aria-hidden="true"></i> PlayStation</span>
+                        <span class="badge bg-white text-dark"><i class="fab fa-xbox me-1" aria-hidden="true"></i> Xbox</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-gamepad me-1" aria-hidden="true"></i> Nintendo</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-tools" aria-hidden="true"></i>
+                                    <h4>Reparaciones Comunes</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Luz azul/roja PS4</li>
+                                        <li class="mb-2">Overheating</li>
+                                        <li class="mb-2">Problemas HDMI</li>
+                                        <li>Fallos de alimentación</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                                    <h4>Otros Servicios</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Limpieza interna</li>
+                                        <li class="mb-2">Cambio pasta térmica</li>
+                                        <li class="mb-2">Reparación joysticks</li>
+                                        <li>Actualización firmware</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Console Models Section -->
+    <section class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title console display-5 fw-bold">Marcas que Reparamos</h2>
+                <p class="lead">Trabajamos con todas las principales marcas y modelos de videoconsolas</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-playstation fa-4x mb-3" style="color: var(--console-color);" aria-hidden="true"></i>
+                            <h3>PlayStation</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">PS5 / PS5 Digital</li>
+                                <li class="mb-2">PS4 / PS4 Pro / PS4 Slim</li>
+                                <li class="mb-2">PS3 / PS3 Slim</li>
+                                <li>PS Vita / PSP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-xbox fa-4x mb-3" style="color: var(--console-color);" aria-hidden="true"></i>
+                            <h3>Xbox</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Xbox Series X/S</li>
+                                <li class="mb-2">Xbox One X / One S</li>
+                                <li class="mb-2">Xbox 360</li>
+                                <li>Xbox Original</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-gamepad fa-4x mb-3" style="color: var(--console-color);" aria-hidden="true"></i>
+                            <h3>Nintendo</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Switch / Switch Lite</li>
+                                <li class="mb-2">Wii U / Wii</li>
+                                <li class="mb-2">3DS / 2DS</li>
+                                <li>DS / DSi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contacto" class="btn btn-console btn-lg px-4">Consulta tu modelo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Recovery Banner Section -->
+    <section id="datos" class="data-banner">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="display-5 fw-bold mb-4">Recuperación Profesional de Datos</h2>
+                    <p class="lead mb-4">Recuperamos tus archivos importantes de dispositivos dañados con las técnicas más avanzadas.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-white text-dark"><i class="fas fa-hdd me-1" aria-hidden="true"></i> Discos Duros</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-usb me-1" aria-hidden="true"></i> USB</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Móviles</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-database" aria-hidden="true"></i>
+                                    <h4>Recuperación de</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Fotos y vídeos</li>
+                                        <li class="mb-2">Documentos</li>
+                                        <li class="mb-2">Correos electrónicos</li>
+                                        <li>Archivos empresariales</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <h4>Casos Comunes</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Dispositivos dañados</li>
+                                        <li class="mb-2">Borrado accidental</li>
+                                        <li class="mb-2">Formateo no deseado</li>
+                                        <li>Fallos lógicos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Recovery Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title data display-5 fw-bold">Dispositivos que Recuperamos</h2>
+                <p class="lead">Trabajamos con todos los tipos de dispositivos de almacenamiento</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-hdd fa-4x mb-3" style="color: var(--data-color);" aria-hidden="true"></i>
+                            <h3>Discos Duros</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">HDD y SSD</li>
+                                <li class="mb-2">Internos y externos</li>
+                                <li class="mb-2">Daños físicos</li>
+                                <li>Daños lógicos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-mobile-alt fa-4x mb-3" style="color: var(--data-color);" aria-hidden="true"></i>
+                            <h3>Móviles y Tablets</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Smartphones</li>
+                                <li class="mb-2">Tablets</li>
+                                <li class="mb-2">Daños por agua</li>
+                                <li>Pantallas rotas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-sd-card fa-4x mb-3" style="color: var(--data-color);" aria-hidden="true"></i>
+                            <h3>Otros Dispositivos</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">USB y memorias</li>
+                                <li class="mb-2">Tarjetas SD/CF</li>
+                                <li class="mb-2">RAID y NAS</li>
+                                <li>SSD externos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contacto" class="btn btn-data btn-lg px-4">Consulta tu caso</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Config Banner Section -->
+    <section id="configuracion" class="config-banner">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="display-5 fw-bold mb-4">Instalación y Configuración</h2>
+                    <p class="lead mb-4">Servicios profesionales de instalación y configuración para maximizar el rendimiento de tus dispositivos.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-white text-dark"><i class="fab fa-windows me-1" aria-hidden="true"></i> Windows</span>
+                        <span class="badge bg-white text-dark"><i class="fab fa-linux me-1" aria-hidden="true"></i> Linux</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-wifi me-1" aria-hidden="true"></i> Redes</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                    <h4>Instalación de</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Sistemas operativos</li>
+                                        <li class="mb-2">Controladores</li>
+                                        <li class="mb-2">Programas esenciales</li>
+                                        <li>Software especializado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                                    <h4>Configuración de</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Redes WiFi/Ethernet</li>
+                                        <li class="mb-2">Correo electrónico</li>
+                                        <li class="mb-2">Copia de seguridad</li>
+                                        <li>Optimización sistema</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Config Section -->
+    <section class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title config display-5 fw-bold">Servicios de Configuración</h2>
+                <p class="lead">Ofrecemos soluciones completas para tus necesidades tecnológicas</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-windows fa-4x mb-3" style="color: var(--config-color);" aria-hidden="true"></i>
+                            <h3>Sistemas Operativos</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Windows 10/11</li>
+                                <li class="mb-2">Linux (Ubuntu, Mint)</li>
+                                <li class="mb-2">Instalación limpia</li>
+                                <li>Migración de datos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-network-wired fa-4x mb-3" style="color: var(--config-color);" aria-hidden="true"></i>
+                            <h3>Redes y Conectividad</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Configuración WiFi</li>
+                                <li class="mb-2">Redes empresariales</li>
+                                <li class="mb-2">Seguridad red</li>
+                                <li>Solución problemas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-tools fa-4x mb-3" style="color: var(--config-color);" aria-hidden="true"></i>
+                            <h3>Mantenimiento</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Optimización sistema</li>
+                                <li class="mb-2">Limpieza malware</li>
+                                <li class="mb-2">Actualizaciones</li>
+                                <li>Copia de seguridad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contacto" class="btn btn-config btn-lg px-4">Solicitar Servicio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Banner Section -->
+    <section id="empresas" class="business-banner">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="display-5 fw-bold mb-4">Servicios para Empresas</h2>
+                    <p class="lead mb-4">Soluciones tecnológicas integrales para empresas con soporte continuo y mantenimiento preventivo.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-white text-dark"><i class="fas fa-building me-1" aria-hidden="true"></i> Oficinas</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-store me-1" aria-hidden="true"></i> Comercios</span>
+                        <span class="badge bg-white text-dark"><i class="fas fa-industry me-1" aria-hidden="true"></i> Pymes</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-headset" aria-hidden="true"></i>
+                                    <h4>Soporte IT</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Mantenimiento preventivo</li>
+                                        <li class="mb-2">Soporte remoto</li>
+                                        <li class="mb-2">Asistencia técnica</li>
+                                        <li>Resolución incidencias</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card banner-card text-center py-4 h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-server" aria-hidden="true"></i>
+                                    <h4>Infraestructura</h4>
+                                    <ul class="list-unstyled mt-3">
+                                        <li class="mb-2">Redes empresariales</li>
+                                        <li class="mb-2">Servidores</li>
+                                        <li class="mb-2">Ciberseguridad</li>
+                                        <li>Copias de seguridad</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title business display-5 fw-bold">Servicios Empresariales</h2>
+                <p class="lead">Soluciones a medida para empresas de todos los tamaños</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-laptop-house fa-4x mb-3" style="color: var(--business-color);" aria-hidden="true"></i>
+                            <h3>Oficinas</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Mantenimiento equipos</li>
+                                <li class="mb-2">Redes cableadas/WiFi</li>
+                                <li class="mb-2">Impresoras compartidas</li>
+                                <li>Soporte a empleados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-cash-register fa-4x mb-3" style="color: var(--business-color);" aria-hidden="true"></i>
+                            <h3>Comercios</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">TPVs y cajas registradoras</li>
+                                <li class="mb-2">Pantallas informativas</li>
+                                <li class="mb-2">Sistemas de inventario</li>
+                                <li>Cámaras de seguridad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-industry fa-4x mb-3" style="color: var(--business-color);" aria-hidden="true"></i>
+                            <h3>Pymes</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">Infraestructura IT</li>
+                                <li class="mb-2">Servidores locales</li>
+                                <li class="mb-2">Soluciones cloud</li>
+                                <li>Consultoría tecnológica</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contacto" class="btn btn-business btn-lg px-4">Contactar para Empresa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                        </div>
+                        <h3>Reparación Rápida</h3>
+                        <p>La mayoría de reparaciones las realizamos en 24-48 horas, para que no estés sin tu dispositivo más tiempo del necesario.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-euro-sign" aria-hidden="true"></i>
+                        </div>
+                        <h3>Diagnóstico Profesional</h3>
+                        <p>Tarifa plana de 53,90€ para diagnóstico completo. Solo pagas por la reparación si decides continuar con el servicio.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Garantía 3 Meses</h3>
+                        <p>Todas nuestras reparaciones incluyen garantía de 3 meses en piezas y mano de obra para tu tranquilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Taller TecnoGirona" class="img-fluid rounded shadow lazy" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title display-5 fw-bold">Nuestra Historia</h2>
+                    <p class="lead">Más de 10 años ofreciendo soluciones tecnológicas en Girona</p>
+                    <p>TecnoGirona nació en 2013 con el objetivo de ofrecer un servicio técnico cercano, honesto y profesional para todos los vecinos de Girona y alrededores.</p>
+                    <p>Lo que comenzó como un pequeño taller de reparación se ha convertido en un referente en el sector, gracias a nuestro compromiso con la calidad y la satisfacción del cliente.</p>
+                    <p>Nuestro equipo está formado por técnicos certificados con años de experiencia en reparación de dispositivos electrónicos, incluyendo móviles y videoconsolas de última generación.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                    <i class="fas fa-user-check text-primary" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">+2,500</h5>
+                                    <small class="text-muted">Clientes satisfechos</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                    <i class="fas fa-tools text-primary" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">+5,000</h5>
+                                    <small class="text-muted">Dispositivos reparados</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                    <i class="fas fa-mobile-alt text-primary" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">+1,200</h5>
+                                    <small class="text-muted">Móviles reparados</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                    <i class="fas fa-gamepad text-primary" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">+800</h5>
+                                    <small class="text-muted">Consolas reparadas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title display-5 fw-bold">Opiniones de Clientes</h2>
+                <p class="lead">Lo que dicen quienes ya han confiado en nosotros</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card card bg-light p-4">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle me-3" width="60" alt="Elena Martínez" loading="lazy">
+                                            <div>
+                                                <h5 class="mb-0">Elena Martínez</h5>
+                                                <small class="text-muted">Girona</small>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">"Llevé mi portátil que no arrancaba y en menos de 2 horas me lo tenían listo. El trato fue excelente y el precio muy razonable. ¡Totalmente recomendables!"</p>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                                <div class="testimonial-card card bg-light p-4">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="60" alt="Jordi Ribas" loading="lazy">
+                                            <div>
+                                                <h5 class="mb-0">Jordi Ribas</h5>
+                                                <small class="text-muted">Salt</small>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">"Mi PS4 daba la luz azul y ya la daba por perdida. En TecnoGirona la repararon en un día y funciona como nueva. ¡Increíble servicio!"</p>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                                <div class="testimonial-card card bg-light p-4">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="60" alt="Carla Vidal" loading="lazy">
+                                            <div>
+                                                <h5 class="mb-0">Carla Vidal</h5>
+                                                <small class="text-muted">Sarrià de Ter</small>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">"Se me cayó el iPhone y se rompió la pantalla. La reparación fue rápida y con garantía. Ahora funciona perfectamente. ¡Muy profesionales!"</p>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                            <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Testimonio anterior">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Siguiente testimonio">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> TecnoGirona - Todos los derechos reservados.</p>
-            <p>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h4 text-white mb-4">TecnoGirona</h3>
+                    <p>Servicio técnico especializado en reparación de ordenadores, móviles, tablets y videoconsolas en Girona.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h3 class="h4 text-white mb-4">Enlaces</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Inicio</a></li>
+                        <li class="mb-2"><a href="#servicios">Servicios</a></li>
+                        <li class="mb-2"><a href="#moviles">Móviles</a></li>
+                        <li class="mb-2"><a href="#consolas">Consolas</a></li>
+                        <li class="mb-2"><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h3 class="h4 text-white mb-4">Servicios</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Reparación Ordenadores</a></li>
+                        <li class="mb-2"><a href="#">Reparación Móviles</a></li>
+                        <li class="mb-2"><a href="#">Reparación Consolas</a></li>
+                        <li class="mb-2"><a href="#">Recuperación Datos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h3 class="h4 text-white mb-4">Contacto</h3>
+                    <address>
+                        <p><i class="fas fa-phone-alt me-2" aria-hidden="true"></i> 637 161 141</p>
+                        <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> tecnogirona@gmail.com</p>
+                    </address>
+                </div>
+            </div>
+            
+            <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 TecnoGirona. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidad</a></li>
+                        <li class="list-inline-item"><span class="text-white mx-2">|</span></li>
+                        <li class="list-inline-item"><a href="#" class="text-white">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselWrapper = document.querySelector('.testimonial-card-wrapper');
-            const testimonialCards = Array.from(document.querySelectorAll('.testimonial-card')); // Convert NodeList to Array
-            const dotsContainer = document.querySelector('.carousel-dots');
-            let currentIndex = 0; // Current page index
-            let cardsVisible = 3; // Default for desktop
-
-            // Function to determine cardsVisible based on screen width
-            const getCardsVisible = () => {
-                // If the screen is small (e.g., mobile), show 1 card per view
-                if (window.innerWidth <= 768) {
-                    return 1;
-                }
-                // For larger screens, show 3 cards per view
-                return 3;
-            };
-
-            const createDots = () => {
-                dotsContainer.innerHTML = ''; // Clear existing dots
-                cardsVisible = getCardsVisible(); // Update cardsVisible based on current screen size
-                const totalPages = Math.ceil(testimonialCards.length / cardsVisible);
-
-                // Ensure current index is within bounds of new totalPages
-                if (currentIndex >= totalPages) {
-                    currentIndex = totalPages > 0 ? totalPages - 1 : 0; // Adjust if resized smaller
-                }
-
-                for (let i = 0; i < totalPages; i++) {
-                    const dot = document.createElement('span');
-                    dot.classList.add('dot');
-                    dot.dataset.index = i;
-                    dotsContainer.appendChild(dot);
-                    dot.addEventListener('click', () => {
-                        currentIndex = i;
-                        updateCarousel();
-                    });
-                }
-            };
-
-            const updateCarousel = () => {
-                // Recalculate card dimensions on update to be responsive
-                const currentCard = testimonialCards[0];
-                if (!currentCard) { // Exit if no cards are present
-                    carouselWrapper.style.transform = `translateX(0px)`; // Reset transform if no cards
-                    return;
-                }
-
-                // Get actual width and margin of the first card (all are assumed same)
-                const cardWidth = currentCard.offsetWidth;
-                // Get the computed margin-right. parseFloat is important for numeric value
-                const gap = parseFloat(getComputedStyle(currentCard).marginRight || 0);
-                const cardFullWidth = cardWidth + gap;
-
-                // Calculate the translation offset
-                // This shifts the wrapper by `cardsVisible` full card widths for each page
-                let offset = -currentIndex * cardFullWidth * cardsVisible;
-
-                carouselWrapper.style.transform = `translateX(${offset}px)`;
-
-                // Update active dot
-                document.querySelectorAll('.dot').forEach((dot, index) => {
-                    if (index === currentIndex) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-            };
-
-            // Initialize carousel and dots
-            createDots();
-            updateCarousel();
-
-            // Recalculate and update on window resize
-            window.addEventListener('resize', () => {
-                // Only recreate dots and update if cardsVisible actually changes
-                // or if there's a significant resize that affects card layout
-                const newCardsVisible = getCardsVisible();
-                if (newCardsVisible !== cardsVisible) {
-                    cardsVisible = newCardsVisible;
-                    createDots();
-                }
-                updateCarousel();
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+            
+            // Lazy load images
+            const lazyImages = document.querySelectorAll('img.lazy');
+            lazyImages.forEach(img => {
+                img.classList.add('loaded');
             });
         });
+        
+        // Cambiar navbar al hacer scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling para enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without page reload
+                    if (history.pushState) {
+                        history.pushState(null, null, this.getAttribute('href'));
+                    } else {
+                        location.hash = this.getAttribute('href');
+                    }
+                }
+            });
+        });
+        
+        // Form validation
+        (function() {
+            'use strict';
+            
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                
+                form.classList.add('was-validated');
+            }, false);
+        })();
+        
+        // Intersection Observer for animations
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.animate-fadeInUp');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            elements.forEach(element => {
+                element.style.animationPlayState = 'paused';
+                observer.observe(element);
+            });
+        };
+        
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
     </script>
-
 </body>
 </html>
