@@ -3,1540 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicio técnico especializado en Girona para reparación de ordenadores, móviles, tablets y videoconsolas. Reparaciones rápidas con garantía.">
-    <meta name="keywords" content="reparación móviles Girona, arreglar ordenadores, servicio técnico, reparación consolas, recuperación datos">
-    <meta name="author" content="TecnoGirona">
-    <meta property="og:title" content="TecnoGirona | Reparación de Dispositivos en Girona">
-    <meta property="og:description" content="Reparación rápida de móviles, ordenadores y consolas con garantía. ¡Presupuesto sin compromiso!">
-    <!-- Preload resources -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1X4ES7FPPT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1X4ES7FPPT');
-</script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://img.icons8.com/dusk/64/000000/computer-support.png">
-    
-    <title>TecnoGirona - Reparación de Dispositivos Tecnológicos en Girona</title>
-    
-    <!-- Critical CSS -->
+    <title>Chatbot IA: Reduce Costes y Aumenta Ventas 24/7</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root{--primary-color:#2c3e50;--secondary-color:#3498db;--mobile-color:#27ae60;--console-color:#9b59b6;--pc-color:#2980b9;--data-color:#f39c12;--config-color:#1abc9c;--business-color:#e74c3c;--light-color:#ecf0f1;--dark-color:#2c3e50}
-        body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.6;margin:0;padding:0;overflow-x:hidden}
-        h1,h2,h3,h4,h5,h6{font-family:'Montserrat',sans-serif;font-weight:700;margin-top:0}
-        .navbar{background-color:var(--primary-color);box-shadow:0 2px 10px rgba(0,0,0,0.1);transition:all 0.3s ease}
-        .hero-section{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:#fff;padding:120px 0 80px;position:relative;overflow:hidden}
-        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--primary-color);z-index:9999;display:flex;justify-content:center;align-items:center;transition:opacity 0.5s ease}
-        .preloader.fade-out{opacity:0}
-    </style>
-    
-    <!-- Deferred CSS -->
-    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
-    
-    <!-- Main CSS -->
-    <style>
-        /* Optimized CSS */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --mobile-color: #27ae60;
-            --console-color: #9b59b6;
-            --pc-color: #2980b9;
-            --data-color: #f39c12;
-            --config-color: #1abc9c;
-            --business-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-        
-        .navbar {
-            background-color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled {
-            background-color: rgba(44, 62, 80, 0.95);
-            padding: 10px 0;
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-        }
-        
-        .nav-link {
-            font-weight: 600;
-            padding: 0.5rem 1rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #334155;
         }
         
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 5rem 0;
+            border-bottom: 1px solid #bae6fd;
         }
         
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
+        .hero-title {
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
         }
         
-        .service-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .hero-subtitle {
+            font-size: 1.35rem;
+            color: #475569;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
             border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            height: 100%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .service-icon.pc { color: var(--pc-color); }
-        .service-icon.mobile { color: var(--mobile-color); }
-        .service-icon.console { color: var(--console-color); }
-        .service-icon.data { color: var(--data-color); }
-        .service-icon.config { color: var(--config-color); }
-        .service-icon.business { color: var(--business-color); }
-        
-        .btn-primary {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            padding: 10px 25px;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
             font-weight: 600;
-            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
         }
         
-        .btn-primary:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-        }
-        
-        .btn-mobile {
-            background-color: var(--mobile-color);
-            border-color: var(--mobile-color);
-            color: white;
-        }
-        
-        .btn-mobile:hover {
-            background-color: #219955;
-            border-color: #219955;
-            color: white;
-        }
-        
-        .btn-console {
-            background-color: var(--console-color);
-            border-color: var(--console-color);
-            color: white;
-        }
-        
-        .btn-console:hover {
-            background-color: #8e44ad;
-            border-color: #8e44ad;
-            color: white;
-        }
-        
-        .btn-pc {
-            background-color: var(--pc-color);
-            border-color: var(--pc-color);
-            color: white;
-        }
-        
-        .btn-pc:hover {
-            background-color: #2472a4;
-            border-color: #2472a4;
-            color: white;
-        }
-        
-        .btn-data {
-            background-color: var(--data-color);
-            border-color: var(--data-color);
-            color: white;
-        }
-        
-        .btn-data:hover {
-            background-color: #e67e22;
-            border-color: #e67e22;
-            color: white;
-        }
-        
-        .btn-config {
-            background-color: var(--config-color);
-            border-color: var(--config-color);
-            color: white;
-        }
-        
-        .btn-config:hover {
-            background-color: #16a085;
-            border-color: #16a085;
-            color: white;
-        }
-        
-        .btn-business {
-            background-color: var(--business-color);
-            border-color: var(--business-color);
-            color: white;
-        }
-        
-        .btn-business:hover {
-            background-color: #c0392b;
-            border-color: #c0392b;
-            color: white;
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(37, 99, 235, 0.3);
+            background-color: var(--secondary-color);
         }
         
         .section-title {
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
             position: relative;
-            margin-bottom: 50px;
-            padding-bottom: 15px;
         }
         
-        .section-title::after {
+        .section-title:after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-        
-        .section-title.mobile::after { background-color: var(--mobile-color); }
-        .section-title.console::after { background-color: var(--console-color); }
-        .section-title.pc::after { background-color: var(--pc-color); }
-        .section-title.data::after { background-color: var(--data-color); }
-        .section-title.config::after { background-color: var(--config-color); }
-        .section-title.business::after { background-color: var(--business-color); }
-        
-        .testimonial-card { border-left: 4px solid var(--secondary-color); }
-        .bg-light-gray { background-color: #f8f9fa; }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 60px 0 20px;
-        }
-        
-        .footer-links a {
-            color: var(--light-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .footer-links .text-white {
-            color: white !important;
-        }
-        
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            color: white;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-5px);
-        }
-        
-        .badge-service {
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 5px 10px;
-            border-radius: 50px;
-            background-color: var(--secondary-color);
-            color: white;
-        }
-        
-        .badge-mobile { background-color: var(--mobile-color); }
-        .badge-console { background-color: var(--console-color); }
-        .badge-pc { background-color: var(--pc-color); }
-        .badge-data { background-color: var(--data-color); }
-        .badge-config { background-color: var(--config-color); }
-        .badge-business { background-color: var(--business-color); }
-        
-        .feature-box {
-            padding: 30px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-        
-        /* Banners styles */
-        .mobile-banner {
-            background: linear-gradient(135deg, var(--mobile-color) 0%, #2ecc71 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .mobile-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: -12px;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
+            border-radius: 2px;
         }
         
-        .console-banner {
-            background: linear-gradient(135deg, var(--console-color) 0%, #6c3483 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
+        .chapter-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary-color);
         }
         
-        .console-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
-        }
-        
-        .pc-banner {
-            background: linear-gradient(135deg, var(--pc-color) 0%, #3498db 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pc-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
-        }
-        
-        .data-banner {
-            background: linear-gradient(135deg, var(--data-color) 0%, #f39c12 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .data-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
-        }
-        
-        .config-banner {
-            background: linear-gradient(135deg, var(--config-color) 0%, #1abc9c 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .config-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
-        }
-        
-        .business-banner {
-            background: linear-gradient(135deg, var(--business-color) 0%, #e74c3c 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .business-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3') no-repeat center center/cover;
-            opacity: 0.1;
-        }
-        
-        /* Banner cards */
-        .banner-card {
-            background-color: rgba(255,255,255,0.1);
-            border: none;
-            color: white;
-            height: 100%;
-        }
-        
-        .banner-card .card-body {
-            padding: 2rem;
-        }
-        
-        .banner-card i {
-            font-size: 3rem;
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
             margin-bottom: 1.5rem;
         }
         
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 100;
+        .benefit-icon {
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            margin-right: 1rem;
+            flex-shrink: 0;
         }
         
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-bottom: 2rem;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin: 1rem 0;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .step-number {
+            background-color: var(--primary-color);
             color: white;
-            transform: scale(1.1);
-        }
-        
-        /* Accessibility improvements */
-        a:focus, button:focus {
-            outline: 2px solid var(--secondary-color);
-            outline-offset: 2px;
-        }
-        
-        /* Skip to content link for keyboard users */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--secondary-color);
-            color: white;
-            padding: 8px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-        
-        .skip-link:focus {
-            top: 0;
-        }
-        
-        /* Lazy loading for images */
-        img.lazy {
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        img.lazy.loaded {
-            opacity: 1;
-        }
-        
-        /* Improved contrast for better accessibility */
-        .text-muted {
-            color: #6c757d !important;
-        }
-        
-        /* Animation for cards */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        /* Preloader animation */
-        .preloader-spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(255,255,255,0.3);
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            border-top-color: var(--secondary-color);
-            animation: spin 1s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-right: 1rem;
+            flex-shrink: 0;
         }
         
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .step-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 4rem 0;
+            color: white;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .chapter-card {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-spinner"></div>
-    </div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     
-    <!-- Skip to content link -->
-    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/34637161141" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#" aria-label="TecnoGirona - Inicio">
-                <i class="fas fa-laptop-medical me-2" aria-hidden="true"></i>Tecno<span style="color: var(--secondary-color);">Girona</span>
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">
+                <i class="fas fa-robot me-2"></i>ChatbotIA
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Inicio</a>
+                        <a class="nav-link" href="#problema">El Problema</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
+                        <a class="nav-link" href="#solucion">La Solución</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#moviles">Móviles</a>
+                        <a class="nav-link" href="#casos">Casos Reales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#consolas">Consolas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-light" href="tel:+34637161141">
-                            <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>637 161 141
-                        </a>
+                        <a class="nav-link" href="#implementacion">Implementación</a>
                     </li>
                 </ul>
+                <a href="#cta" class="btn btn-primary-custom ms-lg-3 text-white">Agendar Llamada</a>
             </div>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
-    <section class="hero-section" id="main-content">
-        <div class="container position-relative">
+    <section class="hero-section">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Reparación de Dispositivos Tecnológicos</h1>
-                    <p class="lead mb-4">Servicio técnico especializado en Girona para ordenadores, móviles, tablets y videoconsolas. Soluciones rápidas y profesionales con garantía.</p>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span class="badge-service"><i class="fas fa-check-circle me-1" aria-hidden="true"></i> Reparación Express</span>
-                        <span class="badge-service"><i class="fas fa-check-circle me-1" aria-hidden="true"></i> Diagnóstico 53,90€</span>
-                        <span class="badge-service badge-mobile"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Especialistas en Móviles</span>
-                        <span class="badge-service badge-console"><i class="fas fa-gamepad me-1" aria-hidden="true"></i> Expertos en Consolas</span>
-                    </div>
+                    <h1 class="hero-title">El Secreto Mejor Guardado para Reducir los Costes de Atención al Cliente y Aumentar las Ventas Automáticamente</h1>
+                    <p class="hero-subtitle"> Descubre cómo un chatbot con inteligencia artificial puede revolucionar tu negocio, trabajando 24/7 sin pausas, sin errores y sin descanso.</p>
+                    <div class="d-flex gap-3">
+                       </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Reparación de dispositivos y consolas" class="img-fluid rounded shadow lazy" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chatbot IA" class="img-fluid rounded-4 shadow mt-4 mt-lg-0">
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="servicios" class="py-5 bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title display-5 fw-bold">Nuestros Servicios</h2>
-                <p class="lead">Soluciones técnicas profesionales para todos tus dispositivos</p>
-            </div>
-            
-            <div class="row g-4">
-                <!-- Reparación Ordenadores -->
-                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.1s;">
-                    <div class="service-card card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon pc">
-                                <i class="fas fa-desktop" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="h4">Reparación de Ordenadores</h3>
-                            <p class="card-text">Diagnóstico y reparación de todo tipo de problemas en ordenadores de sobremesa y portátiles de todas las marcas.</p>
-                            <div class="mt-3 text-start">
-                                <h5 class="h6">Incluye:</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Cambio de piezas</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Eliminación de virus</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Problemas de hardware</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Optimización</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 text-center">
-                            <a href="#ordenadores" class="btn btn-sm btn-pc">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Reparación Móviles/Tablets -->
-                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="service-card card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon mobile">
-                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="h4">Reparación Móviles/Tablets</h3>
-                            <p class="card-text">Arreglamos pantallas rotas, problemas de carga, fallos de software y más en smartphones y tablets.</p>
-                            <div class="mt-3 text-start">
-                                <h5 class="h6">Incluye:</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Cambio de pantalla</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Reparación conector carga</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Problemas de software</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Sustitución batería</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 text-center">
-                            <a href="#moviles" class="btn btn-sm btn-mobile">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Reparación de Videoconsolas -->
-                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.3s;">
-                    <div class="service-card card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon console">
-                                <i class="fas fa-gamepad" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="h4">Reparación de Videoconsolas</h3>
-                            <p class="card-text">Especialistas en reparación de PS4, PS5, Xbox, Nintendo Switch y otras consolas. Soluciones para problemas de hardware y software.</p>
-                            <div class="mt-3 text-start">
-                                <h5 class="h6">Incluye:</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Luz azul/roja PS4</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Problemas lectura discos</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Overheating</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Fallos de alimentación</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 text-center">
-                            <a href="#consolas" class="btn btn-sm btn-console">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Recuperación de Datos -->
-                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.4s;">
-                    <div class="service-card card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon data">
-                                <i class="fas fa-hdd" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="h4">Recuperación de Datos</h3>
-                            <p class="card-text">Recuperamos tus archivos importantes de discos duros, USB, tarjetas de memoria y otros dispositivos dañados.</p>
-                            <div class="mt-3 text-start">
-                                <h5 class="h6">Incluye:</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Discos duros dañados</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Datos borrados</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Formateo accidental</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Fallos lógicos</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 text-center">
-                            <a href="#datos" class="btn btn-sm btn-data">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Instalación y Configuración -->
-                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.5s;">
-                    <div class="service-card card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon config">
-                                <i class="fas fa-cogs" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="h4">Instalación y Configuración</h3>
-                            <p class="card-text">Instalamos y configuramos sistemas operativos, programas, redes WiFi y otros servicios tecnológicos.</p>
-                            <div class="mt-3 text-start">
-                                <h5 class="h6">Incluye:</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Instalación Windows/Linux</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Configuración redes</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Instalación programas</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Optimización sistema</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 text-center">
-                            <a href="#configuracion" class="btn btn-sm btn-config">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Servicio a Empresas -->
-                <div class="col-md-4 animate-fadeInUp" style="animation-delay: 0.6s;">
-                    <div class="service-card card h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon business">
-                                <i class="fas fa-building" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="h4">Servicio a Empresas</h3>
-                            <p class="card-text">Soluciones tecnológicas integrales para empresas, con mantenimiento preventivo y soporte continuo.</p>
-                            <div class="mt-3 text-start">
-                                <h5 class="h6">Servicios:</h5>
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Mantenimiento IT</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Soporte remoto</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Redes empresariales</li>
-                                    <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i> Soluciones a medida</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 text-center">
-                            <a href="#empresas" class="btn btn-sm btn-business">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PC Banner Section -->
-    <section id="ordenadores" class="pc-banner">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4">Reparación Profesional de Ordenadores</h2>
-                    <p class="lead mb-4">Especialistas en reparación de portátiles y ordenadores de sobremesa de todas las marcas con componentes de calidad.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-white text-dark"><i class="fas fa-laptop me-1" aria-hidden="true"></i> Portátiles</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-desktop me-1" aria-hidden="true"></i> Sobremesa</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-server me-1" aria-hidden="true"></i> Componentes</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                                    <h4>Reparaciones Comunes</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Pantallas rotas</li>
-                                        <li class="mb-2">Problemas de arranque</li>
-                                        <li class="mb-2">Sobrecalentamiento</li>
-                                        <li>Fallos de hardware</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-tools" aria-hidden="true"></i>
-                                    <h4>Otros Servicios</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Actualización componentes</li>
-                                        <li class="mb-2">Limpieza interna</li>
-                                        <li class="mb-2">Cambio pasta térmica</li>
-                                        <li>Optimización sistema</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PC Models Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title pc display-5 fw-bold">Marcas que Reparamos</h2>
-                <p class="lead">Trabajamos con todas las principales marcas de ordenadores y componentes</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-laptop fa-4x mb-3" style="color: var(--pc-color);" aria-hidden="true"></i>
-                            <h3>Portátiles</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">HP, Dell, Lenovo</li>
-                                <li class="mb-2">Asus, Acer, MSI</li>
-                                <li class="mb-2">Apple MacBook</li>
-                                <li>Toshiba, Samsung</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-desktop fa-4x mb-3" style="color: var(--pc-color);" aria-hidden="true"></i>
-                            <h3>Sobremesa</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">PC Gaming</li>
-                                <li class="mb-2">Workstations</li>
-                                <li class="mb-2">Todo-en-uno</li>
-                                <li>Ordenadores de oficina</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-microchip fa-4x mb-3" style="color: var(--pc-color);" aria-hidden="true"></i>
-                            <h3>Componentes</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Discos duros/SSD</li>
-                                <li class="mb-2">Tarjetas gráficas</li>
-                                <li class="mb-2">Placas base</li>
-                                <li>Fuentes alimentación</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contacto" class="btn btn-pc btn-lg px-4">Consulta tu modelo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile Banner Section -->
-    <section id="moviles" class="mobile-banner">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4">Reparación Profesional de Móviles</h2>
-                    <p class="lead mb-4">Especialistas en reparación de todas las marcas y modelos con componentes de calidad y garantía.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-white text-dark"><i class="fab fa-apple me-1" aria-hidden="true"></i> iPhone</span>
-                        <span class="badge bg-white text-dark"><i class="fab fa-android me-1" aria-hidden="true"></i> Android</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Tablets</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-mobile-screen" aria-hidden="true"></i>
-                                    <h4>Reparaciones Comunes</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Cambio de pantalla</li>
-                                        <li class="mb-2">Sustitución de batería</li>
-                                        <li class="mb-2">Problemas de carga</li>
-                                        <li>Fallo de micrófono/altavoz</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
-                                    <h4>Otros Servicios</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Reparación de placa base</li>
-                                        <li class="mb-2">Sustitución de conectores</li>
-                                        <li class="mb-2">Eliminación de humedad</li>
-                                        <li>Recuperación de datos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile Models Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title mobile display-5 fw-bold">Marcas que Reparamos</h2>
-                <p class="lead">Trabajamos con todas las principales marcas y modelos de smartphones y tablets</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fab fa-apple fa-4x mb-3" style="color: var(--mobile-color);" aria-hidden="true"></i>
-                            <h3>Apple iPhone</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">iPhone 14/13/12 Series</li>
-                                <li class="mb-2">iPhone 11/XS/XR</li>
-                                <li class="mb-2">iPhone X/8/7/6</li>
-                                <li>iPhone SE/5S/5</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fab fa-android fa-4x mb-3" style="color: var(--mobile-color);" aria-hidden="true"></i>
-                            <h3>Android</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Samsung Galaxy S/Note</li>
-                                <li class="mb-2">Xiaomi Redmi/Note</li>
-                                <li class="mb-2">Huawei P/Mate Series</li>
-                                <li>Oppo/OnePlus/Vivo</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-tablet-alt fa-4x mb-3" style="color: var(--mobile-color);" aria-hidden="true"></i>
-                            <h3>Tablets</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">iPad todas series</li>
-                                <li class="mb-2">Samsung Galaxy Tab</li>
-                                <li class="mb-2">Huawei MediaPad</li>
-                                <li>Amazon Fire Tablet</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contacto" class="btn btn-mobile btn-lg px-4">Consulta tu modelo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Console Banner Section -->
-    <section id="consolas" class="console-banner">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4">Reparación Profesional de Videoconsolas</h2>
-                    <p class="lead mb-4">Especialistas en reparación de todas las marcas y modelos con piezas originales y garantía.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-white text-dark"><i class="fas fa-playstation me-1" aria-hidden="true"></i> PlayStation</span>
-                        <span class="badge bg-white text-dark"><i class="fab fa-xbox me-1" aria-hidden="true"></i> Xbox</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-gamepad me-1" aria-hidden="true"></i> Nintendo</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-tools" aria-hidden="true"></i>
-                                    <h4>Reparaciones Comunes</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Luz azul/roja PS4</li>
-                                        <li class="mb-2">Overheating</li>
-                                        <li class="mb-2">Problemas HDMI</li>
-                                        <li>Fallos de alimentación</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
-                                    <h4>Otros Servicios</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Limpieza interna</li>
-                                        <li class="mb-2">Cambio pasta térmica</li>
-                                        <li class="mb-2">Reparación joysticks</li>
-                                        <li>Actualización firmware</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Console Models Section -->
-    <section class="py-5 bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title console display-5 fw-bold">Marcas que Reparamos</h2>
-                <p class="lead">Trabajamos con todas las principales marcas y modelos de videoconsolas</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fab fa-playstation fa-4x mb-3" style="color: var(--console-color);" aria-hidden="true"></i>
-                            <h3>PlayStation</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">PS5 / PS5 Digital</li>
-                                <li class="mb-2">PS4 / PS4 Pro / PS4 Slim</li>
-                                <li class="mb-2">PS3 / PS3 Slim</li>
-                                <li>PS Vita / PSP</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fab fa-xbox fa-4x mb-3" style="color: var(--console-color);" aria-hidden="true"></i>
-                            <h3>Xbox</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Xbox Series X/S</li>
-                                <li class="mb-2">Xbox One X / One S</li>
-                                <li class="mb-2">Xbox 360</li>
-                                <li>Xbox Original</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-gamepad fa-4x mb-3" style="color: var(--console-color);" aria-hidden="true"></i>
-                            <h3>Nintendo</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Switch / Switch Lite</li>
-                                <li class="mb-2">Wii U / Wii</li>
-                                <li class="mb-2">3DS / 2DS</li>
-                                <li>DS / DSi</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contacto" class="btn btn-console btn-lg px-4">Consulta tu modelo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Recovery Banner Section -->
-    <section id="datos" class="data-banner">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4">Recuperación Profesional de Datos</h2>
-                    <p class="lead mb-4">Recuperamos tus archivos importantes de dispositivos dañados con las técnicas más avanzadas.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-white text-dark"><i class="fas fa-hdd me-1" aria-hidden="true"></i> Discos Duros</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-usb me-1" aria-hidden="true"></i> USB</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Móviles</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-database" aria-hidden="true"></i>
-                                    <h4>Recuperación de</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Fotos y vídeos</li>
-                                        <li class="mb-2">Documentos</li>
-                                        <li class="mb-2">Correos electrónicos</li>
-                                        <li>Archivos empresariales</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
-                                    <h4>Casos Comunes</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Dispositivos dañados</li>
-                                        <li class="mb-2">Borrado accidental</li>
-                                        <li class="mb-2">Formateo no deseado</li>
-                                        <li>Fallos lógicos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Recovery Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title data display-5 fw-bold">Dispositivos que Recuperamos</h2>
-                <p class="lead">Trabajamos con todos los tipos de dispositivos de almacenamiento</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-hdd fa-4x mb-3" style="color: var(--data-color);" aria-hidden="true"></i>
-                            <h3>Discos Duros</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">HDD y SSD</li>
-                                <li class="mb-2">Internos y externos</li>
-                                <li class="mb-2">Daños físicos</li>
-                                <li>Daños lógicos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-mobile-alt fa-4x mb-3" style="color: var(--data-color);" aria-hidden="true"></i>
-                            <h3>Móviles y Tablets</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Smartphones</li>
-                                <li class="mb-2">Tablets</li>
-                                <li class="mb-2">Daños por agua</li>
-                                <li>Pantallas rotas</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-sd-card fa-4x mb-3" style="color: var(--data-color);" aria-hidden="true"></i>
-                            <h3>Otros Dispositivos</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">USB y memorias</li>
-                                <li class="mb-2">Tarjetas SD/CF</li>
-                                <li class="mb-2">RAID y NAS</li>
-                                <li>SSD externos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contacto" class="btn btn-data btn-lg px-4">Consulta tu caso</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Config Banner Section -->
-    <section id="configuracion" class="config-banner">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4">Instalación y Configuración</h2>
-                    <p class="lead mb-4">Servicios profesionales de instalación y configuración para maximizar el rendimiento de tus dispositivos.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-white text-dark"><i class="fab fa-windows me-1" aria-hidden="true"></i> Windows</span>
-                        <span class="badge bg-white text-dark"><i class="fab fa-linux me-1" aria-hidden="true"></i> Linux</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-wifi me-1" aria-hidden="true"></i> Redes</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-download" aria-hidden="true"></i>
-                                    <h4>Instalación de</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Sistemas operativos</li>
-                                        <li class="mb-2">Controladores</li>
-                                        <li class="mb-2">Programas esenciales</li>
-                                        <li>Software especializado</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
-                                    <h4>Configuración de</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Redes WiFi/Ethernet</li>
-                                        <li class="mb-2">Correo electrónico</li>
-                                        <li class="mb-2">Copia de seguridad</li>
-                                        <li>Optimización sistema</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Config Section -->
-    <section class="py-5 bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title config display-5 fw-bold">Servicios de Configuración</h2>
-                <p class="lead">Ofrecemos soluciones completas para tus necesidades tecnológicas</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fab fa-windows fa-4x mb-3" style="color: var(--config-color);" aria-hidden="true"></i>
-                            <h3>Sistemas Operativos</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Windows 10/11</li>
-                                <li class="mb-2">Linux (Ubuntu, Mint)</li>
-                                <li class="mb-2">Instalación limpia</li>
-                                <li>Migración de datos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-network-wired fa-4x mb-3" style="color: var(--config-color);" aria-hidden="true"></i>
-                            <h3>Redes y Conectividad</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Configuración WiFi</li>
-                                <li class="mb-2">Redes empresariales</li>
-                                <li class="mb-2">Seguridad red</li>
-                                <li>Solución problemas</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-tools fa-4x mb-3" style="color: var(--config-color);" aria-hidden="true"></i>
-                            <h3>Mantenimiento</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Optimización sistema</li>
-                                <li class="mb-2">Limpieza malware</li>
-                                <li class="mb-2">Actualizaciones</li>
-                                <li>Copia de seguridad</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contacto" class="btn btn-config btn-lg px-4">Solicitar Servicio</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Business Banner Section -->
-    <section id="empresas" class="business-banner">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="display-5 fw-bold mb-4">Servicios para Empresas</h2>
-                    <p class="lead mb-4">Soluciones tecnológicas integrales para empresas con soporte continuo y mantenimiento preventivo.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <span class="badge bg-white text-dark"><i class="fas fa-building me-1" aria-hidden="true"></i> Oficinas</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-store me-1" aria-hidden="true"></i> Comercios</span>
-                        <span class="badge bg-white text-dark"><i class="fas fa-industry me-1" aria-hidden="true"></i> Pymes</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-headset" aria-hidden="true"></i>
-                                    <h4>Soporte IT</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Mantenimiento preventivo</li>
-                                        <li class="mb-2">Soporte remoto</li>
-                                        <li class="mb-2">Asistencia técnica</li>
-                                        <li>Resolución incidencias</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card banner-card text-center py-4 h-100">
-                                <div class="card-body">
-                                    <i class="fas fa-server" aria-hidden="true"></i>
-                                    <h4>Infraestructura</h4>
-                                    <ul class="list-unstyled mt-3">
-                                        <li class="mb-2">Redes empresariales</li>
-                                        <li class="mb-2">Servidores</li>
-                                        <li class="mb-2">Ciberseguridad</li>
-                                        <li>Copias de seguridad</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Business Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title business display-5 fw-bold">Servicios Empresariales</h2>
-                <p class="lead">Soluciones a medida para empresas de todos los tamaños</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-laptop-house fa-4x mb-3" style="color: var(--business-color);" aria-hidden="true"></i>
-                            <h3>Oficinas</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Mantenimiento equipos</li>
-                                <li class="mb-2">Redes cableadas/WiFi</li>
-                                <li class="mb-2">Impresoras compartidas</li>
-                                <li>Soporte a empleados</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-cash-register fa-4x mb-3" style="color: var(--business-color);" aria-hidden="true"></i>
-                            <h3>Comercios</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">TPVs y cajas registradoras</li>
-                                <li class="mb-2">Pantallas informativas</li>
-                                <li class="mb-2">Sistemas de inventario</li>
-                                <li>Cámaras de seguridad</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-industry fa-4x mb-3" style="color: var(--business-color);" aria-hidden="true"></i>
-                            <h3>Pymes</h3>
-                            <ul class="list-unstyled mt-3">
-                                <li class="mb-2">Infraestructura IT</li>
-                                <li class="mb-2">Servidores locales</li>
-                                <li class="mb-2">Soluciones cloud</li>
-                                <li>Consultoría tecnológica</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contacto" class="btn btn-business btn-lg px-4">Contactar para Empresa</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
+    
+    <!-- Introducción -->
     <section class="py-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock" aria-hidden="true"></i>
-                        </div>
-                        <h3>Reparación Rápida</h3>
-                        <p>La mayoría de reparaciones las realizamos en 24-48 horas, para que no estés sin tu dispositivo más tiempo del necesario.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-euro-sign" aria-hidden="true"></i>
-                        </div>
-                        <h3>Diagnóstico Profesional</h3>
-                        <p>Tarifa plana de 53,90€ para diagnóstico completo. Solo pagas por la reparación si decides continuar con el servicio.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3>Garantía 3 Meses</h3>
-                        <p>Todas nuestras reparaciones incluyen garantía de 3 meses en piezas y mano de obra para tu tranquilidad.</p>
-                    </div>
-                </div>
+            <div class="chapter-card">
+                <h2 class="section-title">Introducción</h2>
+                <p class="lead fw-bold">¿Y si te dijera que existe una herramienta que nunca duerme, nunca se enferma y puede atender a tus clientes día y noche mientras tú descansas?</p>
+                <p>Esa herramienta ya existe, y se llama chatbot con inteligencia artificial.</p>
+                <p>Este ebook te revelará cómo empresarios como tú están reduciendo drásticamente los costes operativos en atención al cliente y aumentando sus ventas gracias a esta tecnología. No es ciencia ficción. Es una ventaja competitiva que ya está cambiando las reglas del juego.</p>
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="nosotros" class="py-5 bg-light-gray">
+    
+    <!-- Capítulo 1 -->
+    <section id="problema" class="py-5 bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Taller TecnoGirona" class="img-fluid rounded shadow lazy" loading="lazy">
+            <div class="chapter-card">
+                <h2 class="section-title">El Problema Silencioso que Está Drenando tus Recursos</h2>
+                <p class="fw-bold">¿Cuánto cuesta realmente tu equipo de atención al cliente?</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-euro-sign"></i>
+                            </div>
+                            <div>
+                                <h5>Salarios y costes fijos</h5>
+                                <p class="text-muted">Salarios, formación, rotación, ausencias, descansos, tiempo improductivo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">70%</div>
+                            <p class="mb-0">de las consultas son repetitivas y fácilmente automatizables</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title display-5 fw-bold">Nuestra Historia</h2>
-                    <p class="lead">Más de 10 años ofreciendo soluciones tecnológicas en Girona</p>
-                    <p>TecnoGirona nació en 2013 con el objetivo de ofrecer un servicio técnico cercano, honesto y profesional para todos los vecinos de Girona y alrededores.</p>
-                    <p>Lo que comenzó como un pequeño taller de reparación se ha convertido en un referente en el sector, gracias a nuestro compromiso con la calidad y la satisfacción del cliente.</p>
-                    <p>Nuestro equipo está formado por técnicos certificados con años de experiencia en reparación de dispositivos electrónicos, incluyendo móviles y videoconsolas de última generación.</p>
-                    
-                    <div class="row mt-4">
-                        <div class="col-6">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
-                                    <i class="fas fa-user-check text-primary" aria-hidden="true"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">+2,500</h5>
-                                    <small class="text-muted">Clientes satisfechos</small>
-                                </div>
+                
+                <div class="mt-4 bg-danger bg-opacity-10 p-4 rounded-3">
+                    <h5 class="text-danger"><i class="fas fa-exclamation-triangle me-2"></i>El riesgo oculto: el cliente que no espera</h5>
+                    <ul class="mt-3">
+                        <li>Respuestas lentas = pérdida de ventas</li>
+                        <li>Clientes insatisfechos = reputación en peligro</li>
+                        <li>Errores humanos = costes adicionales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 2 -->
+    <section id="solucion" class="py-5">
+        <div class="container">
+            <div class="chapter-card">
+                <h2 class="section-title">El Chatbot que Nunca Duerme</h2>
+                <p class="fw-bold">¿Qué es un chatbot con IA?</p>
+                <p>Un chatbot con inteligencia artificial es un asistente virtual que:</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div>
+                                <h5>Atención automática</h5>
+                                <p class="text-muted">Atiende de forma automática a los clientes en tu web, redes sociales o WhatsApp.</p>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
-                                    <i class="fas fa-tools text-primary" aria-hidden="true"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">+5,000</h5>
-                                    <small class="text-muted">Dispositivos reparados</small>
-                                </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h5>Aprendizaje continuo</h5>
+                                <p class="text-muted">Aprende de las interacciones y se adapta a tu negocio.</p>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
-                                    <i class="fas fa-mobile-alt text-primary" aria-hidden="true"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">+1,200</h5>
-                                    <small class="text-muted">Móviles reparados</small>
-                                </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <div>
+                                <h5>Precisión y escalabilidad</h5>
+                                <p class="text-muted">Responde con precisión y puede escalar sin límites.</p>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
-                                    <i class="fas fa-gamepad text-primary" aria-hidden="true"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">+800</h5>
-                                    <small class="text-muted">Consolas reparadas</small>
-                                </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h5>Personalización</h5>
+                                <p class="text-muted">Se adapta al tono y estilo de tu marca.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <h5 class="fw-bold">¿Por qué es tan poderoso?</h5>
+                    <div class="row mt-4 g-4">
+                        <div class="col-md-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-3 h-100">
+                                <i class="fas fa-clock text-primary mb-2"></i>
+                                <h6>Trabaja 24/7</h6>
+                                <p class="small text-muted mb-0">Atiende a cualquier hora del día o noche.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-3 h-100">
+                                <i class="fas fa-users text-primary mb-2"></i>
+                                <h6>Escalabilidad</h6>
+                                <p class="small text-muted mb-0">Atiende cientos de clientes simultáneamente.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-3 h-100">
+                                <i class="fas fa-calendar-minus text-primary mb-2"></i>
+                                <h6>Sin descansos</h6>
+                                <p class="small text-muted mb-0">No necesita vacaciones ni pausas.</p>
                             </div>
                         </div>
                     </div>
@@ -1544,250 +377,377 @@
             </div>
         </div>
     </section>
-
-    <!-- Testimonials Section -->
+    
+    <!-- Capítulo 3 -->
+    <section id="casos" class="py-5 bg-light">
+        <div class="container">
+            <div class="chapter-card">
+                <h2 class="section-title">Casos Reales y Resultados Tangibles</h2>
+                
+                <div class="row mt-5">
+                    <div class="col-lg-6">
+                        <div class="testimonial-card">
+                            <h5 class="fw-bold">Caso 1: E-commerce de ropa</h5>
+                            <p class="text-muted">Antes: Equipo de 5 personas en atención al cliente, alto volumen de consultas sobre envíos, tallas y devoluciones.</p>
+                            <div class="testimonial-text mt-3">
+                                <p>Después del chatbot: Reducción del 80% en tickets humanos. Aumento del 25% en conversión de ventas nocturnas. Clientes más satisfechos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial-card">
+                            <h5 class="fw-bold">Caso 2: Clínica de estética</h5>
+                            <p class="text-muted">Antes: Consultas por WhatsApp saturaban a la recepcionista.</p>
+                            <div class="testimonial-text mt-3">
+                                <p>Después del chatbot: Agenda automatizada 24/7. Citas duplicadas sin contratar más personal. Reducción del 90% en errores de coordinación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number">80%</div>
+                            <p class="mb-0">Reducción en tickets humanos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number">25%</div>
+                            <p class="mb-0">Aumento en ventas nocturnas</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number">90%</div>
+                            <p class="mb-0">Menos errores en coordinación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 4 -->
     <section class="py-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title display-5 fw-bold">Opiniones de Clientes</h2>
-                <p class="lead">Lo que dicen quienes ya han confiado en nosotros</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="testimonial-card card bg-light p-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle me-3" width="60" alt="Elena Martínez" loading="lazy">
-                                            <div>
-                                                <h5 class="mb-0">Elena Martínez</h5>
-                                                <small class="text-muted">Girona</small>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">"Llevé mi portátil que no arrancaba y en menos de 2 horas me lo tenían listo. El trato fue excelente y el precio muy razonable. ¡Totalmente recomendables!"</p>
-                                        <div class="text-warning">
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="chapter-card">
+                <h2 class="section-title">¿Cómo te Ayuda a Reducir Costes?</h2>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-money-bill-wave"></i>
                             </div>
-                            
-                            <div class="carousel-item">
-                                <div class="testimonial-card card bg-light p-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="60" alt="Jordi Ribas" loading="lazy">
-                                            <div>
-                                                <h5 class="mb-0">Jordi Ribas</h5>
-                                                <small class="text-muted">Salt</small>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">"Mi PS4 daba la luz azul y ya la daba por perdida. En TecnoGirona la repararon en un día y funciona como nueva. ¡Increíble servicio!"</p>
-                                        <div class="text-warning">
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item">
-                                <div class="testimonial-card card bg-light p-4">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="60" alt="Carla Vidal" loading="lazy">
-                                            <div>
-                                                <h5 class="mb-0">Carla Vidal</h5>
-                                                <small class="text-muted">Sarrià de Ter</small>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">"Se me cayó el iPhone y se rompió la pantalla. La reparación fue rápida y con garantía. Ahora funciona perfectamente. ¡Muy profesionales!"</p>
-                                        <div class="text-warning">
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star" aria-hidden="true"></i>
-                                            <i class="fas fa-star-half-alt" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div>
+                                <h5>Ahorro en personal</h5>
+                                <p class="text-muted">Reduce drásticamente la necesidad de contratar nuevos agentes.</p>
                             </div>
                         </div>
-                        
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Testimonio anterior">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Siguiente testimonio">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
-                        </button>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div>
+                                <h5>Menos errores</h5>
+                                <p class="text-muted">Respuestas coherentes y automáticas sin equivocaciones humanas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h5>Más eficiencia</h5>
+                                <p class="text-muted">Cada consulta automatizada es tiempo ganado para tareas de alto valor.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                            <div>
+                                <h5>Escalabilidad</h5>
+                                <p class="text-muted">Puedes atender más clientes sin aumentar tu equipo.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Capítulo 5 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="chapter-card">
+                <h2 class="section-title">El Verdadero Valor: Automatización + Conversión</h2>
+                <p class="lead">Un chatbot bien diseñado no solo responde preguntas. También vende.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chatbot vendiendo" class="img-fluid rounded-4">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-3 mt-md-0">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div>
+                                    <h5>Sugerencia de productos</h5>
+                                    <p class="text-muted">Recomienda productos basados en las necesidades del cliente.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h5>Cierre de ventas</h5>
+                                    <p class="text-muted">Guía al cliente hacia la compra como un vendedor experto.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <h5>Agendamiento</h5>
+                                    <p class="text-muted">Programa citas y reuniones automáticamente.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <div>
+                                    <h5>Links de pago</h5>
+                                    <p class="text-muted">Envía enlaces directos para completar la compra.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 bg-primary bg-opacity-10 p-4 rounded-3">
+                    <h5 class="text-primary"><i class="fas fa-lightbulb me-2"></i>Cada interacción es una oportunidad de conversión</h5>
+                    <p class="mb-0">Mientras un agente humano puede estar limitado por horarios y capacidad, tu chatbot trabaja como tu mejor vendedor 24 horas al día.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Capítulo 6 -->
+    <section id="implementacion" class="py-5">
+        <div class="container">
+            <div class="chapter-card">
+                <h2 class="section-title">¿Cómo Se Implementa un Chatbot en Tu Negocio?</h2>
+                
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h5>Diagnóstico personalizado</h5>
+                                <p class="text-muted">Analizamos tu negocio y flujos de atención actuales.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h5>Diseño del chatbot</h5>
+                                <p class="text-muted">Creamos la estructura según tus necesidades y tono de marca.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h5>Entrenamiento con IA</h5>
+                                <p class="text-muted">Alimentamos el sistema con tus contenidos y datos reales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h5>Integración</h5>
+                                <p class="text-muted">Implementamos en tus canales (web, WhatsApp, redes).</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div>
+                                <h5>Optimización continua</h5>
+                                <p class="text-muted">Mejoramos respuestas y conversión basado en datos.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number"><i class="fas fa-rocket"></i></div>
+                            <div>
+                                <h5>Implementación rápida</h5>
+                                <p class="text-muted">En solo 2-4 semanas tendrás tu chatbot operativo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Conclusión -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="chapter-card">
+                <h2 class="section-title">El Futuro Ya Está Aquí</h2>
+                <p class="lead fw-bold">Cada día que tu negocio no tiene un chatbot activo es dinero que estás dejando sobre la mesa.</p>
+                <p>Mientras tú duermes, un chatbot con IA puede estar vendiendo por ti, atendiendo clientes y cerrando ventas.</p>
+                <p>La tecnología ya está lista. ¿Lo estás tú?</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Final -->
+    <section id="cta" class="py-5">
+        <div class="container">
+            <div class="cta-section text-center">
+                <h2 class="mb-4">Implementa Hoy Tu Chatbot y Empieza a Vender sin Pausas</h2>
+                <p class="lead mb-5">🚀 Yo me encargo de todo. Diseño, configuro e implemento chatbots con inteligencia artificial totalmente personalizados para tu negocio.</p>
+                
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-4">
+                        <div class="bg-white bg-opacity-10 p-3 rounded-3 h-100">
+                            <i class="fas fa-bolt text-white mb-2"></i>
+                            <h5>Implementación rápida</h5>
+                            <p class="small opacity-75 mb-0">2-4 semanas para tenerlo operativo</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-white bg-opacity-10 p-3 rounded-3 h-100">
+                            <i class="fas fa-chart-bar text-white mb-2"></i>
+                            <h5>Resultados medibles</h5>
+                            <p class="small opacity-75 mb-0">Métricas claras de rendimiento</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-white bg-opacity-10 p-3 rounded-3 h-100">
+                            <i class="fas fa-hands-helping text-white mb-2"></i>
+                            <h5>Acompañamiento completo</h5>
+                            <p class="small opacity-75 mb-0">Soporte continuo post-implementación</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-light btn-lg px-5 py-3 fw-bold mt-5" style="color: var(--primary-color);">
+                    📞 Agenda una llamada gratuita de diagnóstico
+                </a>
+                <p class="mt-3 opacity-75"><small>Descubre cómo ahorrar miles de euros al año y vender 24/7</small></p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h3 class="h4 text-white mb-4">TecnoGirona</h3>
-                    <p>Servicio técnico especializado en reparación de ordenadores, móviles, tablets y videoconsolas en Girona.</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-4"><i class="fas fa-robot me-2"></i>ChatbotIA Solutions</h5>
+                    <p>Transformamos tu atención al cliente con inteligencia artificial.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h3 class="h4 text-white mb-4">Enlaces</h3>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="#">Inicio</a></li>
-                        <li class="mb-2"><a href="#servicios">Servicios</a></li>
-                        <li class="mb-2"><a href="#moviles">Móviles</a></li>
-                        <li class="mb-2"><a href="#consolas">Consolas</a></li>
-                        <li class="mb-2"><a href="#contacto">Contacto</a></li>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none opacity-75">Inicio</a></li>
+                        <li class="mb-2"><a href="#problema" class="text-white text-decoration-none opacity-75">El Problema</a></li>
+                        <li class="mb-2"><a href="#solucion" class="text-white text-decoration-none opacity-75">La Solución</a></li>
+                        <li class="mb-2"><a href="#casos" class="text-white text-decoration-none opacity-75">Casos Reales</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <h3 class="h4 text-white mb-4">Servicios</h3>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="#">Reparación Ordenadores</a></li>
-                        <li class="mb-2"><a href="#">Reparación Móviles</a></li>
-                        <li class="mb-2"><a href="#">Reparación Consolas</a></li>
-                        <li class="mb-2"><a href="#">Recuperación Datos</a></li>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none opacity-75">Términos y condiciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none opacity-75">Política de privacidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none opacity-75">Aviso legal</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <h3 class="h4 text-white mb-4">Contacto</h3>
-                    <address>
-                        <p><i class="fas fa-phone-alt me-2" aria-hidden="true"></i> 637 161 141</p>
-                        <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> tecnogirona@gmail.com</p>
-                    </address>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> tecnogirona@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +34 637 161 141</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Girona, España</li>
+                    </ul>
                 </div>
             </div>
-            
-            <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
-            
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2023 TecnoGirona. Todos los derechos reservados.</p>
+                    <p class="mb-0 small opacity-75">© 2025 ChatbotIA Solutions. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidad</a></li>
-                        <li class="list-inline-item"><span class="text-white mx-2">|</span></li>
-                        <li class="list-inline-item"><a href="#" class="text-white">Términos de Servicio</a></li>
-                    </ul>
+                    <p class="mb-0 small opacity-75">Diseñado para transformar tu negocio</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Preloader
-        window.addEventListener('load', function() {
-            const preloader = document.querySelector('.preloader');
-            preloader.classList.add('fade-out');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
-            
-            // Lazy load images
-            const lazyImages = document.querySelectorAll('img.lazy');
-            lazyImages.forEach(img => {
-                img.classList.add('loaded');
-            });
-        });
-        
-        // Cambiar navbar al hacer scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Smooth scrolling para enlaces
+        // Smooth scrolling para los enlaces
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update URL without page reload
-                    if (history.pushState) {
-                        history.pushState(null, null, this.getAttribute('href'));
-                    } else {
-                        location.hash = this.getAttribute('href');
-                    }
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
         
-        // Form validation
-        (function() {
-            'use strict';
-            
-            const form = document.getElementById('contactForm');
-            
-            form.addEventListener('submit', function(event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
+        // Animación para los números de estadísticas
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = +stat.getAttribute('data-target') || parseInt(stat.textContent);
+                const increment = target / 50;
+                let current = 0;
                 
-                form.classList.add('was-validated');
-            }, false);
-        })();
-        
-        // Intersection Observer for animations
-        const animateOnScroll = function() {
-            const elements = document.querySelectorAll('.animate-fadeInUp');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                        observer.unobserve(entry.target);
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(timer);
+                        current = target;
                     }
-                });
-            }, {
-                threshold: 0.1
+                    stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : '');
+                }, 20);
             });
-            
-            elements.forEach(element => {
-                element.style.animationPlayState = 'paused';
-                observer.observe(element);
-            });
-        };
+        }
         
-        document.addEventListener('DOMContentLoaded', animateOnScroll);
+        // Ejecutar cuando la sección sea visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.5});
+        
+        document.querySelectorAll('.stat-card').forEach(card => {
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>
