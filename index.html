@@ -6,12 +6,22 @@
     <meta name="description" content="Servicio técnico especializado en Girona para reparación de ordenadores, móviles, tablets y videoconsolas. Reparaciones rápidas con garantía.">
     <meta name="keywords" content="reparación móviles Girona, arreglar ordenadores, servicio técnico, reparación consolas, recuperación datos">
     <meta name="author" content="TecnoGirona">
-    
+    <meta property="og:title" content="TecnoGirona | Reparación de Dispositivos en Girona">
+    <meta property="og:description" content="Reparación rápida de móviles, ordenadores y consolas con garantía. ¡Presupuesto sin compromiso!">
     <!-- Preload resources -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1X4ES7FPPT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1X4ES7FPPT');
+</script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://img.icons8.com/dusk/64/000000/computer-support.png">
     
@@ -583,7 +593,7 @@
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-light" href="tel:+3463761141">
+                        <a class="btn btn-outline-light" href="tel:+34972123456">
                             <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>637 161 141
                         </a>
                     </li>
@@ -605,9 +615,11 @@
                         <span class="badge-service badge-mobile"><i class="fas fa-mobile-alt me-1" aria-hidden="true"></i> Especialistas en Móviles</span>
                         <span class="badge-service badge-console"><i class="fas fa-gamepad me-1" aria-hidden="true"></i> Expertos en Consolas</span>
                     </div>
+                    <a href="#contacto" class="btn btn-primary btn-lg me-2">Contacto Rápido</a>
+                    <a href="#servicios" class="btn btn-outline-light btn-lg">Nuestros Servicios</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Reparación de dispositivos y consolas" class="img-fluid rounded shadow lazy" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Reparación de dispositivos y consolas" class="img-fluid rounded shadow lazy" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1475,7 +1487,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Taller TecnoGirona" class="img-fluid rounded shadow lazy" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Taller TecnoGirona" class="img-fluid rounded shadow lazy" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title display-5 fw-bold">Nuestra Historia</h2>
@@ -1628,105 +1640,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contacto" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title display-5 fw-bold">¿Necesitas ayuda?</h2>
-                <p class="lead">Contacta con nosotros para cualquier consulta o servicio</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <form id="contactForm" novalidate>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="nombre" class="form-label">Nombre *</label>
-                                <input type="text" class="form-control" id="nombre" required>
-                                <div class="invalid-feedback">Por favor ingresa tu nombre</div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" class="form-control" id="email" required>
-                                <div class="invalid-feedback">Por favor ingresa un email válido</div>
-                            </div>
-                            <div class="col-12">
-                                <label for="telefono" class="form-label">Teléfono</label>
-                                <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}">
-                                <div class="invalid-feedback">Por favor ingresa un teléfono válido (9 dígitos)</div>
-                            </div>
-                            <div class="col-12">
-                                <label for="servicio" class="form-label">Servicio de interés *</label>
-                                <select class="form-select" id="servicio" required>
-                                    <option value="" selected disabled>Selecciona un servicio...</option>
-                                    <option>Reparación de ordenadores</option>
-                                    <option>Reparación de móviles/tablets</option>
-                                    <option>Reparación de videoconsolas</option>
-                                    <option>Recuperación de datos</option>
-                                    <option>Instalación y configuración</option>
-                                    <option>Venta de equipos</option>
-                                    <option>Servicio a empresas</option>
-                                    <option>Otro</option>
-                                </select>
-                                <div class="invalid-feedback">Por favor selecciona un servicio</div>
-                            </div>
-                            <div class="col-12">
-                                <label for="mensaje" class="form-label">Mensaje *</label>
-                                <textarea class="form-control" id="mensaje" rows="5" required></textarea>
-                                <div class="invalid-feedback">Por favor ingresa tu mensaje</div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="privacidad" required>
-                                    <label class="form-check-label" for="privacidad">Acepto la <a href="#" class="text-white">política de privacidad</a> *</label>
-                                    <div class="invalid-feedback">Debes aceptar la política de privacidad</div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="ps-lg-5">
-                        <h3 class="h4 mb-4">Información de Contacto</h3>
-                        
-                        <div class="d-flex mb-4">
-                            <div class="me-3 text-primary">
-                                <i class="fas fa-phone-alt fa-2x" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <h5 class="h6 mb-0">Teléfono</h5>
-                                <p class="mb-0">+34 972 123 456<br>Lunes a Viernes: 9:00 - 14:00 / 16:00 - 19:00</p>
-                            </div>
-                        </div>
-                        
-                        <div class="d-flex mb-4">
-                            <div class="me-3 text-primary">
-                                <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <h5 class="h6 mb-0">Email</h5>
-                                <p class="mb-0">info@tecnogirona.com<br>soporte@tecnogirona.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-5">
-                            <h3 class="h4 mb-3">Horario</h3>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Lunes a Viernes:</strong> 10:00 - 14:00 / 16:30 - 20:30</li>
-                                <li class="mb-2"><strong>Sábados:</strong> Cerrado</li>
-                                <li><strong>Domingos:</strong> Cerrado</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1775,7 +1688,7 @@
             
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 TecnoGirona. Todos los derechos reservados.</p>
+                    <p class="mb-0">&copy; 2023 TecnoGirona. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="list-inline mb-0">
