@@ -5,33 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecnoGirona - Reparación de Móviles, Ordenadores y Consolas en Girona | Servicio Técnico Profesional</title>
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="TecnoGirona - Especialistas en reparación de móviles, ordenadores y consolas en Girona. Servicio técnico profesional con garantía de 3 meses. Diagnóstico gratuito y reparación en 48h.">
     <meta name="keywords" content="reparación móviles Girona, reparación ordenadores Girona, reparación consolas Girona, servicio técnico Girona, TecnoGirona, pantalla móvil rota Girona">
     <meta name="author" content="TecnoGirona">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tecnogirona.github.io/web/">
     <meta property="og:title" content="TecnoGirona - Reparación de Móviles, Ordenadores y Consolas en Girona">
     <meta property="og:description" content="Especialistas en reparación de dispositivos electrónicos en Girona. Garantía de 3 meses y diagnóstico gratuito.">
     <meta property="og:image" content="https://tecnogirona.github.io/web/images/mobile-repair-hero.jpg">
     
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://tecnogirona.github.io/web/">
     <meta property="twitter:title" content="TecnoGirona - Reparación de Móviles, Ordenadores y Consolas en Girona">
     <meta property="twitter:description" content="Especialistas en reparación de dispositivos electrónicos en Girona. Garantía de 3 meses y diagnóstico gratuito.">
     <meta property="twitter:image" content="https://tecnogirona.github.io/web/images/mobile-repair-hero.jpg">
     
-    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
@@ -403,6 +396,97 @@
             color: white; /* FORZAR COLOR BLANCO */
         }
 
+        /* ESTILOS ESPECÍFICOS PARA EL FORMULARIO HUBSPOT EN LA SECCIÓN DE CONTACTO */
+        #hubspot-form-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        #hubspot-form-container .hs-form-field {
+            margin-bottom: 1.5rem !important;
+        }
+
+        #hubspot-form-container .hs-form-field label {
+            font-weight: 600 !important;
+            color: white !important;
+            margin-bottom: 0.5rem !important;
+            display: block !important;
+            font-size: 0.95rem !important;
+        }
+
+        #hubspot-form-container .hs-form-field input[type="text"],
+        #hubspot-form-container .hs-form-field input[type="email"],
+        #hubspot-form-container .hs-form-field input[type="tel"],
+        #hubspot-form-container .hs-form-field textarea,
+        #hubspot-form-container .hs-form-field select {
+            width: 100% !important;
+            padding: 0.75rem 1rem !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 0.5rem !important;
+            font-size: 1rem !important;
+            font-family: 'Inter', sans-serif !important;
+            transition: all 0.3s ease !important;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            color: var(--text-dark) !important;
+        }
+
+        #hubspot-form-container .hs-form-field input[type="text"]:focus,
+        #hubspot-form-container .hs-form-field input[type="email"]:focus,
+        #hubspot-form-container .hs-form-field input[type="tel"]:focus,
+        #hubspot-form-container .hs-form-field textarea:focus,
+        #hubspot-form-container .hs-form-field select:focus {
+            outline: none !important;
+            border-color: var(--accent-color) !important;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3) !important;
+            background-color: white !important;
+        }
+
+        #hubspot-form-container .hs-form-field textarea {
+            min-height: 120px !important;
+            resize: vertical !important;
+        }
+
+        #hubspot-form-container .hs-button {
+            background: linear-gradient(135deg, var(--accent-color), #d97706) !important;
+            color: white !important;
+            padding: 0.875rem 2rem !important;
+            border: none !important;
+            border-radius: 0.75rem !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: var(--shadow-md) !important;
+            width: 100% !important;
+            margin-top: 1rem !important;
+        }
+
+        #hubspot-form-container .hs-button:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-lg) !important;
+            background: linear-gradient(135deg, #d97706, var(--accent-color)) !important;
+        }
+
+        #hubspot-form-container .hs-error-msgs {
+            color: #fecaca !important;
+            font-size: 0.875rem !important;
+            margin-top: 0.5rem !important;
+        }
+
+        #hubspot-form-container .hs-error-msgs li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #hubspot-form-container .hs-form-required {
+            color: #fecaca !important;
+        }
+
         /* FOOTER REDISEÑADO - SIN REDUNDANCIAS */
         .footer {
             background: var(--text-dark);
@@ -531,19 +615,56 @@
             .hero-title {
                 font-size: 2.5rem;
             }
-            
+
             .hero-stats {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-            
+
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
-            
+
             .navbar-actions {
                 flex-direction: column;
                 gap: 0.5rem;
+            }
+
+            .btn-phone,
+            .btn-quote {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            #hubspot-form-container {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .contact-info-card {
+                padding: 1.5rem;
+            }
+
+            #hubspot-form-container {
+                padding: 1rem;
             }
         }
 
@@ -558,13 +679,38 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* MEJORAS DE ACCESIBILIDAD */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* FOCUS STATES MEJORADOS */
+        .btn-phone:focus,
+        .btn-quote:focus,
+        .service-btn:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        .navbar-nav .nav-link:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
- <!-- NAVBAR CORREGIDA -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#inicio">
                 <i class="bi bi-tools"></i>
                 TecnoGirona
             </a>
@@ -574,28 +720,37 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Servicios
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="moviles.html"><i class="bi bi-phone"></i> Reparación Móviles</a></li>
-                            <li><a class="dropdown-item" href="ordenadores.html"><i class="bi bi-laptop"></i> Reparación Ordenadores</a></li>
-                            <li><a class="dropdown-item" href="consolas.html"><i class="bi bi-controller"></i> Reparación Consolas</a></li>
-                            <li><a class="dropdown-item" href="datos.html"><i class="bi bi-hdd"></i> Recuperación Datos</a></li>
-                            <li><a class="dropdown-item" href="empresas.html"><i class="bi bi-building"></i> Servicios IT Empresas</a></li>
-                            <li><a class="dropdown-item" href="tpv.html"><i class="bi bi-credit-card"></i> Instalación TPV</a></li>
+                            <li><a class="dropdown-item" href="moviles.html">
+                                <i class="bi bi-phone"></i> Reparación Móviles
+                            </a></li>
+                            <li><a class="dropdown-item" href="ordenadores.html">
+                                <i class="bi bi-laptop"></i> Reparación Ordenadores
+                            </a></li>
+                            <li><a class="dropdown-item" href="consolas.html">
+                                <i class="bi bi-controller"></i> Reparación Consolas
+                            </a></li>
+                            <li><a class="dropdown-item" href="datos.html">
+                                <i class="bi bi-hdd"></i> Recuperación Datos
+                            </a></li>
+                            <li><a class="dropdown-item" href="empresas.html">
+                                <i class="bi bi-building"></i> Servicios IT
+                            </a></li>
+                            <li><a class="dropdown-item" href="tpv.html">
+                                <i class="bi bi-credit-card"></i> Instalación TPV
+                            </a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
@@ -604,7 +759,7 @@
                 
                 <div class="navbar-actions">
                     <a href="tel:637161141" class="btn-phone">
-                        <i class="bi bi-telephone"></i>
+                        <i class="bi bi-telephone-fill"></i>
                         637 161 141
                     </a>
                     <a href="#contacto" class="btn-quote">
@@ -615,65 +770,61 @@
         </div>
     </nav>
 
-
-
-    <!-- HERO SECTION CORREGIDA -->
-    <section class="hero-section">
+    <section class="hero-section" id="inicio">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
                     <h1 class="hero-title" data-aos="fade-up">
-                        Reparación<br>
-                        Profesional en<br>
-                        <span class="highlight">Girona</span>
+                        Reparación de <span class="highlight">Móviles</span>, 
+                        Ordenadores y Consolas en <span class="highlight">Girona</span>
                     </h1>
                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-                        ¿Se te ha roto la pantalla del móvil? ¿Tu ordenador va lento? ¿Tu consola no funciona? 
-                        En TecnoGirona lo reparamos en menos de 48h. Garantía de 3 meses y más de 1.000 dispositivos reparados.
+                        Servicio técnico profesional con más de 10 años de experiencia. 
+                        Diagnóstico gratuito, garantía de 3 meses y reparación en 48 horas.
                     </p>
+                    
                     <div class="d-flex gap-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#contacto" class="btn btn-success btn-lg">
-                            <i class="bi bi-calendar-check me-2"></i>
+                        <a href="#contacto" class="btn btn-lg btn-warning fw-bold px-4">
+                            <i class="bi bi-calculator me-2"></i>
                             Presupuesto Gratis
                         </a>
-                        <a href="tel:637161141" class="btn btn-outline-light btn-lg">
-                            <i class="bi bi-telephone me-2"></i>
+                        <a href="tel:637161141" class="btn btn-lg btn-outline-light fw-bold px-4">
+                            <i class="bi bi-telephone-fill me-2"></i>
                             Llamar Ahora
                         </a>
                     </div>
                     
-                    <!--<div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
                         <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Dispositivos Reparados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Meses de Garantía</span>
+                            <span class="stat-number">5000+</span>
+                            <div class="stat-label">Dispositivos Reparados</div>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">48h</span>
-                            <span class="stat-label">Tiempo Máximo</span>
+                            <div class="stat-label">Tiempo de Reparación</div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">5★</span>
-                            <span class="stat-label">Valoración Media</span>
+                            <span class="stat-number">3 meses</span>
+                            <div class="stat-label">Garantía Incluida</div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="400">
-                    <img src="images/mobile-repair-hero.jpg" alt="Reparación profesional de dispositivos en TecnoGirona" class="img-fluid">
-                </div>-->
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Técnico reparando móvil en TecnoGirona" class="img-fluid">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS SECTION CORREGIDA -->
     <section class="services-section" id="servicios">
         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Nuestros Servicios</h2>
-                <p class="lead text-muted">Soluciones técnicas profesionales para todos tus dispositivos con la mejor calidad y garantía</p>
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3" data-aos="fade-up">Nuestros Servicios</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Soluciones técnicas profesionales para todos tus dispositivos electrónicos
+                </p>
             </div>
             
             <div class="services-grid">
@@ -681,17 +832,17 @@
                     <div class="service-icon mobile">
                         <i class="bi bi-phone"></i>
                     </div>
-                    <h3 class="service-title">Reparación de Móviles y Tablets</h3>
+                    <h3 class="service-title">Reparación de Móviles</h3>
                     <p class="service-description">
-                        Especialistas en reparación de smartphones y tablets. Pantallas rotas, problemas de batería, 
-                        conectores de carga, daños por agua y problemas de software.
+                        Especialistas en reparación de smartphones de todas las marcas. Pantallas rotas, 
+                        problemas de batería, fallos de software y mucho más.
                     </p>
                     <ul class="service-features">
-                        <li><i class="bi bi-check-circle-fill"></i> Todas las marcas (iPhone, Samsung, Xiaomi, Huawei)</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Componentes originales y compatibles</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Garantía de 3 meses</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Reparación en 24-48h</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diagnóstico gratuito</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cambio de pantallas y cristales</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Reparación de baterías</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Problemas de carga</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Fallos de software</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Liberación de terminales</li>
                     </ul>
                     <a href="moviles.html" class="service-btn">Ver Detalles</a>
                 </div>
@@ -702,15 +853,15 @@
                     </div>
                     <h3 class="service-title">Reparación de Ordenadores</h3>
                     <p class="service-description">
-                        Portátiles y sobremesa. Eliminación de virus, optimización de rendimiento, 
-                        hardware dañado, pantallas rotas y actualización de componentes.
+                        Servicio técnico completo para portátiles y ordenadores de sobremesa. 
+                        Desde problemas de hardware hasta optimización del sistema.
                     </p>
                     <ul class="service-features">
-                        <li><i class="bi bi-check-circle-fill"></i> Limpieza profunda de virus y malware</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Optimización del sistema operativo</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Actualización de hardware (RAM, SSD)</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Reparación de pantallas de portátiles</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Instalación de software</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Reparación de pantallas de portátil</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cambio de discos duros y SSD</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Ampliación de memoria RAM</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Limpieza y mantenimiento</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Instalación de sistemas operativos</li>
                     </ul>
                     <a href="ordenadores.html" class="service-btn">Ver Detalles</a>
                 </div>
@@ -721,14 +872,14 @@
                     </div>
                     <h3 class="service-title">Reparación de Consolas</h3>
                     <p class="service-description">
-                        PlayStation, Xbox, Nintendo Switch. Especialistas en luz azul PS4, 
-                        sobrecalentamiento, Joy-Con drift y problemas de lectores de discos.
+                        Reparamos PlayStation, Xbox, Nintendo Switch y consolas retro. 
+                        Problemas de lectura, sobrecalentamiento, mandos y más.
                     </p>
                     <ul class="service-features">
-                        <li><i class="bi bi-check-circle-fill"></i> Todas las generaciones (PS4, PS5, Xbox, Switch)</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Herramientas profesionales especializadas</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Técnicos especializados en videoconsolas</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Pruebas exhaustivas antes de entrega</li>
+                        <li><i class="bi bi-check-circle-fill"></i> PlayStation 4, 5, Xbox Series</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Nintendo Switch y 3DS</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Problemas de lectura de discos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Reparación de mandos</li>
                         <li><i class="bi bi-check-circle-fill"></i> Garantía específica para consolas</li>
                     </ul>
                     <a href="consolas.html" class="service-btn">Ver Detalles</a>
@@ -794,7 +945,6 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION CORREGIDA -->
     <section class="contact-section" id="contacto">
         <div class="container contact-content">
             <h2 class="contact-title" data-aos="fade-up">Contacta con Nosotros</h2>
@@ -802,72 +952,22 @@
                 Obtén un presupuesto gratuito y sin compromiso para la reparación de tu dispositivo
             </p>
             
-            <!--<div class="row">
+            <div class="row">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
-                    <h3 class="h4 mb-4">Solicitar Presupuesto</h3>
-                    <form id="contactForm">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <input type="text" class="form-control form-control-lg" name="nombre" placeholder="Nombre completo *" required>
+                    <!--<h3 class="h4 mb-4">Solicitar Presupuesto</h3>-->
+                    
+                    <!-- Contenedor del formulario de HubSpot -->
+                    <div id="hubspot-form-container">
+                        <div class="form-loading text-center">
+                            <div class="spinner-border text-warning mb-3" role="status">
+                                <span class="visually-hidden">Cargando formulario...</span>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <input type="email" class="form-control form-control-lg" name="email" placeholder="Email *" required>
-                            </div>
+                            <p class="text-white">Cargando formulario...</p>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <input type="tel" class="form-control form-control-lg" name="telefono" placeholder="Teléfono *" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <select class="form-select form-select-lg" name="dispositivo" required>
-                                    <option value="">Tipo de dispositivo *</option>
-                                    <option value="Móvil/Smartphone">Móvil/Smartphone</option>
-                                    <option value="Tablet">Tablet</option>
-                                    <option value="Ordenador Portátil">Ordenador Portátil</option>
-                                    <option value="Ordenador Sobremesa">Ordenador Sobremesa</option>
-                                    <option value="PlayStation 4">PlayStation 4</option>
-                                    <option value="PlayStation 5">PlayStation 5</option>
-                                    <option value="Xbox One/Series">Xbox One/Series</option>
-                                    <option value="Nintendo Switch">Nintendo Switch</option>
-                                    <option value="Sistema TPV">Sistema TPV</option>
-                                    <option value="Servicios Empresariales">Servicios Empresariales</option>
-                                    <option value="Otro">Otro</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <select class="form-select form-select-lg" name="problema" required>
-                                <option value="">¿Cuál es el problema? *</option>
-                                <option value="Pantalla rota">Pantalla rota</option>
-                                <option value="Problemas de batería">Problemas de batería</option>
-                                <option value="No carga">No carga</option>
-                                <option value="Daños por agua">Daños por agua</option>
-                                <option value="Va muy lento">Va muy lento</option>
-                                <option value="Virus/Malware">Virus/Malware</option>
-                                <option value="No enciende">No enciende</option>
-                                <option value="Sobrecalentamiento">Sobrecalentamiento</option>
-                                <option value="Problemas de audio">Problemas de audio</option>
-                                <option value="Luz azul PS4">Luz azul PS4</option>
-                                <option value="Joy-Con drift">Joy-Con drift</option>
-                                <option value="Recuperación de datos">Recuperación de datos</option>
-                                <option value="Instalación TPV">Instalación TPV</option>
-                                <option value="Soporte IT empresarial">Soporte IT empresarial</option>
-                                <option value="Otro problema">Otro problema</option>
-                            </select>
-                        </div>
-                        <div class="mb-4">
-                            <textarea class="form-control form-control-lg" name="mensaje" rows="4" placeholder="Describe el problema con más detalle (opcional)"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-lg w-100">
-                            <i class="bi bi-send me-2"></i>
-                            <span class="submit-text">Enviar Solicitud</span>
-                            <span class="loading-text d-none">Enviando...</span>
-                        </button>
-                        <div id="formMessage" class="mt-3" style="display: none;"></div>
-                    </form>
-                </div>-->
+                    </div>
+                </div>
                 
-                <div class="col-lg-15" data-aos="fade-left" data-aos-delay="300">
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="300">
                     <div class="contact-info-card">
                         <h3 class="h4 mb-4">Información de Contacto</h3>
                         
@@ -924,7 +1024,6 @@
         </div>
     </section>
 
-    <!-- FOOTER REDISEÑADO -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -979,15 +1078,54 @@
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOTANTE -->
     <a href="https://wa.me/34637161141?text=Hola,%20necesito%20información%20sobre%20reparación%20de%20dispositivos" 
        class="whatsapp-float" aria-label="Contactar por WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- Bootstrap 5.3 JS -->
+    <!-- Scripts de HubSpot -->
+    <script charset="utf-8"
+
+
+ type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        // Configuración del formulario de HubSpot
+        hbspt.forms.create({
+            portalId: "139791456",
+            formId: "b8569ebc-f4b5-418b-8394-c0917590f598",
+            region: "eu1",
+            target: '#hubspot-form-container',
+            onFormReady: function() {
+                // Ocultar el mensaje de carga cuando el formulario esté listo
+                const loadingElement = document.querySelector('.form-loading');
+                if (loadingElement) {
+                    loadingElement.style.display = 'none';
+                }
+                
+                // Resetear el contenedor
+                const container = document.getElementById('hubspot-form-container');
+                container.style.minHeight = 'auto';
+                container.style.display = 'block';
+            },
+            onFormSubmitted: function() {
+                // Opcional: Agregar tracking o redirección después del envío
+                console.log('Formulario enviado exitosamente');
+                
+                // Ejemplo de tracking con Google Analytics (si está configurado)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'Contact',
+                        'event_label': 'HubSpot Form'
+                    });
+                }
+            },
+            onFormSubmitError: function() {
+                console.log('Error al enviar el formulario');
+            }
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
@@ -1009,56 +1147,6 @@
             }
         });
 
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const submitText = submitBtn.querySelector('.submit-text');
-            const loadingText = submitBtn.querySelector('.loading-text');
-            const formMessage = document.getElementById('formMessage');
-            
-            // Show loading state
-            submitText.style.display = 'none';
-            loadingText.style.display = 'inline-block';
-            submitBtn.disabled = true;
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simulate form submission (replace with actual backend)
-            setTimeout(() => {
-                // Success message
-                formMessage.innerHTML = `
-                    <div class="alert alert-success">
-                        <i class="bi bi-check-circle me-2"></i>
-                        ¡Solicitud enviada correctamente! Te contactaremos en menos de 24 horas.
-                    </div>
-                `;
-                formMessage.style.display = 'block';
-                this.reset();
-                
-                // WhatsApp fallback
-                const whatsappMessage = `Hola, solicito presupuesto para:
-Nombre: ${data.nombre}
-Email: ${data.email}
-Teléfono: ${data.telefono}
-Dispositivo: ${data.dispositivo}
-Problema: ${data.problema}
-Mensaje: ${data.mensaje || 'No especificado'}`;
-                
-                setTimeout(() => {
-                    window.open(`https://wa.me/34637161141?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-                }, 2000);
-                
-                // Reset button state
-                submitText.style.display = 'inline-block';
-                loadingText.style.display = 'none';
-                submitBtn.disabled = false;
-            }, 1500);
-        });
-
         // Add fade-in animation to elements when they come into view
         const observerOptions = {
             threshold: 0.1,
@@ -1076,9 +1164,22 @@ Mensaje: ${data.mensaje || 'No especificado'}`;
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
+
+        // Función para mejorar la accesibilidad del formulario HubSpot
+        document.addEventListener('DOMContentLoaded', function() {
+            // Agregar atributos de accesibilidad cuando el formulario se cargue
+            setTimeout(function() {
+                const formFields = document.querySelectorAll('#hubspot-form-container .hs-form-field input, #hubspot-form-container .hs-form-field textarea, #hubspot-form-container .hs-form-field select');
+                formFields.forEach(function(field) {
+                    if (!field.getAttribute('aria-label') && field.previousElementSibling) {
+                        const label = field.previousElementSibling.textContent;
+                        field.setAttribute('aria-label', label);
+                    }
+                });
+            }, 3000);
+        });
     </script>
 
-    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -1102,6 +1203,7 @@ Mensaje: ${data.mensaje || 'No especificado'}`;
             "Mo-Fr 09:00-19:00",
             "Sa 10:00-14:00"
         ],
+        "priceRange": "€€",
         "serviceArea": {
             "@type": "City",
             "name": "Girona"
@@ -1114,21 +1216,24 @@ Mensaje: ${data.mensaje || 'No especificado'}`;
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Reparación de Móviles y Tablets"
+                        "name": "Reparación de Móviles",
+                        "description": "Reparación profesional de smartphones"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Reparación de Ordenadores"
+                        "name": "Reparación de Ordenadores",
+                        "description": "Servicio técnico para portátiles y PCs"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Reparación de Consolas"
+                        "name": "Reparación de Consolas",
+                        "description": "Reparación de PlayStation, Xbox, Nintendo"
                     }
                 }
             ]
