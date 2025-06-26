@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - TecnoGirona</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #10b981;
+            --secondary-dark: #059669;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Contenedor principal del formulario */
+        .form-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 3rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .form-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Estilos para el formulario de HubSpot */
+        #hubspot-form-container {
+            margin-top: 2rem;
+        }
+
+        /* Personalización de los campos del formulario de HubSpot */
+        .hs-form-field {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .hs-form-field label {
+            font-weight: 600 !important;
+            color: var(--text-dark) !important;
+            margin-bottom: 0.5rem !important;
+            display: block !important;
+            font-size: 0.95rem !important;
+        }
+
+        .hs-form-field input[type="text"],
+        .hs-form-field input[type="email"],
+        .hs-form-field input[type="tel"],
+        .hs-form-field textarea,
+        .hs-form-field select {
+            width: 100% !important;
+            padding: 0.75rem 1rem !important;
+            border: 2px solid var(--border-color) !important;
+            border-radius: 0.5rem !important;
+            font-size: 1rem !important;
+            font-family: 'Inter', sans-serif !important;
+            transition: all 0.3s ease !important;
+            background-color: white !important;
+            color: var(--text-dark) !important;
+        }
+
+        .hs-form-field input[type="text"]:focus,
+        .hs-form-field input[type="email"]:focus,
+        .hs-form-field input[type="tel"]:focus,
+        .hs-form-field textarea:focus,
+        .hs-form-field select:focus {
+            outline: none !important;
+            border-color: var(--primary-color) !important;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+        }
+
+        .hs-form-field textarea {
+            min-height: 120px !important;
+            resize: vertical !important;
+        }
+
+        /* Botón de envío personalizado */
+        .hs-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+            color: white !important;
+            padding: 0.875rem 2rem !important;
+            border: none !important;
+            border-radius: 0.75rem !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: var(--shadow-md) !important;
+            width: 100% !important;
+            margin-top: 1rem !important;
+        }
+
+        .hs-button:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-lg) !important;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)) !important;
+        }
+
+        /* Mensajes de error */
+        .hs-error-msgs {
+            color: #dc2626 !important;
+            font-size: 0.875rem !important;
+            margin-top: 0.5rem !important;
+        }
+
+        .hs-error-msgs li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Campos requeridos */
+        .hs-form-required {
+            color: #dc2626 !important;
+        }
+
+        /* Mensaje de éxito */
+        .submitted-message {
+            background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .submitted-message h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .submitted-message p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        /* Información de contacto adicional */
+        .contact-info {
+            background: var(--bg-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-info h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-method-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .contact-method-icon.phone {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        }
+
+        .contact-method-icon.email {
+            background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+        }
+
+        .contact-method-icon.location {
+            background: linear-gradient(135deg, var(--accent-color), #d97706);
+        }
+
+        .contact-method-info h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-method-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .contact-method-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-method-info a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-card {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .form-title {
+                font-size: 2rem;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animaciones de carga */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Ocultar el formulario inicialmente mientras carga */
+        #hubspot-form-container {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-loading {
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .form-loading .loading-spinner {
+            border-color: var(--border-color);
+            border-top-color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-card">
+            <div class="form-header">
+                <h1 class="form-title">
+                    <i class="bi bi-tools text-primary me-2"></i>
+                    Solicita tu Presupuesto
+                </h1>
+                <p class="form-subtitle">
+                    Cuéntanos qué necesitas y te responderemos en menos de 24 horas con un presupuesto personalizado
+                </p>
+            </div>
+
+            <!-- Contenedor del formulario de HubSpot -->
+            <div id="hubspot-form-container">
+                <div class="form-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Cargando formulario...</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Información de contacto adicional -->
+        <div class="contact-info">
+            <h4>¿Prefieres contactarnos directamente?</h4>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-method-icon phone">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="contact-method-info">
+                        <h5>Teléfono</h5>
+                        <p><a href="tel:+34972123456">+34 972 123 456</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon email">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div class="contact-method-info">
+                        <h5>Email</h5>
+                        <p><a href="mailto:info@tecnogirona.com">info@tecnogirona.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon location">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="contact-method-info">
+                        <h5>Ubicación</h5>
+                        <p>Girona, España</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de HubSpot -->
+    <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        // Configuración del formulario de HubSpot
+        hbspt.forms.create({
+            portalId: "139791456",
+            formId: "b8569ebc-f4b5-418b-8394-c0917590f598",
+            region: "eu1",
+            target: '#hubspot-form-container',
+            onFormReady: function() {
+                // Ocultar el mensaje de carga cuando el formulario esté listo
+                const loadingElement = document.querySelector('.form-loading');
+                if (loadingElement) {
+                    loadingElement.style.display = 'none';
+                }
+                
+                // Resetear el contenedor
+                const container = document.getElementById('hubspot-form-container');
+                container.style.minHeight = 'auto';
+                container.style.display = 'block';
+            },
+            onFormSubmitted: function() {
+                // Opcional: Agregar tracking o redirección después del envío
+                console.log('Formulario enviado exitosamente');
+                
+                // Ejemplo de tracking con Google Analytics (si está configurado)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'Contact',
+                        'event_label': 'HubSpot Form'
+                    });
+                }
+            },
+            onFormSubmitError: function() {
+                console.log('Error al enviar el formulario');
+            }
+        });
+
+        // Función para mejorar la accesibilidad
+        document.addEventListener('DOMContentLoaded', function() {
+            // Agregar atributos de accesibilidad cuando el formulario se cargue
+            setTimeout(function() {
+                const formFields = document.querySelectorAll('.hs-form-field input, .hs-form-field textarea, .hs-form-field select');
+                formFields.forEach(function(field) {
+                    if (!field.getAttribute('aria-label') && field.previousElementSibling) {
+                        const label = field.previousElementSibling.textContent;
+                        field.setAttribute('aria-label', label);
+                    }
+                });
+            }, 2000);
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

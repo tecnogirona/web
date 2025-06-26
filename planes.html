@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Soporte IT en Girona | TecnoGirona - Servicios Profesionales</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Planes de soporte IT profesional en Girona. Básico, Profesional y Enterprise. Soporte técnico 24/7, mantenimiento y consultoría tecnológica.">
+    <meta name="keywords" content="planes soporte IT Girona, servicios IT empresas, soporte técnico profesional, mantenimiento informático Girona">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #10b981;
+            --secondary-dark: #059669;
+            --accent-color: #f59e0b;
+            --business-color: #0891b2;
+            --business-dark: #0e7490;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        /* NAVBAR */
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 0;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: var(--shadow-xl);
+            border-radius: 0.75rem;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-phone {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-phone:hover {
+            color: var(--primary-dark);
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-quote {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: linear-gradient(135deg, var(--business-color) 0%, var(--business-dark) 100%);
+            padding: 8rem 0 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* PLANES SECTION */
+        .plans-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .plan-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            border-color: var(--business-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .plan-card.popular {
+            border-color: var(--business-color);
+            transform: scale(1.05);
+        }
+
+        .plan-card.popular::before {
+            content: 'Más Popular';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--business-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--business-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-period {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .service-features li i {
+            color: var(--business-color);
+            font-size: 0.875rem;
+        }
+
+        /* BENEFICIOS SECTION */
+        .benefits-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .benefit-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--business-color), var(--business-dark));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* COMPARACION SECTION */
+        .comparison-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            margin: 0;
+        }
+
+        .comparison-table th {
+            background: var(--business-color);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .comparison-table td {
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .check-icon {
+            color: var(--secondary-color);
+            font-size: 1.25rem;
+        }
+
+        .cross-icon {
+            color: #ef4444;
+            font-size: 1.25rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h5 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* WHATSAPP FLOTANTE */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .plan-card.popular {
+                transform: none;
+            }
+
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tools"></i>
+                TecnoGirona
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="moviles.html"><i class="bi bi-phone"></i> Reparación Móviles</a></li>
+                            <li><a class="dropdown-item" href="ordenadores.html"><i class="bi bi-laptop"></i> Reparación Ordenadores</a></li>
+                            <li><a class="dropdown-item" href="consolas.html"><i class="bi bi-controller"></i> Reparación Consolas</a></li>
+                            <li><a class="dropdown-item" href="datos.html"><i class="bi bi-hdd"></i> Recuperación Datos</a></li>
+                            <li><a class="dropdown-item" href="empresas.html"><i class="bi bi-building"></i> Servicios IT Empresas</a></li>
+                            <li><a class="dropdown-item" href="tpv.html"><i class="bi bi-credit-card"></i> Instalación TPV</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <a href="tel:637161141" class="btn-phone">
+                        <i class="bi bi-telephone"></i>
+                        637 161 141
+                    </a>
+                    <a href="index.html#contacto" class="btn-quote">
+                        Consulta Gratuita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="hero-title" data-aos="fade-up">
+                        Planes de <span class="highlight">Soporte IT</span><br>
+                        para tu Empresa
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                        Elige el plan que mejor se adapte a las necesidades de tu empresa. 
+                        Soporte técnico profesional, mantenimiento preventivo y consultoría tecnológica.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#planes" class="btn btn-warning btn-lg">
+                            <i class="bi bi-eye me-2"></i>
+                            Ver Planes
+                        </a>
+                        <a href="tel:637161141" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone me-2"></i>
+                            Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANES SECTION -->
+    <section class="plans-section" id="planes">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">Nuestros Planes de Soporte IT</h2>
+                <p class="lead text-muted">Soluciones adaptadas a empresas de todos los tamaños</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-card">
+                        <h3 class="plan-name">Básico</h3>
+                        <div class="plan-price">150€</div>
+                        <p class="plan-period">por mes</p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Soporte remoto</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Horario comercial (9h-18h)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Hasta 10 equipos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Mantenimiento básico</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Antivirus incluido</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Tiempo respuesta: 4h</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Email y teléfono</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/14AcN4bwj9iv63460O2wU06" class="btn btn-outline-primary mt-auto">Contratar Ahora</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plan-card popular">
+                        <h3 class="plan-name">Profesional</h3>
+                        <div class="plan-price">300€</div>
+                        <p class="plan-period">por mes</p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Soporte 24/7</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Soporte presencial</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Hasta 25 equipos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Backup automático</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Monitorización de red</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Tiempo respuesta: 2h</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Mantenimiento preventivo</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/6oU5kC43RbqD3UW2OC2wU07" class="btn btn-primary mt-auto">Contratar Ahora</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plan-card">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">500€</div>
+                        <p class="plan-period">por mes</p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Soporte dedicado</li>
+                            <li><i class="bi bi-check-circle-fill"></i> SLA garantizado</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Equipos ilimitados</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Consultoría incluida</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Ciberseguridad avanzada</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Tiempo respuesta: 1h</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Técnico asignado</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/fZu3cubwj9iv0IKexk2wU08" class="btn btn-outline-primary mt-auto">Contratar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARACION SECTION -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">Comparación Detallada</h2>
+                <p class="lead text-muted">Encuentra el plan perfecto para tu empresa</p>
+            </div>
+            
+            <div class="comparison-table" data-aos="fade-up" data-aos-delay="200">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Características</th>
+                            <th>Básico</th>
+                            <th>Profesional</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Soporte remoto</td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Soporte presencial</td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Horario de atención</td>
+                            <td>9h-18h</td>
+                            <td>24/7</td>
+                            <td>24/7</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Número de equipos</td>
+                            <td>Hasta 10</td>
+                            <td>Hasta 25</td>
+                            <td>Ilimitados</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Tiempo de respuesta</td>
+                            <td>4 horas</td>
+                            <td>2 horas</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Backup automático</td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Monitorización de red</td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Consultoría IT</td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Técnico dedicado</td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">SLA garantizado</td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-x-lg cross-icon"></i></td>
+                            <td><i class="bi bi-check-lg check-icon"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS SECTION -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">¿Por Qué Elegir TecnoGirona?</h2>
+                <p class="lead text-muted">Ventajas de nuestros servicios IT</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <h4>Respuesta Rápida</h4>
+                        <p>Tiempo de respuesta garantizado según tu plan. Desde 1 hora en Enterprise hasta 4 horas en Básico.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4>Equipo Experto</h4>
+                        <p>Técnicos certificados con más de 10 años de experiencia en entornos empresariales.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Seguridad Total</h4>
+                        <p>Protección completa con antivirus empresarial, firewall y auditorías de seguridad regulares.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4>Escalabilidad</h4>
+                        <p>Soluciones que crecen contigo. Cambia de plan fácilmente según evolucionen tus necesidades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>TecnoGirona</h5>
+                    <p>Especialistas en servicios IT y reparación de dispositivos electrónicos en Girona desde 2010. Calidad, rapidez y garantía en cada servicio.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="moviles.html">Reparación Móviles</a></li>
+                        <li><a href="ordenadores.html">Reparación Ordenadores</a></li>
+                        <li><a href="consolas.html">Reparación Consolas</a></li>
+                        <li><a href="datos.html">Recuperación Datos</a></li>
+                        <li><a href="empresas.html">Servicios IT</a></li>
+                        <li><a href="tpv.html">Instalación TPV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="planes.html">Planes de Soporte</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Garantía y Calidad</h5>
+                    <ul>
+                        <li>✓ Soporte técnico profesional</li>
+                        <li>✓ Respuesta garantizada</li>
+                        <li>✓ Técnicos certificados</li>
+                        <li>✓ Disponibilidad 24/7</li>
+                        <li>✓ Atención personalizada</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TecnoGirona. Todos los derechos reservados. Servicios IT profesionales en Girona.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/34637161141?text=Hola,%20necesito%20información%20sobre%20los%20planes%20de%20soporte%20IT" 
+       class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Planes de Soporte IT TecnoGirona",
+        "description": "Planes de soporte IT profesional para empresas en Girona",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "TecnoGirona",
+            "telephone": "+34637161141",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Girona",
+                "addressCountry": "ES"
+            }
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Plan Básico",
+                "price": "150",
+                "priceCurrency": "EUR",
+                "description": "Soporte remoto, horario comercial, hasta 10 equipos"
+            },
+            {
+                "@type": "Offer",
+                "name": "Plan Profesional",
+                "price": "300",
+                "priceCurrency": "EUR",
+                "description": "Soporte 24/7, presencial, hasta 25 equipos"
+            },
+            {
+                "@type": "Offer",
+                "name": "Plan Enterprise",
+                "price": "500",
+                "priceCurrency": "EUR",
+                "description": "Soporte dedicado, SLA garantizado, equipos ilimitados"
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
+

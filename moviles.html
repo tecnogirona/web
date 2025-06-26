@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparación de Móviles y Tablets en Girona | TecnoGirona - Servicio Técnico Especializado</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Especialistas en reparación de móviles y tablets en Girona. iPhone, Samsung, Xiaomi, Huawei. Pantallas rotas, baterías, daños por agua. Garantía 3 meses.">
+    <meta name="keywords" content="reparación móviles Girona, reparación iPhone Girona, reparación Samsung Girona, pantalla móvil rota Girona, batería móvil Girona">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #10b981;
+            --secondary-dark: #059669;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        /* NAVBAR */
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 0;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-custom.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand i {
+            font-size: 1.75rem;
+        }
+
+        .navbar-nav {
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: var(--shadow-xl);
+            border-radius: 0.75rem;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .dropdown-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-phone {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-phone:hover {
+            color: var(--primary-dark);
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-quote {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            padding: 8rem 0 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image img {
+            border-radius: 1rem;
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            height: auto;
+        }
+
+        /* BRANDS SECTION */
+        .brand-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid currentColor;
+            transition: all 0.3s ease;
+       }
+
+        .brand-icon:hover {
+            transform: scale(1.1);
+            <!--background: currentColor;-->
+            <!--color: white !important;-->
+        }
+
+        /* CONTENT SECTIONS */
+        .content-section {
+            padding: 5rem 0;
+        }
+
+        .content-section.bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        /* PROBLEMS GRID */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .problem-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .problem-badge.urgent { background: #ef4444; }
+        .problem-badge.priority { background: #f59e0b; }
+        .problem-badge.normal { background: #10b981; }
+
+        .problem-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        }
+
+        .problem-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .problem-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .problem-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .time {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* WHATSAPP FLOTANTE */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h5 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navbar-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tools"></i>
+                TecnoGirona
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="moviles.html"><i class="bi bi-phone"></i> Reparación Móviles</a></li>
+                            <li><a class="dropdown-item" href="ordenadores.html"><i class="bi bi-laptop"></i> Reparación Ordenadores</a></li>
+                            <li><a class="dropdown-item" href="consolas.html"><i class="bi bi-controller"></i> Reparación Consolas</a></li>
+                            <li><a class="dropdown-item" href="datos.html"><i class="bi bi-hdd"></i> Recuperación Datos</a></li>
+                            <li><a class="dropdown-item" href="empresas.html"><i class="bi bi-building"></i> Servicios IT Empresas</a></li>
+                            <li><a class="dropdown-item" href="tpv.html"><i class="bi bi-credit-card"></i> Instalación TPV</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <a href="tel:637161141" class="btn-phone">
+                        <i class="bi bi-telephone"></i>
+                        637 161 141
+                    </a>
+                    <a href="index.html#contacto" class="btn-quote">
+                        Presupuesto Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title" data-aos="fade-up">
+                        Reparación de<br>
+                        <span class="highlight">Móviles y Tablets</span><br>
+                        en Girona
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                        Especialistas en reparación de smartphones y tablets de todas las marcas. 
+                        Pantallas rotas, problemas de batería, daños por agua y mucho más. 
+                        Garantía de 3 meses y diagnóstico gratuito.
+                    </p>
+                    <div class="d-flex gap-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="index.html#contacto" class="btn btn-success btn-lg">
+                            <i class="bi bi-calendar-check me-2"></i>
+                            Presupuesto Gratis
+                        </a>
+                        <a href="tel:637161141" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone me-2"></i>
+                            Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="400">
+                    <img src="images/mobile-repair-hero.jpg" alt="Reparación profesional de móviles en TecnoGirona" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS SECTION -->
+    <section class="brands-section" style="padding: 3rem 0; background: white; border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="mb-3">Marcas que Reparamos</h3>
+                <p class="text-muted">Servicio técnico especializado para todas las marcas de dispositivos</p>
+            </div>
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-6 col-md-2 text-center">
+                    <div class="brand-icon" style="color: #000;">
+                        <i class="bi bi-apple"></i>
+                    </div>
+                    <h6>Apple</h6>
+                    <small class="text-muted">iPhone, iPad, Mac</small>
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <div class="brand-icon" style="color: #1f4e79;">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h6>Samsung</h6>
+                    <small class="text-muted">Galaxy, Note</small>
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <div class="brand-icon" style="color: #ff6900;">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h6>Xiaomi</h6>
+                    <small class="text-muted">Mi, Redmi, POCO</small>
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <div class="brand-icon" style="color: #e60012;">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h6>Huawei</h6>
+                    <small class="text-muted">P, Mate, Nova</small>
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <div class="brand-icon" style="color: #00a8ff;">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h6>OnePlus</h6>
+                    <small class="text-muted">Nord, Pro</small>
+                </div>
+                <div class="col-6 col-md-2 text-center">
+                    <div class="brand-icon" style="color: #666;">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <h6>Otras</h6>
+                    <small class="text-muted">Oppo, Vivo, etc.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMAS FRECUENTES -->
+    <section class="content-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Problemas Más Frecuentes en Móviles</h2>
+                <p class="section-subtitle">Identificamos y solucionamos los fallos más comunes en smartphones y tablets</p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-badge urgent">Urgente</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-phone-vibrate"></i>
+                    </div>
+                    <h3 class="problem-title">Pantalla Rota</h3>
+                    <p class="problem-description">
+                        Cambio de pantalla completa con cristal y LCD. Todas las marcas y modelos. 
+                        Componentes originales y compatibles de alta calidad.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 49€</span>
+                        <span class="time">24h</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-badge priority">Prioritario</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-battery-half"></i>
+                    </div>
+                    <h3 class="problem-title">Problemas de Batería</h3>
+                    <p class="problem-description">
+                        Batería que no carga, se agota rápido o se hincha. Sustitución con batería 
+                        original y calibración del sistema.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 35€</span>
+                        <span class="time">48h</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-badge urgent">Urgente</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-droplet"></i>
+                    </div>
+                    <h3 class="problem-title">Daños por Agua</h3>
+                    <p class="problem-description">
+                        Limpieza profunda y reparación de componentes dañados por líquidos. 
+                        Proceso especializado para maximizar recuperación.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 60€</span>
+                        <span class="time">24-48h</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-badge normal">Normal</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-plug"></i>
+                    </div>
+                    <h3 class="problem-title">No Carga</h3>
+                    <p class="problem-description">
+                        Problemas con el conector de carga, cable interno o circuito de carga. 
+                        Diagnóstico completo y reparación.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 45€</span>
+                        <span class="time">2-3 días</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="problem-badge normal">Normal</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-volume-mute"></i>
+                    </div>
+                    <h3 class="problem-title">Problemas de Audio</h3>
+                    <p class="problem-description">
+                        Altavoz, micrófono o auricular no funcionan. Reparación o sustitución 
+                        de componentes de audio.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 40€</span>
+                        <span class="time">2-3 días</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="problem-badge normal">Normal</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3 class="problem-title">Problemas de Software</h3>
+                    <p class="problem-description">
+                        Móvil lento, aplicaciones que se cierran, problemas de sistema operativo. 
+                        Optimización y reinstalación.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 30€</span>
+                        <span class="time">1-2 días</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="problem-badge normal">Normal</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-camera"></i>
+                    </div>
+                    <h3 class="problem-title">Cámara No Funciona</h3>
+                    <p class="problem-description">
+                        Cámara trasera o frontal no funciona, imagen borrosa o manchas. 
+                        Reparación o sustitución de módulo de cámara.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 55€</span>
+                        <span class="time">2-3 días</span>
+                    </div>
+                </div>
+
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="problem-badge normal">Normal</div>
+                    <div class="problem-icon">
+                        <i class="bi bi-wifi-off"></i>
+                    </div>
+                    <h3 class="problem-title">Problemas de Conectividad</h3>
+                    <p class="problem-description">
+                        WiFi no conecta, Bluetooth no funciona, problemas de red móvil. 
+                        Reparación de antenas y módulos de conectividad.
+                    </p>
+                    <div class="problem-price">
+                        <span class="price">Desde 50€</span>
+                        <span class="time">2-4 días</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARCAS COMPATIBLES -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Marcas que Reparamos</h2>
+                <p class="section-subtitle">Trabajamos con todas las marcas principales de smartphones y tablets</p>
+            </div>
+            
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="brand-card p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-apple display-4 text-primary mb-3"></i>
+                        <h5>iPhone & iPad</h5>
+                        <p class="text-muted small">Todas las generaciones</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="brand-card p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                        <h5>Samsung</h5>
+                        <p class="text-muted small">Galaxy S, Note, A</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="brand-card p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                        <h5>Xiaomi</h5>
+                        <p class="text-muted small">Mi, Redmi, POCO</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="brand-card p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                        <h5>Huawei</h5>
+                        <p class="text-muted small">P, Mate, Nova</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+                <p class="text-muted">¿No ves tu marca? También reparamos OnePlus, Oppo, Realme, LG, Sony y muchas más.</p>
+                <a href="index.html#contacto" class="btn btn-primary btn-lg mt-3">
+                    <i class="bi bi-chat-dots me-2"></i>
+                    Consultar Mi Modelo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO DE REPARACIÓN -->
+    <section class="content-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Nuestro Proceso de Reparación</h2>
+                <p class="section-subtitle">Proceso transparente y profesional para garantizar la mejor reparación</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <h5>Diagnóstico Gratuito</h5>
+                        <p class="text-muted">Evaluamos tu dispositivo sin coste para identificar el problema exacto.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <h5>Presupuesto Transparente</h5>
+                        <p class="text-muted">Te damos un presupuesto claro sin sorpresas ni costes ocultos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <h5>Reparación Profesional</h5>
+                        <p class="text-muted">Nuestros técnicos especializados reparan tu dispositivo con componentes de calidad.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-step text-center">
+                        <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <span class="fw-bold">4</span>
+                        </div>
+                        <h5>Entrega y Garantía</h5>
+                        <p class="text-muted">Te entregamos tu dispositivo funcionando con 3 meses de garantía.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>TecnoGirona</h5>
+                    <p>Especialistas en reparación de dispositivos electrónicos en Girona desde 2010. Calidad, rapidez y garantía en cada reparación.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="moviles.html">Reparación Móviles</a></li>
+                        <li><a href="ordenadores.html">Reparación Ordenadores</a></li>
+                        <li><a href="consolas.html">Reparación Consolas</a></li>
+                        <li><a href="datos.html">Recuperación Datos</a></li>
+                        <li><a href="empresas.html">Servicios IT</a></li>
+                        <li><a href="tpv.html">Instalación TPV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li><i class="bi bi-telephone me-2"></i> 637 161 141</li>
+                        <li><i class="bi bi-envelope me-2"></i> tecnogirona@gmail.com</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Girona, España</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TecnoGirona. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/34637161141?text=Hola,%20necesito%20reparar%20mi%20móvil" 
+       class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
