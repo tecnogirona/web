@@ -35,7 +35,7 @@
 
 .hs-form-field label {
     font-weight: 600 !important;
-    color: white !important; /* CAMBIADO A BLANCO */
+    color: #1f2937 !important;
     margin-bottom: 0.5rem !important;
     display: block !important;
     font-size: 0.95rem !important;
@@ -95,7 +95,7 @@
 .hs-form-field .hs-form-checkbox-display span,
 .hs-form-field .hs-form-radio-display span {
     font-size: 0.9rem !important;
-    color: white !important; /* CAMBIADO A BLANCO */
+    color: #4b5563 !important;
     line-height: 1.5 !important;
 }
 
@@ -135,7 +135,7 @@
 
 /* Mensajes de error */
 .hs-error-msgs {
-    color: #fca5a5 !important; /* CAMBIADO A UN ROJO CLARO PARA MEJOR CONTRASTE */
+    color: #dc2626 !important;
     font-size: 0.875rem !important;
     margin-top: 0.5rem !important;
     padding: 0 !important;
@@ -285,3 +285,4 @@
 .tecnogirona-form .submitted-message {
     background: linear-gradient(135deg, var(--form-secondary), #059669) !important;
 }
+
