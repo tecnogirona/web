@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecnoGirona - Reparación de Móviles, Ordenadores y Consolas en Girona | Servicio Técnico Profesional</title>
-    
+
     <meta name="description" content="TecnoGirona - Especialistas en reparación de móviles, ordenadores y consolas en Girona. Servicio técnico profesional con garantía de 3 meses. Diagnóstico gratuito y reparación en 48h.">
     <meta name="keywords" content="reparación móviles Girona, reparación ordenadores Girona, reparación consolas Girona, servicio técnico Girona, TecnoGirona, pantalla móvil rota Girona">
     <meta name="author" content="TecnoGirona">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tecnogirona.github.io/web/">
     <meta property="og:title" content="TecnoGirona - Reparación de Móviles, Ordenadores y Consolas en Girona">
     <meta property="og:description" content="Especialistas en reparación de dispositivos electrónicos en Girona. Garantía de 3 meses y diagnóstico gratuito.">
     <meta property="og:image" content="https://tecnogirona.github.io/web/images/mobile-repair-hero.jpg">
-    
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://tecnogirona.github.io/web/">
     <meta property="twitter:title" content="TecnoGirona - Reparación de Móviles, Ordenadores y Consolas en Girona">
     <meta property="twitter:description" content="Especialistas en reparación de dispositivos electrónicos en Girona. Garantía de 3 meses y diagnóstico gratuito.">
     <meta property="twitter:image" content="https://tecnogirona.github.io/web/images/mobile-repair-hero.jpg">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="hubspot-form-styles.css">
 
     <style>
@@ -442,6 +442,50 @@
             color: white; /* FORZAR COLOR BLANCO */
         }
 
+        /* Estilos para el formulario de HubSpot */
+        #hubspot-form-container input[type="text"],
+        #hubspot-form-container input[type="email"],
+        #hubspot-form-container input[type="tel"],
+        #hubspot-form-container textarea,
+        #hubspot-form-container select {
+            color: white !important; /* Color de texto para los campos de entrada */
+            border-color: rgba(255, 255, 255, 0.4) !important; /* Ajusta el borde si es necesario */
+            background-color: rgba(255, 255, 255, 0.05) !important; /* Fondo ligeramente transparente */
+        }
+
+        /* Color para el texto del placeholder (texto de sugerencia) */
+        #hubspot-form-container input::placeholder,
+        #hubspot-form-container textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7) !important; /* Color más claro para el placeholder */
+        }
+
+        /* Color para las etiquetas (labels) de los campos */
+        #hubspot-form-container .hs-form-field label {
+            color: white !important;
+        }
+
+        /* Color para mensajes de error si los hay */
+        #hubspot-form-container .hs-error-msgs label {
+            color: #ffcccc !important; /* Un rojo claro para los errores */
+        }
+
+        /* Estilo para el botón de enviar (ajustar si ya tienes uno global) */
+        #hubspot-form-container .hs-button {
+            background: var(--accent-color) !important; /* Usar tu color de acento o uno específico */
+            color: var(--text-dark) !important; /* Texto oscuro para contraste en el botón */
+            font-weight: 700 !important;
+            border: none !important;
+            padding: 0.75rem 1.5rem !important;
+            border-radius: 0.5rem !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #hubspot-form-container .hs-button:hover {
+            background: #e68a00 !important; /* Un poco más oscuro al pasar el ratón */
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
         /* FOOTER REDISEÑADO - SIN REDUNDANCIAS */
         .footer {
             background: var(--text-dark);
@@ -570,16 +614,16 @@
             .hero-title {
                 font-size: 2.5rem;
             }
-            
+
             .hero-stats {
-                grid-template-columns: 1fr; /* <--- ESTE ES EL CAMBIO SOLICITADO */
+                grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-            
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .navbar-actions {
                 flex-direction: column;
                 gap: 0.5rem;
@@ -606,11 +650,11 @@
                 <i class="bi bi-tools"></i>
                 TecnoGirona
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -642,7 +686,7 @@
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
-                
+
                 <div class="navbar-actions">
                     <a href="tel:637161141" class="btn-phone">
                         <i class="bi bi-telephone"></i>
@@ -666,7 +710,7 @@
                         <span class="highlight">Girona</span>
                     </h1>
                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-                        ¿Se te ha roto la pantalla del móvil? ¿Tu ordenador va lento? ¿Tu consola no funciona? 
+                        ¿Se te ha roto la pantalla del móvil? ¿Tu ordenador va lento? ¿Tu consola no funciona?
                         En TecnoGirona lo reparamos en menos de 48h. Garantía de 3 meses y más de 1.000 dispositivos reparados.
                     </p>
                     <div class="d-flex gap-3 mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -679,7 +723,7 @@
                             Llamar Ahora
                         </a>
                     </div>
-                    
+
                     </div>
         </div>
     </section>
@@ -690,7 +734,7 @@
                 <h2 class="display-5 fw-bold mb-3">Nuestros Servicios</h2>
                 <p class="lead text-muted">Soluciones técnicas profesionales para todos tus dispositivos con la mejor calidad y garantía</p>
             </div>
-            
+
             <div class="services-grid">
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon mobile">
@@ -698,7 +742,7 @@
                     </div>
                     <h3 class="service-title">Reparación de Móviles y Tablets</h3>
                     <p class="service-description">
-                        Especialistas en reparación de smartphones y tablets. Pantallas rotas, problemas de batería, 
+                        Especialistas en reparación de smartphones y tablets. Pantallas rotas, problemas de batería,
                         conectores de carga, daños por agua y problemas de software.
                     </p>
                     <ul class="service-features">
@@ -717,7 +761,7 @@
                     </div>
                     <h3 class="service-title">Reparación de Ordenadores</h3>
                     <p class="service-description">
-                        Portátiles y sobremesa. Eliminación de virus, optimización de rendimiento, 
+                        Portátiles y sobremesa. Eliminación de virus, optimización de rendimiento,
                         hardware dañado, pantallas rotas y actualización de componentes.
                     </p>
                     <ul class="service-features">
@@ -736,7 +780,7 @@
                     </div>
                     <h3 class="service-title">Reparación de Consolas</h3>
                     <p class="service-description">
-                        PlayStation, Xbox, Nintendo Switch. Especialistas en luz azul PS4, 
+                        PlayStation, Xbox, Nintendo Switch. Especialistas en luz azul PS4,
                         sobrecalentamiento, Joy-Con drift y problemas de lectores de discos.
                     </p>
                     <ul class="service-features">
@@ -755,7 +799,7 @@
                     </div>
                     <h3 class="service-title">Recuperación de Datos</h3>
                     <p class="service-description">
-                        Recuperamos archivos importantes de discos duros dañados, USB, tarjetas de memoria 
+                        Recuperamos archivos importantes de discos duros dañados, USB, tarjetas de memoria
                         y dispositivos con fallos lógicos o físicos.
                     </p>
                     <ul class="service-features">
@@ -774,7 +818,7 @@
                     </div>
                     <h3 class="service-title">Servicios IT para Empresas</h3>
                     <p class="service-description">
-                        Soluciones tecnológicas integrales para empresas. Mantenimiento preventivo, 
+                        Soluciones tecnológicas integrales para empresas. Mantenimiento preventivo,
                         soporte remoto, configuración de redes y consultoría IT.
                     </p>
                     <ul class="service-features">
@@ -793,7 +837,7 @@
                     </div>
                     <h3 class="service-title">Instalación y Configuración TPV</h3>
                     <p class="service-description">
-                        Instalación, configuración y mantenimiento de sistemas TPV (Terminal Punto de Venta) 
+                        Instalación, configuración y mantenimiento de sistemas TPV (Terminal Punto de Venta)
                         para comercios y restaurantes.
                     </p>
                     <ul class="service-features">
@@ -815,7 +859,7 @@
             <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
                 Obtén un presupuesto gratuito y sin compromiso para la reparación de tu dispositivo
             </p>
-            
+
             <div class="row">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
                     <h3 class="h4 mb-4">Solicitar Presupuesto</h3>
@@ -837,11 +881,11 @@
                       });
                     </script>
                     </div>
-                
+
                 <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
                     <div class="contact-info-card">
                         <h3 class="h4 mb-4">Información de Contacto</h3>
-                        
+
                         <div class="contact-info">
                             <div class="contact-item mb-4">
                                 <i class="bi bi-telephone-fill me-3"></i>
@@ -850,7 +894,7 @@
                                     <a href="tel:637161141" class="text-white">637 161 141</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-item mb-4">
                                 <i class="bi bi-envelope-fill me-3"></i>
                                 <div>
@@ -858,7 +902,7 @@
                                     <a href="mailto:tecnogirona@gmail.com" class="text-white">tecnogirona@gmail.com</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-item mb-4">
                                 <i class="bi bi-geo-alt-fill me-3"></i>
                                 <div>
@@ -867,7 +911,7 @@
                                     <small class="text-light">Servicio a domicilio disponible</small>
                                 </div>
                             </div>
-                           
+
                             <div class="contact-item mb-4">
                                 <i class="bi bi-clock-fill me-3"></i>
                                 <div>
@@ -878,7 +922,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="service-features-card">
                             <h5>¿Qué incluye nuestro servicio?</h5>
                             <ul class="service-features-list">
@@ -907,7 +951,7 @@
                         <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h5>Servicios</h5>
                     <ul>
@@ -919,7 +963,7 @@
                         <li><a href="tpv.html">Instalación TPV</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h5>Información</h5>
                     <ul>
@@ -930,7 +974,7 @@
                         <li><a href="terminos-condiciones.html">Términos de Servicio</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h5>Garantía y Calidad</h5>
                     <ul>
@@ -942,14 +986,14 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2024 TecnoGirona. Todos los derechos reservados. Especialistas en reparación de dispositivos electrónicos en Girona.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/34637161141?text=Hola,%20necesito%20información%20sobre%20reparación%20de%20dispositivos" 
+    <a href="https://wa.me/34637161141?text=Hola,%20necesito%20información%20sobre%20reparación%20de%20dispositivos"
        class="whatsapp-float" aria-label="Contactar por WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
@@ -980,21 +1024,21 @@
         /*
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const submitBtn = this.querySelector('button[type="submit"]');
             const submitText = submitBtn.querySelector('.submit-text');
             const loadingText = submitBtn.querySelector('.loading-text');
             const formMessage = document.getElementById('formMessage');
-            
+
             // Show loading state
             submitText.style.display = 'none';
             loadingText.style.display = 'inline-block';
             submitBtn.disabled = true;
-            
+
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
+
             // Simulate form submission (replace with actual backend)
             setTimeout(() => {
                 // Success message
@@ -1006,7 +1050,7 @@
                 `;
                 formMessage.style.display = 'block';
                 this.reset();
-                
+
                 // WhatsApp fallback
                 const whatsappMessage = `Hola, solicito presupuesto para:
 Nombre: ${data.nombre}
@@ -1015,11 +1059,11 @@ Teléfono: ${data.telefono}
 Dispositivo: ${data.dispositivo}
 Problema: ${data.problema}
 Mensaje: ${data.mensaje || 'No especificado'}`;
-                
+
                 setTimeout(() => {
                     window.open(`https://wa.me/34637161141?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
                 }, 2000);
-                
+
                 // Reset button state
                 submitText.style.display = 'inline-block';
                 loadingText.style.display = 'none';
