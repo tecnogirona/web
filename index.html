@@ -204,6 +204,44 @@
             box-shadow: var(--shadow-lg);
             color: white;
         }
+            @media (max-width: 991.98px) { /* Este breakpoint es el 'lg' de Bootstrap */
+        .navbar-collapse {
+            width: 100%; /* Asegura que el menú colapsado ocupe todo el ancho disponible */
+        }
+        .navbar-nav {
+            width: 100%; /* Asegura que la lista de navegación ocupe todo el ancho */
+            margin-left: 0 !important; /* Anula 'ms-auto' en móvil si causa problemas */
+            margin-right: 0 !important;
+            padding-left: 0; /* Elimina cualquier padding extra en el ul */
+        }
+        .navbar-nav .nav-item {
+            width: 100%; /* Hace que cada elemento del menú ocupe todo el ancho */
+            text-align: left; /* Alinea el texto de los ítems a la izquierda, como en index.html */
+        }
+        .navbar-nav .nav-link {
+            padding-left: 1rem !important; /* Asegura un padding consistente a la izquierda para los enlaces */
+            padding-right: 1rem !important; /* Asegura un padding consistente a la derecha para los enlaces */
+        }
+        .dropdown-menu {
+            width: 100%; /* Asegura que los menús desplegables sean de ancho completo */
+            text-align: left; /* Alinea el texto de los ítems desplegables a la izquierda */
+        }
+        .dropdown-item {
+            padding-left: 1rem !important; /* Asegura un padding consistente para los ítems desplegables */
+            padding-right: 1rem !important;
+            justify-content: flex-start; /* Alinea iconos y texto de ítems desplegables al inicio */
+        }
+        .navbar-actions {
+            flex-direction: column; /* Apila los botones de acción verticalmente */
+            width: 100%;
+            align-items: center; /* Centra los botones si aparecen en móvil */
+            margin-top: 1rem;
+        }
+        .navbar-actions .btn {
+            width: 90%; /* Da un ancho fijo a los botones de acción */
+            max-width: 300px;
+        }
+    }
         /* HERO SECTION CORREGIDA */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
@@ -619,10 +657,11 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                </ul>
+            <div class="navbar-actions d-lg-flex d-none">
+                </div>
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
