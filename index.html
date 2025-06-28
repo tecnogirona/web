@@ -147,8 +147,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border: none;
             box-shadow: var(--shadow-xl);
             border-radius: 0.75rem;
-            padding: 0.5rem;
+            padding: 0.75rem; /* Adjusted padding */
             margin-top: 0.5rem;
+            min-width: 220px; /* Added min-width */
         }
 
         .dropdown-item {
@@ -428,6 +429,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         /* Estilos para el formulario de HubSpot */
+        #hubspot-form-container {
+            background: rgba(255, 255, 255, 0.2); /* Increased alpha for more whiteness */
+            border-radius: 1rem; /* Rounded corners */
+            padding: 2rem; /* Add padding similar to card */
+            backdrop-filter: blur(10px); /* Glass effect blur */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Increased alpha for border */
+            height: 100%; /* Ensure it takes full height of its column */
+            display: flex;
+            flex-direction: column;
+            /* Existing margin styles can be maintained or adjusted as needed */
+            margin-top: 4rem; /* Adjust if mb-5 is not needed */
+            margin-bottom: 5rem; /* Adjust if mb-5 is not needed */
+        }
+
+
         #hubspot-form-container input[type="text"],
         #hubspot-form-container input[type="email"],
         #hubspot-form-container input[type="tel"],
@@ -829,10 +845,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Envíanos tus dudas o solicita un presupuesto gratuito.
             </p>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div id="hubspot-form-container" class="mt-4 mb-5">
                         </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="contact-info-card mt-4">
                         <h5 class="fw-bold mb-4">Información de Contacto</h5>
                         <ul class="list-unstyled">
