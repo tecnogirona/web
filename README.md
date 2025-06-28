@@ -55,5 +55,5 @@ Sitio web oficial de TecnoGirona, especialistas en reparación de dispositivos e
 
 ## Licencia
 
-© 2024 TecnoGirona. Todos los derechos reservados.
+© 2025 TecnoGirona. Todos los derechos reservados.
 
