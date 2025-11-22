@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementación y Soporte CRM Privado | TecnoGirona - Soluciones IT Empresariales</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Implementación de nuestro CRM privado y robusto. Automatiza ventas, gestiona proyectos y acepta pagos online con la máxima seguridad y eficiencia.">
+    <meta name="keywords" content="CRM privado, SaaS empresarial, gestión de clientes, automatización de ventas, pagos online seguros, TecnoGirona CRM">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Colores Base de la Web */
+            --primary-color: #2563eb; /* Azul */
+            --primary-dark: #1d4ed8;
+            --secondary-color: #10b981; /* Verde */
+            --secondary-dark: #059669;
+            --accent-color: #f59e0b; /* Naranja */
+            
+            /* NUEVOS COLORES PARA CRM (Morado Vibrante) */
+            --crm-color: #8A2BE2; /* Azul Violeta (Blue Violet) */
+            --crm-dark: #6A1B9A; /* Morado más oscuro */
+
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        /* NAVBAR - Se mantiene el estilo original */
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 0;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-custom.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand i {
+            font-size: 1.75rem;
+        }
+
+        .navbar-nav {
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: var(--shadow-xl);
+            border-radius: 0.75rem;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .dropdown-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-phone {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-phone:hover {
+            color: var(--primary-dark);
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-quote {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        /* HERO SECTION - Adaptado al nuevo color */
+        .hero-section {
+            background: linear-gradient(135deg, var(--crm-color) 0%, var(--crm-dark) 100%);
+            padding: 8rem 0 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* BOTONES - Adaptado al nuevo color */
+        .btn-crm-primary {
+            background: linear-gradient(135deg, var(--crm-color), var(--crm-dark));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            border: none;
+        }
+
+        .btn-crm-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        .btn-crm-secondary {
+            background: none;
+            color: var(--crm-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--crm-color);
+        }
+
+        .btn-crm-secondary:hover {
+            background-color: rgba(138, 43, 226, 0.1);
+            color: var(--crm-dark);
+        }
+
+        /* SECCIONES DE CONTENIDO */
+        .content-section {
+            padding: 5rem 0;
+        }
+
+        .content-section.bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        /* CARDS DE BENEFICIOS - Adaptado al nuevo color */
+        .benefit-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            height: 100%;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .benefit-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--crm-color), var(--crm-dark));
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-description {
+            color: var(--text-light);
+        }
+
+        /* LISTA DE CARACTERÍSTICAS */
+        .feature-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .feature-list li i {
+            color: var(--crm-color);
+            margin-right: 0.5rem;
+        }
+
+        /* FOOTER - Se mantiene el estilo original */
+        .footer-section {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-link {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--crm-color);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-contact-item i {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Utilidades */
+        .text-crm { color: var(--crm-color) !important; }
+        .bg-crm { background-color: var(--crm-color) !important; }
+        .border-crm { border-color: var(--crm-color) !important; }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (Mantenido de index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tools"></i> TecnoGirona
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="moviles.html"><i class="bi bi-phone"></i> Reparación Móviles</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Reparación Ordenadores</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-controller"></i> Reparación Consolas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-hdd-fill"></i> Recuperación Datos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-briefcase-fill"></i> Servicios IT Empresas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash-coin"></i> Instalación TPV</a></li>
+                            <li><a class="dropdown-item text-crm" href="perfex_crm.html"><i class="bi bi-diagram-3-fill text-crm"></i> **CRM Privado**</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <div class="navbar-actions">
+                    <a href="tel:637161141" class="btn-phone">
+                        <i class="bi bi-telephone-fill"></i> 637 161 141
+                    </a>
+                    <a href="#" class="btn-quote">Presupuesto Gratis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Adaptado al nuevo color y contenido) -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content" data-aos="fade-right">
+                        <h1 class="hero-title">
+                            Implementación de tu <span class="highlight">CRM Privado</span> y Robusto
+                        </h1>
+                        <p class="hero-subtitle">
+                            Transforma tu gestión comercial y de proyectos con nuestra solución SaaS privada. Automatiza tareas, centraliza la información de tus clientes y acepta pagos online con la máxima seguridad.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#contacto" class="btn btn-crm-primary btn-lg">
+                                <i class="bi bi-rocket-takeoff-fill"></i> Solicitar Auditoría Gratuita
+                            </a>
+                            <a<a<a href="tel:637161141" class="btn btn-crm-primary btn-lg">">
+                                <i class="bi bi-telephone-fill"></i> Llamar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="hero-image" data-aos="fade-left">
+                        <!-- Aquí iría una imagen o ilustración relacionada con CRM/Automatización -->
+                        <i class="bi bi-diagram-3-fill display-1 text-white opacity-50" style="font-size: 10rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Beneficios Clave (Adaptado al nuevo color) -->
+    <section class="content-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">¿Por qué elegir nuestro CRM Privado?</h2>
+                <p class="section-subtitle">
+                    Nuestro CRM es la solución ideal para pymes que buscan una gestión integral, robusta y segura de sus procesos de venta, proyectos y soporte técnico. Es tu plataforma privada.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="benefit-icon"><i class="bi bi-funnel-fill"></i></div>
+                        <h3 class="benefit-title">Aumento de la Conversión y Seguridad</h3>
+                        <p class="benefit-description">
+                            Centraliza leads y automatiza el seguimiento de oportunidades. Nunca más perderás una venta. Además, tus datos están seguros en nuestra plataforma privada.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3 class="benefit-title">Gestión de Proyectos y Pagos Online</h3>
+                        <p class="benefit-description">
+                            Asigna tareas, controla el tiempo y gestiona la facturación. **Acepta pagos de presupuestos y facturas online** de forma segura y sin preocupaciones.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit-icon"><i class="bi bi-person-lines-fill"></i></div>
+                        <h3 class="benefit-title">Relación con el Cliente (Soporte)</h3>
+                        <p class="benefit-description">
+                            Ofrece un portal de clientes dedicado y gestiona tickets de soporte de forma organizada y profesional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios de Implementación (Adaptado al nuevo color) -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">Nuestro Servicio de Implementación de CRM Privado</h2>
+                    <p class="section-subtitle mb-4">
+                        No solo implementamos el software, lo adaptamos a la forma única en que opera tu negocio, garantizando una adopción rápida y resultados medibles con la máxima robustez.
+                    </p>
+                    <ul class="list-unstyled feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> **Instalación y Configuración:** Despliegue seguro en tu servidor o en la nube, garantizando la **máxima robustez**.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> **Personalización de Módulos:** Adaptación de campos, flujos de trabajo y plantillas (facturas, presupuestos).</li>
+                        <li><i class="bi bi-check-circle-fill"></i> **Migración de Datos:** Importación de tu base de datos de clientes y proyectos existentes.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> **Integración con TPV/Web:** Conexión con otros sistemas y **pasarelas de pago** para aceptar presupuestos online.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> **Formación a tu Equipo:** Sesiones prácticas para que tu equipo domine el CRM desde el primer día.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> **Soporte Post-Implementación:** Asistencia técnica continua y resolución de dudas.</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-crm-primary mt-3">
+                        <i class="bi bi-calendar-check"></i> Agenda una Consulta Gratuita
+                    </a>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block text-center" data-aos="fade-left">
+                    <!-- Aquí iría una imagen o mockup de Perfex CRM -->
+                    <i class="bi bi-pc-display-horizontal text-crm opacity-50" style="font-size: 15rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Modularidad y Plugins -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <h2 class="section-title">Modularidad y Expansión sin Límites</h2>
+                    <p class="section-subtitle mb-4">
+                        Nuestro CRM Privado está diseñado con una arquitectura totalmente modular, lo que garantiza su adaptabilidad a cualquier sector y la posibilidad de crecer al ritmo de tu negocio.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3" style="width: 3rem; height: 3rem; font-size: 1.2rem;"><i class="bi bi-gear-fill"></i></div>
+                                <div>
+                                    <h4 class="benefit-title" style="font-size: 1.1rem;">Adaptación Sectorial</h4>
+                                    <p class="benefit-description" style="font-size: 0.9rem;">
+                                        Perfecto para **Industria y Fabricación**, **Venta Retail**, Servicios IT o cualquier otro nicho. Se ajusta a tus flujos de trabajo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3" style="width: 3rem; height: 3rem; font-size: 1.2rem;"><i class="bi bi-box-seam-fill"></i></div>
+                                <div>
+                                    <h4 class="benefit-title" style="font-size: 1.1rem;">Gestión de Stock Avanzada</h4>
+                                    <p class="benefit-description" style="font-size: 0.9rem;">
+                                        Integra módulos de inventario y gestión de almacén para tener un control total de tus activos y existencias en tiempo real.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3" style="width: 3rem; height: 3rem; font-size: 1.2rem;"><i class="bi bi-puzzle-fill"></i></div>
+                                <div>
+                                    <h4 class="benefit-title" style="font-size: 1.1rem;">Ecosistema de Plugins</h4>
+                                    <p class="benefit-description" style="font-size: 0.9rem;">
+                                        Amplía las funcionalidades con plugins para marketing, RRHH, contabilidad o cualquier necesidad específica que surja en el futuro.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start">
+                                <div class="benefit-icon me-3" style="width: 3rem; height: 3rem; font-size: 1.2rem;"><i class="bi bi-shield-lock-fill"></i></div>
+                                <div>
+                                    <h4 class="benefit-title" style="font-size: 1.1rem;">Seguridad y Escalabilidad</h4>
+                                    <p class="benefit-description" style="font-size: 0.9rem;">
+                                        La arquitectura modular garantiza que las nuevas integraciones no comprometan la robustez ni la seguridad de tu plataforma central.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center" data-aos="fade-right">
+                    <h2 class="section-title text-crm">Totalmente Adaptativo</h2>
+                    <p class="lead mb-4">
+                        Un CRM que evoluciona con tu empresa, sin importar el sector.
+                    </p>
+                    <!-- Icono grande para la modularidad -->
+                    <i class="bi bi-bricks text-crm opacity-75" style="font-size: 10rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Llamada a la Acción Final (Adaptado al nuevo color) -->
+    <section class="content-section text-white" style="background: linear-gradient(135deg, var(--crm-dark), var(--crm-color));">
+        <div class="container text-center">
+            <h2 class="section-title text-white">¿Listo para Disparar la Productividad y Asegurar tus Pagos?</h2>
+            <p class="lead mb-4">
+                Deja de gestionar tu negocio con hojas de cálculo. Centraliza, automatiza y crece con nuestro CRM Privado. **Seguridad y pagos online garantizados.**
+            </p>
+            <a href="#contacto" class="btn btn-lg btn-light text-crm fw-bold shadow-lg">
+                <i class="bi bi-envelope-fill"></i> Solicita tu Presupuesto Personalizado
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Mantenido de index.html) -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">TecnoGirona</h5>
+                    <p class="text-light">Especialistas en reparación de dispositivos electrónicos y soluciones IT en Girona desde 2010. Calidad, rapidez y garantía en cada servicio.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="footer-title">Servicios</h5>
+                    <a href="moviles.html" class="footer-link">Reparación Móviles</a>
+                    <a href="#" class="footer-link">Reparación Ordenadores</a>
+                    <a href="#" class="footer-link">Servicios IT</a>
+                    <a href="perfex_crm.html" class="footer-link text-crm">CRM Privado</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="footer-title">Información</h5>
+                    <a href="#" class="footer-link">Preguntas Frecuentes</a>
+                    <a href="#" class="footer-link">Sobre Nosotros</a>
+                    <a href="#" class="footer-link">Política de Privacidad</a>
+                    <a href="#" class="footer-link">Términos y Condiciones</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <div class="footer-contact-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>637 161 141</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>tecnogirona@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Girona, España</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 TecnoGirona. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Script para cambiar el color del navbar al hacer scroll (mantenido de index.html)
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
