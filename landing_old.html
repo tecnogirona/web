@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W397T36P');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacturaClick | CRM y Facturación para Empresas y Autónomos</title>
+    <meta name="description" content="FacturaClick es el CRM y software de facturación más intuitivo para autónomos y pymes. Gestiona tus facturas, clientes y proyectos de forma automática y sencilla.">
+    <meta name="keywords" content="CRM, facturación, autónomos, pymes, software gestión, facturas online, gestión clientes">
+    <link rel="canonical" href="https://facturaclick.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://facturaclick.com/">
+    <meta property="og:title" content="FacturaClick | CRM y Facturación para Empresas y Autónomos">
+    <meta property="og:description" content="Gestiona tu negocio de forma automática con el CRM más intuitivo.">
+    <meta property="og:image" content="https://tecnogirona.github.io/web/hosting3.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://facturaclick.com/">
+    <meta property="twitter:title" content="FacturaClick | CRM y Facturación para Empresas y Autónomos">
+    <meta property="twitter:description" content="Gestiona tu negocio de forma automática con el CRM más intuitivo.">
+    <meta property="twitter:image" content="https://tecnogirona.github.io/web/hosting3.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://tecnogirona.github.io/web/logo%20facturaclickstripe.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0061ff;
+            --primary-dark: #004ecc;
+            --primary-light: #e0eaff;
+            --accent-green: #55aa3f;
+            --accent-green-bright: #00ff00;
+            --accent-green-light: #f0fde8;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-light: #e2e8f0;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #1e293b; 
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+        }
+
+        .navbar-custom { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 2px solid var(--primary-light);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 97, 255, 0.05);
+        }
+        
+        .nav-link { 
+            color: var(--dark) !important; 
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent-green));
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* VIDEO WRAPPER */
+        .video-wrapper {
+            background: #000;
+            cursor: pointer;
+            border: 2px solid var(--primary);
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 97, 255, 0.2);
+        }
+        
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 97, 255, 0.9);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            z-index: 10;
+            pointer-events: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 576px) {
+            .play-button-overlay {
+                display: none !important;
+            }
+        }
+        
+        .video-wrapper:hover .play-button-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 40px rgba(85, 170, 63, 0.5);
+        }
+        
+        .video-playing .play-button-overlay { 
+            opacity: 0; 
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(135deg, #e0eaff 0%, #f0fde8 100%);
+            padding: 8rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 97, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero .text-primary {
+            background: linear-gradient(90deg, var(--primary), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary-custom { 
+            background: linear-gradient(135deg, var(--primary), #0050dd);
+            color: white; 
+            border-radius: 8px; 
+            padding: 12px 25px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            border: none; 
+            transition: all 0.3s; 
+            display: inline-block; 
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 97, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary-custom:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary-custom:hover { 
+            background: linear-gradient(135deg, var(--primary-dark), #003db3);
+            color: white; 
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 97, 255, 0.3);
+        }
+
+        .btn-outline-custom { 
+            border: 2px solid var(--primary); 
+            color: var(--primary); 
+            border-radius: 8px; 
+            padding: 10px 25px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            transition: all 0.3s; 
+            display: inline-block; 
+            text-align: center;
+        }
+        
+        .btn-outline-custom:hover { 
+            background: var(--primary); 
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 97, 255, 0.2);
+        }
+
+        .card-feature { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 2.5rem; 
+            border: 2px solid var(--border-light);
+            transition: all 0.3s; 
+            height: 100%; 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent-green));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        
+        .card-feature:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card-feature:hover { 
+            transform: translateY(-15px); 
+            box-shadow: 0 25px 50px rgba(0, 97, 255, 0.1);
+            border-color: var(--primary);
+        }
+
+        .icon-circle { 
+            width: 80px; 
+            height: 80px; 
+            background: linear-gradient(135deg, var(--primary-light), var(--accent-green-light));
+            color: var(--primary); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 1.5rem; 
+            font-size: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 97, 255, 0.1);
+        }
+
+        /* PRECIOS CUSTOM MEJORADOS */
+        .pricing-section { 
+            background-color: var(--white);
+            padding: 3rem 0;
+        }
+        
+        .pricing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+            gap: 1rem;
+        }
+        
+        .form-check-input:checked {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .toggle-label {
+            font-weight: 600;
+            color: #64748b;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .toggle-label.active {
+            color: var(--dark);
+        }
+
+        .save-badge {
+            background: linear-gradient(135deg, #dcfce7, #f0fde8);
+            color: var(--accent-green);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-left: 8px;
+            border: 1px solid var(--accent-green-light);
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 1.5rem;
+            border: 2px solid var(--border-light);
+            transition: all 0.4s;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            box-shadow: 0 25px 50px rgba(0, 97, 255, 0.15);
+            transform: scale(1.05);
+            z-index: 1;
+            background: linear-gradient(135deg, rgba(0, 97, 255, 0.02), rgba(85, 170, 63, 0.02));
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary), var(--accent-green));
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 97, 255, 0.3);
+        }
+
+        .plan-icon { 
+            font-size: 2.2rem; 
+            background: linear-gradient(135deg, var(--primary), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem; 
+        }
+        
+        .price-container {
+            margin: 1rem 0;
+            min-height: 90px;
+        }
+
+        .price-tag { 
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            color: var(--dark); 
+            line-height: 1;
+        }
+        
+        .price-tag span { 
+            font-size: 1rem; 
+            color: #64748b; 
+            font-weight: 400; 
+        }
+        
+        .price-annual { 
+            display: none; 
+        }
+        
+        .savings-info {
+            color: var(--accent-green);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+        }
+        
+        .gift-info {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+        }
+
+        .module-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 1.2rem 0; 
+            flex-grow: 1; 
+            text-align: left; 
+        }
+        
+        .module-list li { 
+            margin-bottom: 0.6rem; 
+            display: flex; 
+            align-items: start; 
+            color: #475569; 
+            font-size: 0.88rem; 
+        }
+        
+        .module-list li i { 
+            color: var(--accent-green); 
+            margin-right: 8px; 
+            font-size: 1rem; 
+            margin-top: 2px;
+            font-weight: 700;
+        }
+        
+        .module-list li.disabled { 
+            color: #cbd5e1; 
+            text-decoration: line-through; 
+        }
+        
+        .module-list li.disabled i { 
+            color: #cbd5e1; 
+        }
+        
+        .module-category { 
+            font-weight: 700; 
+            color: var(--dark); 
+            margin-top: 1rem; 
+            margin-bottom: 0.5rem; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+        }
+
+        .common-features {
+            background: linear-gradient(135deg, rgba(0, 97, 255, 0.02), rgba(85, 170, 63, 0.02));
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 4rem;
+            border: 2px solid var(--border-light);
+        }
+        
+        .common-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        
+        .common-feature-item i { 
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        /* FAQ SECTION */
+        .accordion-button {
+            background: white;
+            color: var(--dark);
+            border: 2px solid var(--border-light);
+            border-radius: 12px !important;
+            padding: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: linear-gradient(135deg, rgba(0, 97, 255, 0.05), rgba(85, 170, 63, 0.05));
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 97, 255, 0.1);
+        }
+
+        .accordion-button:hover {
+            background: linear-gradient(135deg, rgba(0, 97, 255, 0.08), rgba(85, 170, 63, 0.08));
+            border-color: var(--primary);
+        }
+
+        .accordion-body {
+            color: var(--text-muted);
+            line-height: 1.8;
+            padding: 1.5rem;
+        }
+
+        .whatsapp-float { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            background: linear-gradient(135deg, #25d366, #20ba5d);
+            color: white; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 30px; 
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); 
+            z-index: 1000; 
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+            50% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6); }
+        }
+
+        footer { 
+            background: linear-gradient(135deg, var(--dark), #1a2332);
+            color: #94a3b8; 
+            padding: 4rem 0 2rem;
+            border-top: 2px solid var(--primary-light);
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-links li a {
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 97, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            color: var(--primary);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary), var(--accent-green));
+            color: white;
+            border-radius: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 4rem 0;
+            box-shadow: 0 20px 40px rgba(0, 97, 255, 0.2);
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-btn-white {
+            background: white;
+            color: var(--primary);
+            border-radius: 12px;
+            padding: 14px 32px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .cta-btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: var(--primary-dark);
+        }
+
+        .cta-btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 12px 32px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .cta-btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 991px) {
+            .pricing-card.featured {
+                transform: scale(1);
+                margin: 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W397T36P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <a href="https://wa.me/34637161141" class="whatsapp-float" target="_blank"><i class="bi bi-whatsapp"></i></a>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://tecnogirona.github.io/web/logo%20facturaclickstripe.png" alt="FacturaClick Logo" style="height: 45px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#features">Funciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#pricing">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#faq">Ayuda</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="https://billing.stripe.com/p/login/28o4iBdDH0Kx0q4144">Portal Cliente</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="https://tecnogirona.42web.io/demo/ps/admin/authentication" class="btn btn-outline-custom btn-sm me-2">Ver Demo</a>
+                        <a href="https://buy.stripe.com/00w8wO7g30LZezA2OC2wU0b" class="btn btn-primary-custom btn-sm">Probar 30 días Gratis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <span class="badge bg-primary text-white px-3 py-2 mb-3 fw-bold">NUEVA VERSIÓN 2026</span>
+                    <h1 class="display-4 fw-800 mb-4">Haz que tu negocio <br><span class="text-primary">funcione solo.</span></h1>
+                    <p class="lead text-muted mb-5">La plataforma de facturación y CRM más intuitiva para autónomos y pymes que quieren crecer sin complicaciones.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://buy.stripe.com/00w8wO7g30LZezA2OC2wU0b" class="btn-primary-custom px-4">Empezar Gratis ahora</a>
+                        <a href="https://tecnogirona.42web.io/demo/ps/admin/authentication" class="btn-outline-custom px-4"><i class="bi bi-play-circle me-2"></i>Ver Demo</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="zoom-in">
+                    <div id="videoContainer" class="video-wrapper shadow-lg rounded-4 overflow-hidden">
+                        <div class="play-button-overlay">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                        <div class="ratio ratio-16x9">
+                            <video id="demoVideo" controls playsinline preload="auto" poster="https://tecnogirona.github.io/web/hosting3.png" style="width: 100%; height: 100%; object-fit: cover;">
+                                <source src="https://tecnogirona.es/video%20crm.mp4" type="video/mp4">
+                                Tu navegador no soporta videos.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold fs-1">Todo lo que necesitas</h2>
+                <p class="text-muted fs-5">Gestiona cada área de tu empresa desde una única interfaz privada.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-feature">
+                        <div class="icon-circle"><i class="bi bi-receipt"></i></div>
+                        <h4 class="fw-bold">Facturación Pro</h4>
+                        <p class="text-muted small">Crea facturas, presupuestos y abonos en segundos. Automatiza tus cobros recurrentes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-feature">
+                        <div class="icon-circle"><i class="bi bi-people"></i></div>
+                        <h4 class="fw-bold">CRM de Ventas</h4>
+                        <p class="text-muted small">No pierdas ni una oportunidad. Gestiona leads y clientes con historial completo.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-feature">
+                        <div class="icon-circle"><i class="bi bi-box-seam"></i></div>
+                        <h4 class="fw-bold">Stock e Inventario</h4>
+                        <p class="text-muted small">Sincroniza tus almacenes y productos. Recibe alertas de stock bajo automáticamente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-feature">
+                        <div class="icon-circle"><i class="bi bi-headset"></i></div>
+                        <h4 class="fw-bold">Atención al Cliente</h4>
+                        <p class="text-muted small">Portal de tickets para resolver dudas de clientes y fidelizarlos con un soporte ágil.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-feature">
+                        <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+                        <h4 class="fw-bold">Privacidad Total</h4>
+                        <p class="text-muted small">Tus datos en un entorno cifrado y privado. Tú eres el único dueño de tu información.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-feature">
+                        <div class="icon-circle"><i class="bi bi-kanban"></i></div>
+                        <h4 class="fw-bold">Proyectos</h4>
+                        <p class="text-muted small">Organiza tareas, tiempos y equipos. Visualiza el progreso con paneles Kanban.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-5 pricing-section">
+        <div class="container py-5">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold fs-1">Planes diseñados para crecer</h2>
+                <p class="text-muted fs-5">Toda la potencia de un ERP con la sencillez que buscas.</p>
+            </div>
+
+            <!-- Selector Mensual/Anual -->
+            <div class="pricing-toggle">
+                <span id="monthly-label" class="toggle-label active">Mensual</span>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="billingToggle" style="width: 3.5em; height: 1.75em; cursor: pointer;">
+                </div>
+                <span id="yearly-label" class="toggle-label">Anual <span class="save-badge">¡3 MESES GRATIS!</span></span>
+            </div>
+            
+            <div class="row g-4 align-items-stretch">
+                <!-- Plan Estándar -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="pricing-card">
+                        <div class="plan-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                        <h3 class="fw-bold">Estándar</h3>
+                        <p class="text-muted small">Ideal para autónomos y nuevos negocios.</p>
+                        <div class="price-container">
+                            <div class="price-tag price-monthly">25€<span>/mes</span></div>
+                            <div class="gift-info price-monthly"><i class="bi bi-gift me-1"></i> ¡Prueba 30 días gratis!</div>
+                            
+                            <div class="price-tag price-annual">250€<span>/año</span></div>
+                            <div class="savings-info price-annual"><i class="bi bi-stars me-1"></i> Ahorras 50€ (3 Meses gratis)</div>
+                        </div>
+                        <ul class="module-list">
+                            <div class="module-category">Gestión Comercial</div>
+                            <li><i class="bi bi-check-circle-fill"></i> Facturación Electrónica (Verifactu)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Presupuestos y Albaranes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gestión de Clientes y Leads</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Catálogo de Productos (hasta 1000)</li>
+                            
+                            <div class="module-category">Operaciones</div>
+                            <li><i class="bi bi-check-circle-fill"></i> Agenda y Tareas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> App Móvil (iOS y Android)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gastos y Compras</li>
+                            <li class="disabled"><i class="bi bi-x-circle"></i> Gestión de Proyectos</li>
+                            <li class="disabled"><i class="bi bi-x-circle"></i> Control de Stock Avanzado</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/00w8wO7g30LZezA2OC2wU0b" id="btn-estandar" class="btn btn-outline-custom w-100 mt-auto">Elegir Estándar</a>
+                    </div>
+                </div>
+
+                <!-- Plan Business -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">Más Popular</div>
+                        <div class="plan-icon"><i class="bi bi-briefcase"></i></div>
+                        <h3 class="fw-bold">Business</h3>
+                        <p class="text-muted small">La solución completa para pymes en crecimiento.</p>
+                        <div class="price-container">
+                            <div class="price-tag price-monthly">45€<span>/mes</span></div>
+                            <div class="gift-info price-monthly"><i class="bi bi-gift me-1"></i> ¡Prueba 30 días gratis!</div>
+                            
+                            <div class="price-tag price-annual">450€<span>/año</span></div>
+                            <div class="savings-info price-annual"><i class="bi bi-stars me-1"></i> Ahorras 90€ (3 meses gratis)</div>
+                        </div>
+                        <ul class="module-list">
+                            <div class="module-category">Todo lo del plan Estándar y:</div>
+                            <div class="module-category">Módulos Avanzados</div>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Gestión de Proyectos y Tiempos</strong></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Inventario y Multialmacén</strong></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>SAT y Partes de Trabajo</strong></li>
+                            <li><i class="bi bi-check-circle-fill"></i> Remesas Bancarias SEPA</li>
+                            
+                            <div class="module-category">Automatización</div>
+                            <li><i class="bi bi-check-circle-fill"></i> Portal de Clientes Avanzado</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Conciliación Bancaria</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Estados Personalizados</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Informes de Negocio Pro</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/dRm14m57V1Q33UW4WK2wU0d" id="btn-business" class="btn btn-primary-custom w-100 mt-auto">Probar 30 días gratis</a>
+                    </div>
+                </div>
+
+                <!-- Plan Enterprise -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card">
+                        <div class="plan-icon"><i class="bi bi-buildings"></i></div>
+                        <h3 class="fw-bold">Enterprise</h3>
+                        <p class="text-muted small">Potencia ilimitada para grandes estructuras.</p>
+                        <div class="price-container">
+                            <div class="price-tag price-monthly">129€<span>/mes</span></div>
+                            <div class="gift-info price-monthly"><i class="bi bi-gift me-1"></i> ¡Prueba 30 días gratis!</div>
+                            
+                            <div class="price-tag price-annual">1.290€<span>/año</span></div>
+                            <div class="savings-info price-annual"><i class="bi bi-stars me-1"></i> Ahorras 380€ (3 meses gratis)</div>
+                        </div>
+                        <ul class="module-list">
+                            <div class="module-category">Todo lo del plan Business y:</div>
+                            <div class="module-category">Exclusivo Enterprise</div>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>API Completa para Integraciones</strong></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Dominio y Marca Personalizada</strong></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Soporte VIP y Consultoría</strong></li>
+                            <li><i class="bi bi-check-circle-fill"></i> Usuarios Ilimitados</li>
+                            
+                            <div class="module-category">Seguridad y Control</div>
+                            <li><i class="bi bi-check-circle-fill"></i> Auditoría de Acciones</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Copias de Seguridad Horarias</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Formación Personalizada</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Instalación en Servidor Privado</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/00w00i8k7dyL6341Ky2wU0f" id="btn-enterprise" class="btn btn-outline-custom w-100 mt-auto">Elegir Enterprise</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Características comunes -->
+            <div class="common-features" data-aos="fade-up">
+                <h4 class="fw-bold mb-4 text-center">Incluido en todos los planes:</h4>
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="common-feature-item"><i class="bi bi-shield-check"></i> Cumplimiento RGPD</div>
+                        <div class="common-feature-item"><i class="bi bi-cloud-arrow-up"></i> Nube Segura</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="common-feature-item"><i class="bi bi-phone"></i> App Móvil Gratis</div>
+                        <div class="common-feature-item"><i class="bi bi-headset"></i> Soporte Técnico</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="common-feature-item"><i class="bi bi-arrow-repeat"></i> Actualizaciones</div>
+                        <div class="common-feature-item"><i class="bi bi-file-earmark-pdf"></i> Factura Electrónica</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="common-feature-item"><i class="bi bi-box-arrow-in-right"></i> Importación Datos</div>
+                        <div class="common-feature-item"><i class="bi bi-lock"></i> Cifrado Bancario</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5 bg-white">
+        <div class="container py-5" style="max-width: 900px;">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold fs-1">¿Tienes dudas? Tenemos respuestas</h2>
+                <p class="text-muted fs-5">Todo lo que necesitas saber sobre FacturaClick para decidirte hoy mismo.</p>
+            </div>
+            
+            <div class="accordion accordion-flush" id="faqFactura">
+                <div class="accordion-item border mb-3 rounded-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header"><button class="accordion-button fw-bold" data-bs-toggle="collapse" data-bs-target="#q1">¿Qué diferencia a FacturaClick de otros CRMs?</button></h2>
+                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqFactura">
+                        <div class="accordion-body">La mayoría de CRMs son "públicos" y compartes infraestructura. FacturaClick instala una instancia privada y cifrada exclusiva para ti. Esto significa más velocidad, más privacidad y un software que unifica facturación, proyectos e inventario en un solo lugar sin pagar varias cuotas.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border mb-3 rounded-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#qMigra">¿Puedo importar mis datos desde Excel o mi programa actual?</button></h2>
+                    <div id="qMigra" class="accordion-collapse collapse" data-bs-parent="#faqFactura">
+                        <div class="accordion-body">¡Por supuesto! Puedes importar tus listas de clientes, leads, artículos y servicios mediante archivos CSV o Excel. Si tienes una base de datos compleja, nuestro equipo técnico puede asesorarte para realizar la migración sin perder información.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border mb-3 rounded-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q2">¿Mis datos están seguros y cumplen con el RGPD?</button></h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqFactura">
+                        <div class="accordion-body">Absolutamente. Cumplimos estrictamente con el RGPD. Tus datos se alojan en servidores seguros con copias de seguridad diarias. Al ser una instalación privada, tú eres el dueño absoluto de la información y decides quién tiene acceso.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border mb-3 rounded-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#qSoporte">¿Qué tipo de soporte técnico ofrecéis?</button></h2>
+                    <div id="qSoporte" class="accordion-collapse collapse" data-bs-parent="#faqFactura">
+                        <div class="accordion-body">Ofrecemos soporte a través de un sistema de tickets integrado, correo electrónico y WhatsApp para consultas rápidas. Los planes Business y Enterprise cuentan con soporte prioritario para resolver cualquier duda técnica en menos de 24 horas.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border mb-3 rounded-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q4">¿Puedo cancelar mi plan en cualquier momento?</button></h2>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqFactura">
+                        <div class="accordion-body">Sí, no hay compromiso de permanencia. Puedes gestionar tu suscripción desde el Portal de Cliente de Stripe y cancelarla con un solo clic. Seguirás teniendo acceso hasta que termine tu periodo de facturación actual.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+<section class="cta-section" data-aos="fade-up">
+    <div class="container">
+        <h2>¿Listo para transformar tu negocio?</h2>
+        <p>Únete a miles de empresas que ya están automatizando su gestión con FacturaClick</p>
+        <div class="cta-buttons">
+            <a href="https://buy.stripe.com/00w8wO7g30LZezA2OC2wU0b" class="cta-btn-white">
+                Probar 30 Días Gratis
+            </a>
+            <a href="https://wa.me/34637161141"
+               class="cta-btn-white"
+               style="background: rgba(255,255,255,0.2); border: 2px solid white;">
+                Hablar con Nosotros
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 footer-section">
+                    <img src="https://tecnogirona.github.io/web/logo%20facturaclickstripe.png" alt="FacturaClick" style="height: 40px; width: auto; margin-bottom: 1rem;">
+                    <p style="font-size: 0.9rem; line-height: 1.6;">La solución completa para facturación y CRM de tu negocio. Simplifica tu gestión empresarial.</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5>Producto</h5>
+                    <ul class="footer-links">
+                        <li><a href="#features">Funciones</a></li>
+                        <li><a href="#pricing">Precios</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">Actualizaciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5>Empresa</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">RGPD</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>FacturaClick inc &copy; 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({duration: 800, once: true});
+        
+        // Video Control (Restaurado de versión funcional + Mejoras)
+        const video = document.getElementById('demoVideo');
+        const container = document.getElementById('videoContainer');
+        
+        if(video && container) {
+            // En smartphones, forzamos controles nativos y ocultamos overlay
+            if (window.innerWidth <= 576) {
+                video.controls = true;
+            } else {
+                // En PC/Tablet, el clic en el contenedor controla el play/pausa
+                container.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }
+
+            video.addEventListener('play', () => container.classList.add('video-playing'));
+            video.addEventListener('pause', () => container.classList.remove('video-playing'));
+        }
+
+        // CONFIGURACIÓN DE TUS ENLACES DE STRIPE
+        const stripeLinks = {
+            estandar: {
+                mensual: "https://buy.stripe.com/00w8wO7g30LZezA2OC2wU0b",
+                anual: "https://buy.stripe.com/bJebJ02ZN66jajk4WK2wU0c"
+            },
+            business: {
+                mensual: "https://buy.stripe.com/dRm14m57V1Q33UW4WK2wU0d",
+                anual: "https://buy.stripe.com/14AcN4eIv3Yb7782OC2wU0e"
+            },
+            enterprise: {
+                mensual: "https://buy.stripe.com/00w00i8k7dyL6341Ky2wU0f",
+                anual: "https://buy.stripe.com/6oU28qbwj66j778cpc2wU0g"
+            }
+        };
+
+        // Pricing Toggle Logic
+        const billingToggle = document.getElementById('billingToggle');
+        const monthlyLabel = document.getElementById('monthly-label');
+        const yearlyLabel = document.getElementById('yearly-label');
+        const monthlyPrices = document.querySelectorAll('.price-monthly');
+        const yearlyPrices = document.querySelectorAll('.price-annual');
+        
+        // Botones
+        const btnEstandar = document.getElementById('btn-estandar');
+        const btnBusiness = document.getElementById('btn-business');
+        const btnEnterprise = document.getElementById('btn-enterprise');
+
+        billingToggle.addEventListener('change', function() {
+            if (this.checked) {
+                // VISTA ANUAL
+                monthlyPrices.forEach(el => el.style.display = 'none');
+                yearlyPrices.forEach(el => el.style.display = 'block');
+                monthlyLabel.classList.remove('active');
+                yearlyLabel.classList.add('active');
+                
+                // Cambiar enlaces de los botones a ANUAL
+                btnEstandar.href = stripeLinks.estandar.anual;
+                btnBusiness.href = stripeLinks.business.anual;
+                btnEnterprise.href = stripeLinks.enterprise.anual;
+            } else {
+                // VISTA MENSUAL
+                monthlyPrices.forEach(el => el.style.display = 'block');
+                yearlyPrices.forEach(el => el.style.display = 'none');
+                monthlyLabel.classList.add('active');
+                yearlyLabel.classList.remove('active');
+                
+                // Cambiar enlaces de los botones a MENSUAL
+                btnEstandar.href = stripeLinks.estandar.mensual;
+                btnBusiness.href = stripeLinks.business.mensual;
+                btnEnterprise.href = stripeLinks.enterprise.mensual;
+            }
+        });
+    </script>
+</body>
+</html>
