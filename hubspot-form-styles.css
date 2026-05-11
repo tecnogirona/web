@@ -1,0 +1,288 @@
+/* Estilos para el formulario de HubSpot - TecnoGirona */
+
+/* Contenedor principal del formulario */
+.hubspot-form-wrapper {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+    margin: 2rem 0;
+}
+
+.hubspot-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hubspot-form-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.hubspot-form-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Personalización de los campos del formulario de HubSpot */
+.hs-form-field {
+    margin-bottom: 1.5rem !important;
+}
+
+.hs-form-field label {
+    font-weight: 600 !important;
+    color: #1f2937 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    font-size: 0.95rem !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.hs-form-field input[type="text"],
+.hs-form-field input[type="email"],
+.hs-form-field input[type="tel"],
+.hs-form-field input[type="number"],
+.hs-form-field textarea,
+.hs-form-field select {
+    width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 0.5rem !important;
+    font-size: 1rem !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    transition: all 0.3s ease !important;
+    background-color: white !important;
+    color: #1f2937 !important;
+    box-sizing: border-box !important;
+}
+
+.hs-form-field input[type="text"]:focus,
+.hs-form-field input[type="email"]:focus,
+.hs-form-field input[type="tel"]:focus,
+.hs-form-field input[type="number"]:focus,
+.hs-form-field textarea:focus,
+.hs-form-field select:focus {
+    outline: none !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+.hs-form-field textarea {
+    min-height: 120px !important;
+    resize: vertical !important;
+}
+
+/* Campos de selección múltiple y checkboxes */
+.hs-form-field input[type="checkbox"],
+.hs-form-field input[type="radio"] {
+    width: auto !important;
+    margin-right: 0.5rem !important;
+    accent-color: #2563eb !important;
+}
+
+.hs-form-field .hs-form-checkbox-display,
+.hs-form-field .hs-form-radio-display {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.hs-form-field .hs-form-checkbox-display span,
+.hs-form-field .hs-form-radio-display span {
+    font-size: 0.9rem !important;
+    color: #4b5563 !important;
+    line-height: 1.5 !important;
+}
+
+/* Botón de envío personalizado */
+.hs-button {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: white !important;
+    padding: 0.875rem 2rem !important;
+    border: none !important;
+    border-radius: 0.75rem !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.hs-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+}
+
+.hs-button:active {
+    transform: translateY(0) !important;
+}
+
+/* Estados de carga del botón */
+.hs-button[disabled] {
+    opacity: 0.7 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+/* Mensajes de error */
+.hs-error-msgs {
+    color: #dc2626 !important;
+    font-size: 0.875rem !important;
+    margin-top: 0.5rem !important;
+    padding: 0 !important;
+}
+
+.hs-error-msgs li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0.25rem 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.hs-error-msgs li:before {
+    content: "⚠️" !important;
+    font-size: 0.75rem !important;
+}
+
+/* Campos requeridos */
+.hs-form-required {
+    color: #dc2626 !important;
+    font-weight: 700 !important;
+}
+
+/* Mensaje de éxito */
+.submitted-message {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: white !important;
+    padding: 2rem !important;
+    border-radius: 1rem !important;
+    text-align: center !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
+
+.submitted-message h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+    color: white !important;
+}
+
+.submitted-message p {
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+    opacity: 0.9 !important;
+    color: white !important;
+}
+
+/* Animaciones de carga */
+.hs-loading {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2rem !important;
+    color: #6b7280 !important;
+}
+
+.hs-loading:before {
+    content: "" !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 3px solid #e5e7eb !important;
+    border-radius: 50% !important;
+    border-top-color: #2563eb !important;
+    animation: spin 1s ease-in-out infinite !important;
+    margin-right: 0.75rem !important;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hubspot-form-wrapper {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-radius: 0.75rem;
+    }
+
+    .hubspot-form-title {
+        font-size: 1.5rem;
+    }
+
+    .hs-form-field input[type="text"],
+    .hs-form-field input[type="email"],
+    .hs-form-field input[type="tel"],
+    .hs-form-field input[type="number"],
+    .hs-form-field textarea,
+    .hs-form-field select {
+        padding: 0.625rem 0.875rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    .hs-button {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.hs-form-field input:focus,
+.hs-form-field textarea:focus,
+.hs-form-field select:focus {
+    outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+}
+
+/* Estilos para campos de archivo (si los hay) */
+.hs-form-field input[type="file"] {
+    padding: 0.5rem !important;
+    border: 2px dashed #e5e7eb !important;
+    background-color: #f9fafb !important;
+}
+
+.hs-form-field input[type="file"]:focus {
+    border-color: #2563eb !important;
+    background-color: rgba(37, 99, 235, 0.05) !important;
+}
+
+/* Estilos para campos de fecha */
+.hs-form-field input[type="date"],
+.hs-form-field input[type="datetime-local"] {
+    padding: 0.75rem 1rem !important;
+}
+
+/* Personalización adicional para el tema de TecnoGirona */
+.tecnogirona-form {
+    --form-primary: #2563eb;
+    --form-primary-dark: #1d4ed8;
+    --form-secondary: #10b981;
+    --form-accent: #f59e0b;
+}
+
+.tecnogirona-form .hs-button {
+    background: linear-gradient(135deg, var(--form-primary), var(--form-primary-dark)) !important;
+}
+
+.tecnogirona-form .hs-form-field input:focus,
+.tecnogirona-form .hs-form-field textarea:focus,
+.tecnogirona-form .hs-form-field select:focus {
+    border-color: var(--form-primary) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+.tecnogirona-form .submitted-message {
+    background: linear-gradient(135deg, var(--form-secondary), #059669) !important;
+}
+
