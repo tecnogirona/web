@@ -200,35 +200,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         #hubspot-form-container {
             position: relative;
-            /* Recortamos el fondo del contenedor para ocultar el branding */
-            margin-bottom: -40px !important;
-            padding-bottom: 0 !important;
+            /* Añadimos espacio extra abajo para que el branding se aleje del botón */
+            padding-bottom: 80px !important;
         }
 
         .hs-form-wrapper {
             position: relative;
-            overflow: hidden;
-            /* Altura máxima para asegurar que el pie no se vea, el script la ajustará */
-            max-height: 100%; 
+            /* Quitamos el overflow hidden para que el parche se vea bien si es necesario */
         }
 
-        /* Máscara blanca reforzada */
+        /* Parche blanco para camuflar el branding */
         .hs-form-mask {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 65px; /* Aumentamos el tamaño para cubrir el texto largo */
+            height: 100px; /* Altura generosa para tapar todo el texto */
             background: white;
-            z-index: 9999;
+            z-index: 9999 !important;
             pointer-events: none;
             display: block !important;
-        }
-
-        /* Forzamos que el iframe no empuje la máscara */
-        #hubspot-form-container iframe {
-            margin-bottom: -60px !important;
-            border: none !important;
+            /* Añadimos un borde superior sutil opcional para que se funda con el fondo si fuera necesario */
+            border-top: 1px solid white;
         }
 
         /* Mensaje de éxito */
@@ -630,20 +623,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     loadingElement.style.display = 'none';
                 }
                 
-                // Función para ocultar branding recurrentemente (por si se recarga)
-                const hideBranding = () => {
-                    const iframe = document.querySelector('#hubspot-form-container iframe');
-                    if (iframe) {
-                        iframe.style.marginBottom = '-65px';
-                        iframe.style.setProperty('margin-bottom', '-65px', 'important');
-                    }
-                    const branding = document.querySelectorAll('.hs-backlink, .hs-featured-image-link, a[href*="hubspot.com"]');
-                    branding.forEach(el => el.style.display = 'none');
-                };
-
-                hideBranding();
-                setTimeout(hideBranding, 1000);
-                setTimeout(hideBranding, 3000);
+                // Asegurarnos de que el parche esté visible
+                const mask = document.querySelector('.hs-form-mask');
+                if (mask) {
+                    mask.style.display = 'block';
+                }
                 
                 // Resetear el contenedor
                 const container = document.getElementById('hubspot-form-container');
