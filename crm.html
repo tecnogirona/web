@@ -2,6 +2,35 @@
 
 <html lang="es">
 <head><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Default consent state to 'denied' for all categories
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+
+    // Check for existing consent in localStorage
+    const consent = localStorage.getItem('cookie_consent');
+    if (consent === 'granted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    } else if (consent === 'denied') {
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    </script><script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -439,7 +468,119 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KX2LNGXYGN');
-  </script></head>
+  </script><style>
+    #cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 14px;
+        z-index: 9999;
+        display: none; /* Hidden by default */
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    }
+    #cookie-banner a {
+        color: #4CAF50;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+    #cookie-banner button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    #cookie-banner button:hover {
+        background-color: #45a049;
+    }
+
+        /* AJUSTE GLOBAL MENÚ SERVICIOS Y FOOTER UNIFICADO */
+        .dropdown-menu {
+            min-width: 21rem;
+            max-width: calc(100vw - 2rem);
+            overflow: visible;
+        }
+
+        .dropdown-item {
+            width: 100%;
+            white-space: normal;
+            line-height: 1.25;
+        }
+
+        .dropdown-item i {
+            flex: 0 0 20px;
+        }
+
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h5 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 991.98px) {
+            .dropdown-menu {
+                min-width: 100%;
+                box-shadow: none;
+                margin-top: 0;
+            }
+        }
+
+</style></head>
 <body><noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W397T36P" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- Navbar (Mantenido de index.html) -->
 <nav class="navbar navbar-expand-lg navbar-custom">
@@ -459,16 +600,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
                             Servicios
                         </a>
-<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
-<li><a class="dropdown-item" href="moviles.html"><i class="bi bi-phone"></i> Reparación Móviles</a></li>
-<li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Reparación Ordenadores</a></li>
-<li><a class="dropdown-item" href="#"><i class="bi bi-controller"></i> Reparación Consolas</a></li>
-<li><a class="dropdown-item" href="#"><i class="bi bi-hdd-fill"></i> Recuperación Datos</a></li>
-<li><hr class="dropdown-divider"/></li>
-<li><a class="dropdown-item" href="#"><i class="bi bi-briefcase-fill"></i> Servicios IT Empresas</a></li>
-<li><a class="dropdown-item" href="#"><i class="bi bi-cash-coin"></i> Instalación TPV</a></li>
-<li><a class="dropdown-item" href="#"><i class="bi bi-cash-coin"></i> Implementación CRM </a></li>
-</ul>
+<ul class="dropdown-menu"><li><a class="dropdown-item" href="moviles.html"><i class="bi bi-phone"></i> Reparación Móviles</a></li><li><a class="dropdown-item" href="ordenadores.html"><i class="bi bi-laptop"></i> Reparación Ordenadores</a></li><li><a class="dropdown-item" href="consolas.html"><i class="bi bi-controller"></i> Reparación Consolas</a></li><li><a class="dropdown-item" href="datos.html"><i class="bi bi-hdd"></i> Recuperación Datos</a></li><li><a class="dropdown-item" href="empresas.html"><i class="bi bi-building"></i> Servicios IT Empresas</a></li><li><a class="dropdown-item" href="planes.html"><i class="bi bi-shield-check"></i> Planes de Mantenimiento</a></li><li><a class="dropdown-item" href="tpv.html"><i class="bi bi-credit-card"></i> Instalación TPV</a></li><li><a class="dropdown-item" href="crm.html"><i class="bi bi-diagram-3"></i> CRM Privado</a></li></ul>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="#">FAQ</a>
@@ -544,7 +676,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="benefit-icon"><i class="bi bi-graph-up-arrow"></i></div>
 <h3 class="benefit-title">Gestión de Proyectos y Pagos Online</h3>
 <p class="benefit-description">
-                            Asigna tareas, controla el tiempo y gestiona la facturación. **Acepta pagos de presupuestos y facturas online** de forma segura y sin preocupaciones.
+                            Asigna tareas, controla el tiempo y gestiona la facturación. Acepta pagos de presupuestos y facturas online de forma segura y sin preocupaciones.
                         </p>
 </div>
 </div>
@@ -570,12 +702,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         No solo implementamos el software, lo adaptamos a la forma única en que opera tu negocio, garantizando una adopción rápida y resultados medibles con la máxima robustez.
                     </p>
 <ul class="list-unstyled feature-list">
-<li><i class="bi bi-check-circle-fill"></i> **Instalación y Configuración:** Despliegue seguro en tu servidor o en la nube, garantizando la **máxima robustez**.</li>
-<li><i class="bi bi-check-circle-fill"></i> **Personalización de Módulos:** Adaptación de campos, flujos de trabajo y plantillas (facturas, presupuestos).</li>
-<li><i class="bi bi-check-circle-fill"></i> **Migración de Datos:** Importación de tu base de datos de clientes y proyectos existentes.</li>
-<li><i class="bi bi-check-circle-fill"></i> **Integración con TPV/Web:** Conexión con otros sistemas y **pasarelas de pago** para aceptar presupuestos online.</li>
-<li><i class="bi bi-check-circle-fill"></i> **Formación a tu Equipo:** Sesiones prácticas para que tu equipo domine el CRM desde el primer día.</li>
-<li><i class="bi bi-check-circle-fill"></i> **Soporte Post-Implementación:** Asistencia técnica continua y resolución de dudas.</li>
+<li><i class="bi bi-check-circle-fill"></i> Instalación y Configuración: Despliegue seguro en tu servidor o en la nube, garantizando la máxima robustez.</li>
+<li><i class="bi bi-check-circle-fill"></i> Personalización de Módulos: Adaptación de campos, flujos de trabajo y plantillas (facturas, presupuestos).</li>
+<li><i class="bi bi-check-circle-fill"></i> Migración de Datos: Importación de tu base de datos de clientes y proyectos existentes.</li>
+<li><i class="bi bi-check-circle-fill"></i> Integración con TPV/Web: Conexión con otros sistemas y pasarelas de pago para aceptar presupuestos online.</li>
+<li><i class="bi bi-check-circle-fill"></i> Formación a tu Equipo: Sesiones prácticas para que tu equipo domine el CRM desde el primer día.</li>
+<li><i class="bi bi-check-circle-fill"></i> Soporte Post-Implementación: Asistencia técnica continua y resolución de dudas.</li>
 </ul>
 <a class="btn btn-crm-primary mt-3" href="#contacto">
 <i class="bi bi-calendar-check"></i> Agenda una Consulta Gratuita
@@ -604,7 +736,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div>
 <h4 class="benefit-title" style="font-size: 1.1rem;">Adaptación Sectorial</h4>
 <p class="benefit-description" style="font-size: 0.9rem;">
-                                        Perfecto para **Industria y Fabricación**, **Venta Retail**, Servicios IT o cualquier otro nicho. Se ajusta a tus flujos de trabajo.
+                                        Perfecto para Industria y Fabricación, Venta Retail, Servicios IT o cualquier otro nicho. Se ajusta a tus flujos de trabajo.
                                     </p>
 </div>
 </div>
@@ -660,7 +792,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="container text-center">
 <h2 class="section-title text-white">¿Listo para Disparar la Productividad y Asegurar tus Pagos?</h2>
 <p class="lead mb-4">
-                Deja de gestionar tu negocio con hojas de cálculo. Centraliza, automatiza y crece con nuestro CRM Privado. **Seguridad y pagos online garantizados.**
+                Deja de gestionar tu negocio con hojas de cálculo. Centraliza, automatiza y crece con nuestro CRM Privado. Seguridad y pagos online garantizados.
             </p>
 <a class="btn btn-lg btn-light text-crm fw-bold shadow-lg" href="#contacto">
 <i class="bi bi-envelope-fill"></i> Solicita tu Presupuesto Personalizado
@@ -668,46 +800,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </section>
 <!-- Footer (Mantenido de index.html) -->
-<footer class="footer-section">
+<footer class="footer">
 <div class="container">
-<div class="row">
-<div class="col-md-4 mb-4">
-<h5 class="footer-title">TecnoGirona</h5>
-<p class="text-light">Especialistas en reparación de dispositivos electrónicos y soluciones IT en Girona desde 2010. Calidad, rapidez y garantía en cada servicio.</p>
+<div class="footer-content">
+<div class="footer-section">
+<h5>TecnoGirona</h5>
+<p>Especialistas en reparación de dispositivos electrónicos, soporte IT, TPV y CRM en Girona desde 2010. Calidad, rapidez y garantía en cada servicio.</p>
+<div class="social-links">
+<a aria-label="Facebook" class="me-3" href="#"><i class="bi bi-facebook"></i></a>
+<a aria-label="Instagram" class="me-3" href="#"><i class="bi bi-instagram"></i></a>
+<a aria-label="LinkedIn" class="me-3" href="#"><i class="bi bi-linkedin"></i></a>
 </div>
-<div class="col-md-2 mb-4">
-<h5 class="footer-title">Servicios</h5>
-<a class="footer-link" href="moviles.html">Reparación Móviles</a>
-<a class="footer-link" href="#">Reparación Ordenadores</a>
-<a class="footer-link" href="#">Servicios IT</a>
-<a class="footer-link text-crm" href="perfex_crm.html">CRM Privado</a>
 </div>
-<div class="col-md-3 mb-4">
-<h5 class="footer-title">Información</h5>
-<a class="footer-link" href="#">Preguntas Frecuentes</a>
-<a class="footer-link" href="#">Sobre Nosotros</a>
-<a class="footer-link" href="#">Política de Privacidad</a>
-<a class="footer-link" href="#">Términos y Condiciones</a>
+<div class="footer-section">
+<h5>Servicios</h5>
+<ul>
+<li><a href="moviles.html">Reparación Móviles</a></li>
+<li><a href="ordenadores.html">Reparación Ordenadores</a></li>
+<li><a href="consolas.html">Reparación Consolas</a></li>
+<li><a href="datos.html">Recuperación Datos</a></li>
+<li><a href="empresas.html">Servicios IT Empresas</a></li>
+<li><a href="planes.html">Planes de Mantenimiento</a></li>
+<li><a href="tpv.html">Instalación TPV</a></li>
+<li><a href="crm.html">CRM Privado</a></li>
+</ul>
 </div>
-<div class="col-md-3 mb-4">
-<h5 class="footer-title">Contacto</h5>
-<div class="footer-contact-item">
-<i class="bi bi-telephone-fill"></i>
-<span>637 161 141</span>
+<div class="footer-section">
+<h5>Información</h5>
+<ul>
+<li><a href="faq.html">Preguntas Frecuentes</a></li>
+<li><a href="nosotros.html">Sobre Nosotros</a></li>
+<li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+<li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+</ul>
 </div>
-<div class="footer-contact-item">
-<i class="bi bi-envelope-fill"></i>
-<span>tecnogirona@gmail.com</span>
-</div>
-<div class="footer-contact-item">
-<i class="bi bi-geo-alt-fill"></i>
-<span>Girona, España</span>
-</div>
+<div class="footer-section">
+<h5>Contacto</h5>
+<ul>
+<li><i class="bi bi-telephone me-2"></i> 637 161 141</li>
+<li><i class="bi bi-envelope me-2"></i> tecnogirona@gmail.com</li>
+<li><i class="bi bi-geo-alt me-2"></i> Girona, España</li>
+</ul>
 </div>
 </div>
 <div class="footer-bottom">
-                © 2024 TecnoGirona. Todos los derechos reservados.
-            </div>
+<p>© 2024 TecnoGirona. Todos los derechos reservados. Especialistas en reparación, soporte IT, TPV y CRM en Girona.</p>
+</div>
 </div>
 </footer>
 <!-- Bootstrap JS Bundle -->
@@ -787,5 +925,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
   });
-  </script></body>
+  </script><div id="cookie-banner">
+    Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies. Puedes obtener más información en nuestra <a href="politica-privacidad.html">Política de Privacidad</a>.
+    <button id="accept-cookies">Aceptar</button>
+<button id="reject-cookies" style="background-color: #f44336;">Rechazar</button>
+</div><script id="cookie-consent-script">
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const rejectBtn = document.getElementById('reject-cookies');
+
+        // Show banner if no consent is set
+        if (!localStorage.getItem('cookie_consent')) {
+            banner.style.display = 'block';
+        }
+
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'granted');
+            banner.style.display = 'none';
+            
+            // Update consent state
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+            });
+            console.log('Cookies accepted, consent updated to granted.');
+        });
+
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'denied');
+            banner.style.display = 'none';
+            
+            // Consent state is already denied by default, but we can update it just in case
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+            });
+            console.log('Cookies rejected, consent remains denied.');
+        });
+    });
+    </script></body>
 </html>
