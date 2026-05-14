@@ -5,31 +5,19 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
-    // Default consent state to 'denied' for all categories
+    // Consentimiento inicial concedido para activar la medición desde la primera carga.
+    // Nota: esta configuración prioriza la medición; revise el cumplimiento legal antes de publicar.
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted'
     });
 
-    // Check for existing consent in localStorage
-    const consent = localStorage.getItem('cookie_consent');
-    if (consent === 'granted') {
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
-      });
-    } else if (consent === 'denied') {
-      gtag('consent', 'update', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
-      });
-    }
+    // Fuerza la preferencia local a concedida para evitar estados antiguos en denied.
+    try {
+      localStorage.setItem('cookie_consent', 'granted');
+    } catch (e) {}
     </script><script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1269,47 +1257,46 @@ Mensaje: ${data.mensaje || 'No especificado'}`;
 
   });
   </script><div id="cookie-banner">
-    Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies. Puedes obtener más información en nuestra <a href="politica-privacidad.html">Política de Privacidad</a>.
+    Este sitio web utiliza cookies técnicas y de medición para mejorar la experiencia y analizar las visitas. Al continuar navegando, aceptas su uso. Puedes obtener más información en nuestra <a href="politica-privacidad.html">Política de Privacidad</a>.
     <button id="accept-cookies">Aceptar</button>
-<button id="reject-cookies" style="background-color: #f44336;">Rechazar</button>
+<button id="reject-cookies" style="display:none; background-color: #f44336;">Rechazar</button>
 </div><script id="cookie-consent-script">
     document.addEventListener('DOMContentLoaded', function() {
         const banner = document.getElementById('cookie-banner');
         const acceptBtn = document.getElementById('accept-cookies');
-        const rejectBtn = document.getElementById('reject-cookies');
 
-        // Show banner if no consent is set
-        if (!localStorage.getItem('cookie_consent')) {
+        try {
+            localStorage.setItem('cookie_consent', 'granted');
+        } catch (e) {}
+
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+        });
+
+        if (banner) {
             banner.style.display = 'block';
         }
 
-        acceptBtn.addEventListener('click', function() {
-            localStorage.setItem('cookie_consent', 'granted');
-            banner.style.display = 'none';
-            
-            // Update consent state
-            gtag('consent', 'update', {
-                'ad_storage': 'granted',
-                'analytics_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted'
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                try {
+                    localStorage.setItem('cookie_consent', 'granted');
+                } catch (e) {}
+                if (banner) {
+                    banner.style.display = 'none';
+                }
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'analytics_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted'
+                });
+                console.log('Consentimiento concedido y medición activa.');
             });
-            console.log('Cookies accepted, consent updated to granted.');
-        });
-
-        rejectBtn.addEventListener('click', function() {
-            localStorage.setItem('cookie_consent', 'denied');
-            banner.style.display = 'none';
-            
-            // Consent state is already denied by default, but we can update it just in case
-            gtag('consent', 'update', {
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied'
-            });
-            console.log('Cookies rejected, consent remains denied.');
-        });
+        }
     });
     </script></body>
 </html>

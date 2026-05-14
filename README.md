@@ -21,8 +21,8 @@ Sitio web oficial de TecnoGirona, especialistas en reparación de dispositivos e
 
 ## Contacto
 
-- **Teléfono**: 972 244 863
-- **Email**: info@tecnogirona.es
+- **Teléfono**: 637 161 141
+- **Email**: tecnogirona@gmail.com
 - **Ubicación**: Girona, España
 
 ## Políticas
@@ -55,5 +55,5 @@ Sitio web oficial de TecnoGirona, especialistas en reparación de dispositivos e
 
 ## Licencia
 
-© 2026 TecnoGirona. Todos los derechos reservados.
+© 2025 TecnoGirona. Todos los derechos reservados.
 
