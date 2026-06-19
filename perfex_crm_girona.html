@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    let consent = null; try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+    if (consent === 'granted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    } else if (consent === 'denied') {
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W397T36P');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfex CRM en Girona | Implementación, Personalización y Soporte - TecnoGirona</title>
+<meta name="description" content="Implementación de Perfex CRM en Girona. Instalación, personalización, módulos, automatizaciones, formación y soporte para empresas.">
+<link rel="canonical" href="https://www.tecnogirona.com/perfex_crm_girona.html">
+<meta property="og:title" content="Perfex CRM en Girona | Implementación, Personalización y Soporte - TecnoGirona">
+<meta property="og:description" content="Implementación de Perfex CRM en Girona. Instalación, personalización, módulos, automatizaciones, formación y soporte para empresas.">
+<meta property="og:url" content="https://www.tecnogirona.com/perfex_crm_girona.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.tecnogirona.com/Logo Facturaclick2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Perfex CRM en Girona | Implementación, Personalización y Soporte - TecnoGirona">
+<meta name="twitter:description" content="Implementación de Perfex CRM en Girona. Instalación, personalización, módulos, automatizaciones, formación y soporte para empresas.">
+<meta name="twitter:image" content="https://www.tecnogirona.com/Logo Facturaclick2.png">
+
+
+
+
+
+
+
+
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TecnoGirona",
+    "image": "https://www.tecnogirona.com/Logo Facturaclick2.png",
+    "url": "https://www.tecnogirona.com/",
+    "telephone": "+34972244863",
+    "email": "mailto:info@tecnogirona.es",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer de la Rutlla, 55",
+        "addressLocality": "Girona",
+        "addressRegion": "CT",
+        "postalCode": "17003",
+        "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "19:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "10:00",
+            "closes": "14:00"
+        }
+    ],
+    "hasMap": "https://www.google.com/maps/place/Carrer+de+la+Rutlla,+55,+17003+Girona,+Spain",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.983333",
+        "longitude": "2.824932"
+    },
+    "priceRange": "$$"
+}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KX2LNGXYGN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KX2LNGXYGN');
+</script>
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
+          400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9',
+          800: '#5b21b6', 900: '#4c1d95', 950: '#2e1065'
+        }
+      },
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif']
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'gradient': 'gradient 8s ease infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' }
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' }
+        }
+      }
+    }
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+<style>
+.form-input {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+.form-input:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.4);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
+}
+.form-input::placeholder { color: rgba(255,255,255,0.5); }
+.form-label { color: rgba(255,255,255,0.8); }
+
+#cookie-banner { display: none; }
+</style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased">
+<noscript><iframe title="Google Tag Manager" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W397T36P" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <a href="servicio_tecnico_girona.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white text-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <i class="bi bi-tools"></i>
+                </div>
+                <span class="text-2xl font-extrabold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">TecnoGirona</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="servicio_tecnico_girona.html" class="px-4 py-2 rounded-xl font-medium text-gray-900 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300">Inicio</a>
+                <div class="relative group">
+                    <button class="px-4 py-2 rounded-xl font-medium text-gray-900 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300 flex items-center gap-1.5">
+                        Servicios <i class="bi bi-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 p-3 opacity-0 invisible group-hover:opacity-100 group-focus-within:opacity-100 group-hover:visible group-focus-within:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0">
+                        <a href="reparacion_moviles_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600"><i class="bi bi-phone"></i></div><span class="font-medium">Reparación Móviles</span></a>
+                        <a href="reparacion_ordenadores_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600"><i class="bi bi-laptop"></i></div><span class="font-medium">Reparación Ordenadores</span></a>
+                        <a href="reparacion_consolas_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600"><i class="bi bi-controller"></i></div><span class="font-medium">Reparación Consolas</span></a>
+                        <a href="recuperacion_datos_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-violet-100 flex items-center justify-center text-violet-600"><i class="bi bi-hdd"></i></div><span class="font-medium">Recuperación Datos</span></a>
+                        <a href="mantenimiento_informatico_empresas_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600"><i class="bi bi-building"></i></div><span class="font-medium">Servicios IT Empresas</span></a>
+                        <a href="planes_mantenimiento_informatico_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600"><i class="bi bi-shield-check"></i></div><span class="font-medium">Planes de Mantenimiento</span></a>
+                        <a href="instalacion_tpv_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center text-red-600"><i class="bi bi-credit-card"></i></div><span class="font-medium">Instalación TPV</span></a>
+                        <a href="crm_privado_empresas_girona.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary-50 text-gray-900 hover:text-primary-600 transition-all duration-200"><div class="w-8 h-8 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600"><i class="bi bi-diagram-3"></i></div><span class="font-medium">CRM Privado</span></a>
+                    </div>
+                </div>
+                <a href="preguntas_frecuentes_reparacion_girona.html" class="px-4 py-2 rounded-xl font-medium text-gray-900 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300">FAQ</a>
+                <a href="servicio_tecnico_informatico_girona.html" class="px-4 py-2 rounded-xl font-medium text-gray-900 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300">Nosotros</a>
+            </div>
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:972244863" class="flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-primary-600 hover:bg-primary-50 transition-all duration-300">
+                    <i class="bi bi-telephone-fill"></i> 972 244 863
+                </a>
+                <a href="#contacto" class="relative px-7 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-700 shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden group">
+                    <span class="relative z-10">Presupuesto Gratis</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300"></div>
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-gray-900 hover:bg-gray-100 transition-colors">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden bg-white/95 backdrop-blur-xl border-t border-gray-100">
+        <div class="px-4 py-6 space-y-2 max-h-[80vh] overflow-y-auto">
+            <a href="servicio_tecnico_girona.html" class="block px-4 py-3 rounded-xl font-semibold text-gray-900 hover:bg-gray-50">Inicio</a>
+            <div class="px-4 py-3 font-bold text-gray-400 text-xs uppercase tracking-widest">Servicios</div>
+            <a href="reparacion_moviles_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-phone mr-3 text-blue-600"></i>Móviles</a>
+            <a href="reparacion_ordenadores_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-laptop mr-3 text-emerald-600"></i>Ordenadores</a>
+            <a href="reparacion_consolas_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-controller mr-3 text-amber-600"></i>Consolas</a>
+            <a href="recuperacion_datos_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-hdd mr-3 text-violet-600"></i>Datos</a>
+            <a href="mantenimiento_informatico_empresas_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-building mr-3 text-cyan-600"></i>Empresas</a>
+            <a href="planes_mantenimiento_informatico_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-shield-check mr-3 text-green-600"></i>Planes</a>
+            <a href="instalacion_tpv_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-credit-card mr-3 text-red-600"></i>TPV</a>
+            <a href="crm_privado_empresas_girona.html" class="block px-4 py-3 rounded-xl text-gray-900 hover:bg-gray-50 hover:text-primary-600 transition-all"><i class="bi bi-diagram-3 mr-3 text-indigo-600"></i>CRM</a>
+            <hr class="my-3 border-gray-100">
+            <a href="preguntas_frecuentes_reparacion_girona.html" class="block px-4 py-3 rounded-xl font-medium text-gray-900 hover:bg-gray-50 hover:text-primary-600">FAQ</a>
+            <a href="servicio_tecnico_informatico_girona.html" class="block px-4 py-3 rounded-xl font-medium text-gray-900 hover:bg-gray-50 hover:text-primary-600">Nosotros</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="tel:972244863" class="flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl font-bold text-primary-600 bg-primary-50 border border-primary-200">
+                    <i class="bi bi-telephone-fill"></i> 972 244 863
+                </a>
+                <a href="#contacto" class="flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-700 shadow-lg shadow-primary-500/30">
+                    Presupuesto Gratis
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-primary-900 via-primary-600 to-primary-800 bg-[length:200%_200%] animate-gradient">
+<div class="absolute inset-0 opacity-10">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div data-aos="fade-right">
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
+<i class="bi bi-stars"></i> Perfex CRM - Solución Profesional
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+Implementación de <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Perfex CRM</span> Profesional
+</h1>
+<p class="text-xl text-white/90 mb-8 leading-relaxed">
+Transforma tu gestión comercial y de proyectos con Perfex CRM. Automatiza tareas, centraliza la información de tus clientes y acepta pagos online con la máxima seguridad.
+</p>
+<div class="flex flex-wrap gap-4">
+<a href="#contacto" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-xl font-bold shadow-2xl hover:shadow-white/25 hover:-translate-y-1 transition-all">
+<i class="bi bi-rocket-takeoff-fill"></i> Solicitar Demo Gratuita
+</a>
+<a href="tel:972244863" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">
+<i class="bi bi-telephone-fill"></i> Llamar Ahora
+</a>
+</div>
+</div>
+<div class="hidden lg:flex justify-center" data-aos="fade-left">
+<div class="relative">
+<div class="absolute -inset-8 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20 shadow-2xl animate-float">
+<i class="bi bi-kanban-fill text-white/80 text-[10rem]"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<!-- BENEFICIOS SECTION -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16" data-aos="fade-up">
+<h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">¿Por qué elegir Perfex CRM?</h2>
+<p class="text-xl text-gray-500 max-w-3xl mx-auto">
+Perfex CRM es la solución ideal para pymes que buscan una gestión integral, robusta y segura de sus procesos de venta, proyectos y soporte técnico.
+</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary-100 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+<div class="relative w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+<i class="bi bi-funnel-fill text-white text-2xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Aumento de la Conversión</h3>
+<p class="text-gray-500 leading-relaxed">Centraliza leads y automatiza el seguimiento de oportunidades. Nunca más perderás una venta. Tus datos están seguros en tu propia plataforma.</p>
+</div>
+<div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary-100 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+<div class="relative w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+<i class="bi bi-graph-up-arrow text-white text-2xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Proyectos y Pagos Online</h3>
+<p class="text-gray-500 leading-relaxed">Asigna tareas, controla el tiempo y gestiona la facturación. Acepta pagos de presupuestos y facturas online de forma segura.</p>
+</div>
+<div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary-100 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+<div class="relative w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+<i class="bi bi-person-lines-fill text-white text-2xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Soporte al Cliente</h3>
+<p class="text-gray-500 leading-relaxed">Ofrece un portal de clientes dedicado y gestiona tickets de soporte de forma organizada y profesional.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICIO IMPLEMENTACION -->
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div data-aos="fade-right">
+<h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Servicio de Implementación de Perfex CRM</h2>
+<p class="text-xl text-gray-500 mb-8">
+No solo implementamos el software, lo adaptamos a la forma única en que opera tu negocio, garantizando una adopción rápida y resultados medibles.
+</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3"><i class="bi bi-check-circle-fill text-primary-500 text-xl mt-1"></i><span class="text-gray-700"><strong>Instalación y Configuración:</strong> Despliegue seguro en tu servidor o en la nube.</span></li>
+<li class="flex items-start gap-3"><i class="bi bi-check-circle-fill text-primary-500 text-xl mt-1"></i><span class="text-gray-700"><strong>Personalización de Módulos:</strong> Adaptación de campos, flujos de trabajo y plantillas.</span></li>
+<li class="flex items-start gap-3"><i class="bi bi-check-circle-fill text-primary-500 text-xl mt-1"></i><span class="text-gray-700"><strong>Migración de Datos:</strong> Importación de tu base de datos de clientes y proyectos existentes.</span></li>
+<li class="flex items-start gap-3"><i class="bi bi-check-circle-fill text-primary-500 text-xl mt-1"></i><span class="text-gray-700"><strong>Integración con TPV/Web:</strong> Conexión con otros sistemas y pasarelas de pago.</span></li>
+<li class="flex items-start gap-3"><i class="bi bi-check-circle-fill text-primary-500 text-xl mt-1"></i><span class="text-gray-700"><strong>Formación a tu Equipo:</strong> Sesiones prácticas para dominar Perfex CRM desde el primer día.</span></li>
+<li class="flex items-start gap-3"><i class="bi bi-check-circle-fill text-primary-500 text-xl mt-1"></i><span class="text-gray-700"><strong>Soporte Post-Implementación:</strong> Asistencia técnica continua.</span></li>
+</ul>
+<a href="#contacto" class="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-primary-700 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+<i class="bi bi-calendar-check"></i> Agenda una Consulta Gratuita
+</a>
+</div>
+<div class="hidden lg:flex justify-center" data-aos="fade-left">
+<div class="bg-white rounded-3xl p-12 shadow-2xl border border-gray-100">
+<i class="bi bi-kanban text-primary-300 text-[15rem]"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MODULARIDAD SECTION -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 text-center" data-aos="fade-right">
+<h2 class="text-4xl font-extrabold text-primary-600 mb-4">Totalmente Adaptativo</h2>
+<p class="text-xl text-gray-500 mb-8">Un CRM que evoluciona con tu empresa, sin importar el sector.</p>
+<div class="bg-gray-50 rounded-3xl p-12 inline-block">
+<i class="bi bi-bricks text-primary-300 text-[10rem]"></i>
+</div>
+</div>
+<div class="order-1 lg:order-2" data-aos="fade-left">
+<h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Modularidad y Expansión sin Límites</h2>
+<p class="text-xl text-gray-500 mb-8">
+Perfex CRM está diseñado con una arquitectura totalmente modular, lo que garantiza su adaptabilidad a cualquier sector y la posibilidad de crecer al ritmo de tu negocio.
+</p>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="bi bi-gear-fill text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Adaptación Sectorial</h4>
+<p class="text-gray-500 text-sm">Perfecto para Industria, Retail, Servicios IT o cualquier nicho.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="bi bi-box-seam-fill text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Gestión de Stock</h4>
+<p class="text-gray-500 text-sm">Integra módulos de inventario y gestión de almacén en tiempo real.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="bi bi-puzzle-fill text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Ecosistema de Plugins</h4>
+<p class="text-gray-500 text-sm">Amplía funcionalidades con plugins para marketing, RRHH, contabilidad.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
+<i class="bi bi-shield-lock-fill text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 mb-1">Seguridad y Escalabilidad</h4>
+<p class="text-gray-500 text-sm">Las nuevas integraciones no comprometen la seguridad de tu plataforma.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-20 bg-gradient-to-br from-primary-800 via-primary-600 to-primary-700 text-white">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl md:text-5xl font-extrabold mb-6">¿Listo para Disparar la Productividad con Perfex CRM?</h2>
+<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+Deja de gestionar tu negocio con hojas de cálculo. Centraliza, automatiza y crece con Perfex CRM.
+</p>
+<a href="#contacto" class="inline-flex items-center gap-2 bg-white text-primary-700 px-10 py-5 rounded-xl font-bold text-lg shadow-2xl hover:shadow-white/25 hover:-translate-y-1 transition-all">
+<i class="bi bi-envelope-fill"></i> Solicita tu Presupuesto Personalizado
+</a>
+</div>
+</section>
+
+<!-- CONTACTO / FORMSPREE -->
+<section id="contacto" class="py-20 bg-gray-900 relative overflow-hidden">
+<div class="absolute inset-0">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16" data-aos="fade-up">
+<h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Solicita tu Demo de Perfex CRM</h2>
+<p class="text-xl text-gray-300">Te mostramos todas las funcionalidades sin compromiso</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2" data-aos="fade-right">
+<div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-10 border border-white/10">
+<form action="https://formspree.io/f/mdajokng" method="POST" id="contact-form" class="space-y-6">
+<input type="hidden" name="_subject" value="Nuevo contacto desde Perfex CRM - TecnoGirona">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="form-label block text-sm font-medium mb-2">Nombre completo *</label>
+<input type="text" name="nombre" required class="form-input w-full px-4 py-3 rounded-xl">
+</div>
+<div>
+<label class="form-label block text-sm font-medium mb-2">Email *</label>
+<input type="email" name="email" required class="form-input w-full px-4 py-3 rounded-xl">
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="form-label block text-sm font-medium mb-2">Teléfono</label>
+<input type="tel" name="telefono" class="form-input w-full px-4 py-3 rounded-xl">
+</div>
+<div>
+<label class="form-label block text-sm font-medium mb-2">Servicio de interés</label>
+<select name="servicio" class="form-input w-full px-4 py-3 rounded-xl">
+<option value="perfex-implementacion">Implementación Perfex CRM</option>
+<option value="perfex-personalizacion">Personalización</option>
+<option value="perfex-migracion">Migración de Datos</option>
+<option value="perfex-integracion">Integración TPV/Web</option>
+<option value="perfex-formacion">Formación</option>
+<option value="perfex-soporte">Soporte</option>
+<option value="otro">Otro</option>
+</select>
+</div>
+</div>
+<div>
+<label class="form-label block text-sm font-medium mb-2">Mensaje *</label>
+<textarea name="mensaje" rows="4" required class="form-input w-full px-4 py-3 rounded-xl" placeholder="Cuéntanos los detalles de tu proyecto..."></textarea>
+</div>
+<button type="submit" class="w-full bg-gradient-to-r from-primary-500 to-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+<i class="bi bi-send-fill mr-2"></i> Enviar Solicitud
+</button>
+</form>
+</div>
+</div>
+<div class="space-y-6" data-aos="fade-left">
+<div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-4">
+<i class="bi bi-telephone-fill text-white"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Llámanos</h3>
+<a href="tel:972244863" class="text-gray-300 hover:text-white transition-colors">972 244 863</a>
+</div>
+<div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-4">
+<i class="bi bi-envelope-fill text-white"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Email</h3>
+<a href="mailto:info@tecnogirona.es" class="text-gray-300 hover:text-white transition-colors">info@tecnogirona.es</a>
+</div>
+<div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-4">
+<i class="bi bi-geo-alt-fill text-white"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Ubicación</h3>
+<p class="text-gray-300">Girona, España</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div>
+<h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2">
+<div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+<i class="bi bi-tools text-white text-sm"></i>
+</div>
+TecnoGirona
+</h3>
+<p class="text-gray-400 mb-4">Especialistas en reparación de dispositivos electrónicos, soporte IT, TPV y CRM en Girona desde 2010.</p>
+<div class="flex gap-3">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"><i class="bi bi-facebook"></i></a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"><i class="bi bi-instagram"></i></a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Servicios</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a href="reparacion_moviles_girona.html" class="hover:text-white transition-colors">Reparación Móviles</a></li>
+<li><a href="reparacion_ordenadores_girona.html" class="hover:text-white transition-colors">Reparación Ordenadores</a></li>
+<li><a href="reparacion_consolas_girona.html" class="hover:text-white transition-colors">Reparación Consolas</a></li>
+<li><a href="recuperacion_datos_girona.html" class="hover:text-white transition-colors">Recuperación Datos</a></li>
+<li><a href="mantenimiento_informatico_empresas_girona.html" class="hover:text-white transition-colors">Servicios IT Empresas</a></li>
+<li><a href="planes_mantenimiento_informatico_girona.html" class="hover:text-white transition-colors">Planes de Mantenimiento</a></li>
+<li><a href="instalacion_tpv_girona.html" class="hover:text-white transition-colors">Instalación TPV</a></li>
+<li><a href="crm_privado_empresas_girona.html" class="hover:text-white transition-colors">CRM Privado</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Información</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a href="preguntas_frecuentes_reparacion_girona.html" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+<li><a href="servicio_tecnico_informatico_girona.html" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+<li><a href="politica_privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+<li><a href="terminos_condiciones.html" class="hover:text-white transition-colors">Términos y Condiciones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Contacto</h4>
+<ul class="space-y-3 text-gray-400">
+<li class="flex items-center gap-2"><i class="bi bi-telephone"></i> 972 244 863</li>
+<li class="flex items-center gap-2"><i class="bi bi-envelope"></i> info@tecnogirona.es</li>
+<li class="flex items-center gap-2"><i class="bi bi-geo-alt"></i> Girona, España</li>
+</ul>
+</div>
+</div>
+	<div class="pt-8 border-t border-gray-700/50">
+	<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+	<p class="text-gray-400 text-sm">© 2026 TecnoGirona. Todos los derechos reservados.</p>
+	<p class="text-gray-400 text-sm">Especialistas en reparación, soporte IT, TPV y CRM en Girona.</p>
+	</div>
+	</div>
+</div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/34972244863?text=Hola,%20necesito%20información%20sobre%20Perfex%20CRM" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/50 hover:scale-110 transition-all group" aria-label="WhatsApp">
+<i class="bi bi-whatsapp text-white text-2xl group-hover:rotate-12 transition-transform"></i>
+</a>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-gray-900/95 backdrop-blur-lg border-t border-gray-700 p-4 z-[9999]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-white text-sm">Este sitio web utiliza cookies para mejorar la experiencia del usuario. <a href="politica_privacidad.html" class="text-primary-400 hover:underline">Política de Privacidad</a></p>
+<div class="flex gap-3">
+<button id="accept-cookies" class="bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all">Aceptar</button>
+<button id="reject-cookies" class="bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-all">Rechazar</button>
+</div>
+</div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 800, once: true });
+
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('bg-white/95', 'shadow-lg');
+    } else {
+        navbar.classList.remove('bg-white/95', 'shadow-lg');
+    }
+});
+
+// Mobile menu toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    const icon = mobileBtn.querySelector('i');
+    if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'bi bi-list text-2xl';
+    } else {
+        icon.className = 'bi bi-x-lg text-2xl';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappButton = document.querySelector('[aria-label="WhatsApp"]');
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', function() {
+            gtag('event', 'whatsapp_click', { 'event_category': 'Contacto', 'event_label': 'Clic en botón WhatsApp', 'value': 1 });
+        });
+    }
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            gtag('event', 'phone_call_click', { 'event_category': 'Contacto', 'event_label': this.href, 'value': 1 });
+        });
+    });
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function() {
+            gtag('event', 'form_submit', { 'event_category': 'Formulario', 'event_label': 'Formspree Perfex CRM', 'value': 1 });
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const banner = document.getElementById('cookie-banner');
+    let hasConsent = false; try { hasConsent = !!localStorage.getItem('cookie_consent'); } catch (e) {}
+    if (!hasConsent) {
+        banner.style.display = 'block';
+    }
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        try { localStorage.setItem('cookie_consent', 'granted'); } catch (e) {}
+        banner.style.display = 'none';
+        gtag('consent', 'update', { 'ad_storage': 'granted', 'analytics_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted' });
+    });
+    document.getElementById('reject-cookies').addEventListener('click', function() {
+        try { localStorage.setItem('cookie_consent', 'denied'); } catch (e) {}
+        banner.style.display = 'none';
+    });
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('nav a[href="#"]').forEach(function (link) {
+      if (link.textContent && link.textContent.trim().toLowerCase().includes('servicios')) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
