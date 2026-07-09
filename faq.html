@@ -393,10 +393,28 @@
             }
         }
     
-        /* Ajuste para navbar fixed */
+        /* Ajuste para navbar fixed en móvil */
         body { padding-top: 70px; }
         @media (max-width: 991.98px) {
             body { padding-top: 56px; }
+            .navbar-collapse {
+                max-height: calc(100vh - 56px);
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .navbar-collapse.show,
+            .navbar-collapse.collapsing {
+                background: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+                border-radius: 0 0 0.75rem 0.75rem;
+                padding: 0.5rem 0;
+                margin-top: 0.5rem;
+            }
+            .navbar-collapse .navbar-actions {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0.5rem 1rem;
+            }
         }
     </style>
 </head>
