@@ -49,18 +49,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tecnogirona.es/perfex-crm-girona.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tecnogirona.es/perfex-crm.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://tecnogirona.es/perfex.html</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
