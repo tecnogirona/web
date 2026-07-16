@@ -1,0 +1,8 @@
+title: TecnoGirona
+description: Servicio técnico en Girona - reparación de móviles, ordenadores, consolas y soporte IT.
+markdown: false
+exclude:
+  - README.md
+  - CNAME
+  - fix_links.py
+  - fix_noindex.py
